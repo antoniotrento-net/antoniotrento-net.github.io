@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://antoniotrento.net/sitemap_index.xml
