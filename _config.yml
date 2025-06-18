@@ -87,6 +87,9 @@ social:
 permalink: "/:categories/:title/"
 markdown: kramdown
 
+include:
+  - assets
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
