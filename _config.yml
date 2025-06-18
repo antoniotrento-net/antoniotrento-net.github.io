@@ -47,6 +47,8 @@ plugins:
 navigation:
   - title: "Home"
     url: "/"
+  - title: "Blog"
+    url: "/blog/"
   - title: "Portfolio"
     url: "/portfolio/"
 #  - title: "Mostre"
@@ -54,7 +56,7 @@ navigation:
   - title: "Biografia"
     url: "/biografia/"
   - title: "Contatti"
-    url: "https://forms.gle/Pv5PoBbQUStbxdu5A"
+    url: "https://forms.gle/"
 
 faq:
   - question: "Quali servizi offri in ambito integrazione sistemi?"
