@@ -1,0 +1,56 @@
+---
+layout: default
+title: Franco Trento - Mostre
+description: Tutte le mostre a cui ho partecipato negli anni.
+permalink: /mostre/
+css: /assets/css/custom-index.scss
+---
+
+<div class="hero-100hv position-relative d-flex flex-column justify-content-end">
+  <picture>
+    <!-- Immagine per mobile -->
+    <source srcset="/assets/images/index/hero-bg-franco-trento-mobile.jpg" media="(max-width: 768px)">
+    <!-- Immagine per desktop (fallback) -->
+    <img src="/assets/images/index/hero-bg-franco-trento.jpg" class="hero-bg img-fluid" alt="Sfondo Franco Trento">
+  </picture>
+  
+  <div class="hero-overlay-white"></div>
+  
+  <div class="container col-xxl-8 py-5 position-relative">
+      <div class="row d-flex flex-column justify-content-end g-5 py-5">
+          <div class="col-12 col-sm-10 col-md-8 col-lg-8">
+              <h1 class="display-5 fw-bold lh-1 mb-5">Franco Trento - Mostre</h1>
+              <p class="fs-5">Tutte le mostre a cui ho partecipato negli anni.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Elenco Mostre -->
+<h2 class="post-list-heading mt-5">Mostre</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {%- for mostra in site.mostre -%}
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ mostra.image | relative_url }}" class="card-img-top" alt="{{ mostra.title }}">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="{{ mostra.url | relative_url }}" class="stretched-link text-decoration-none text-dark">
+            {{ mostra.title }}
+          </a>
+        </h5>
+      </div>
+    </div>
+  </div>
+  {%- endfor -%}
+</div>
+
+
+
+{% include about.html %}
+
+
+  <div class="container py-5">
+    <h2 class="display-5 fw-bold lh-1 pb-4">Domande frequenti</h2>
+    {% include accordion-faq.html %}
+  </div>

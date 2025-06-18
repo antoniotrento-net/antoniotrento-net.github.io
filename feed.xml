@@ -1,13 +1,23 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0">
   <channel>
-    <title>Antonio Trento</title>
-    <description>Antonio Trento an aspiring entrepreneur.</description>
-    <link>https://antoniotrento.net/</link>
-    <atom:link href="https://antoniotrento.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Jul 2021 01:11:00 +0200</pubDate>
-    <lastBuildDate>Thu, 22 Jul 2021 01:11:00 +0200</lastBuildDate>
-    <generator>Jekyll v4.2.0</generator>
-    
+    <title>{{ site.title }}</title>
+    <description>{{ site.description }}</description>
+    <link>{{ site.url }}</link>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <language>it</language>
+
+    {% for post in site.posts limit:10 %}
+      <item>
+        <title>{{ post.title }}</title>
+        <description>{{ post.excerpt | strip_html | truncate: 250 }}</description>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <guid>{{ site.url }}{{ post.url }}</guid>
+      </item>
+    {% endfor %}
   </channel>
 </rss>
