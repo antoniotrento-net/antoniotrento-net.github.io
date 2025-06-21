@@ -15,52 +15,47 @@ css: /assets/css/custom-index.css
   .card-feature { border: 1px solid #e0e0e0; border-radius: 0.5rem; padding: 1.5rem; transition: box-shadow .3s; }
   .card-feature:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
   .testimonial-card { border: 1px solid #0056b3; border-radius: 0.5rem; padding: 1rem; margin: 1rem; }
-  body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: #0f0f0f;
-  font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
-}
+  
 
 
-.hero-floating-icons {
-  height: 100vh;
+
+
+
+
+
+.hero-icons-section {
+  min-height: 100vh;
   background-color: #0f0f0f;
   color: white;
-  overflow: hidden;
   position: relative;
+  z-index: 0;
 }
 
-.hero-floating-content {
-  z-index: 2;
-}
-
-.floating-icon-grid {
+.icon-floating-background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   pointer-events: none;
+  z-index: 0;
 }
 
-.floating-icon-grid img {
+.icon-floating-background img {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  opacity: 0.07;
+  width: 36px;
+  height: 36px;
+  opacity: 0.08;
   filter: grayscale(100%);
-  animation: float 8s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-20px); }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
 }
+
 
 
 
@@ -112,14 +107,15 @@ css: /assets/css/custom-index.css
   </div>
 </section>
 
-<section class="hero-floating-icons position-relative d-flex justify-content-center align-items-center text-center">
-  <div class="floating-icon-grid" id="floatingIconGrid"></div>
-  <div class="hero-floating-content position-relative">
+<section class="hero-icons-section position-relative overflow-hidden">
+  <div class="icon-floating-background" id="iconFloatingBackground"></div>
+  <div class="container position-relative z-1 text-center py-5">
     <h1 class="display-4 fw-bold mb-4">Nuova Hero Animata</h1>
-    <p class="lead mb-5">Con uno sfondo interattivo e animato</p>
-    <a href="#services" class="btn btn-primary btn-lg px-4 mt-2">Scopri di più</a>
+    <p class="lead mb-4">Sfondo tech interattivo, pronto per essere integrato nel tuo business</p>
+    <a href="#services" class="btn btn-primary btn-lg">Scopri di più</a>
   </div>
 </section>
+
 
 
 
@@ -284,32 +280,38 @@ css: /assets/css/custom-index.css
   {% include accordion-faq.html %}
 </div>
 <script>
-  const iconGrid = document.getElementById("floatingIconGrid");
-  const icons = [
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-    "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png",
-    "https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico",
-    "https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Salesforce.com_logo.svg/512px-Salesforce.com_logo.svg.png",
-    "https://cdn-icons-png.flaticon.com/512/2111/2111612.png",
-    "https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
-  ];
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("iconFloatingBackground");
+    if (!container) return;
 
-  const iconCount = 60;
+    const icons = [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png",
+      "https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico",
+      "https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Salesforce.com_logo.svg/512px-Salesforce.com_logo.svg.png",
+      "https://cdn-icons-png.flaticon.com/512/2111/2111612.png",
+      "https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
+    ];
 
-  for (let i = 0; i < iconCount; i++) {
-    const img = document.createElement("img");
-    img.src = icons[Math.floor(Math.random() * icons.length)];
-    img.style.top = Math.random() * 100 + "%";
-    img.style.left = Math.random() * 100 + "%";
-    img.style.animationDelay = `${Math.random() * 5}s`;
-    img.style.transform = `scale(${0.8 + Math.random() * 0.6})`;
-    iconGrid.appendChild(img);
-  }
+    const iconCount = 50;
 
-  // parallasse al movimento del mouse
-  document.querySelector(".hero-floating-icons").addEventListener("mousemove", (e) => {
-    const x = e.clientX / window.innerWidth - 0.5;
-    const y = e.clientY / window.innerHeight - 0.5;
-    iconGrid.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+    for (let i = 0; i < iconCount; i++) {
+      const img = document.createElement("img");
+      img.src = icons[Math.floor(Math.random() * icons.length)];
+      img.style.top = Math.random() * 100 + "%";
+      img.style.left = Math.random() * 100 + "%";
+      img.style.animationDelay = `${Math.random() * 5}s`;
+      img.style.transform = `scale(${0.7 + Math.random() * 0.6})`;
+      container.appendChild(img);
+    }
+
+    // Parallasse leggera al mouse nella sezione
+    const section = document.querySelector(".hero-icons-section");
+    section.addEventListener("mousemove", (e) => {
+      const x = e.clientX / window.innerWidth - 0.5;
+      const y = e.clientY / window.innerHeight - 0.5;
+      container.style.transform = `translate(${x * 25}px, ${y * 25}px)`;
+    });
   });
 </script>
+
