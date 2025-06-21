@@ -24,30 +24,23 @@ css: /assets/css/custom-index.css
   overflow: hidden;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-}
 
 .hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden; /* 🔑 contiene le icone solo dentro l’hero */
+  background-color: #0f0f0f;
+  color: white;
+  overflow: hidden; /* 🔑 confina le icone */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0f0f0f;
-  color: white;
-  z-index: 1;
+  text-align: center;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  padding: 2rem;
 }
 
 .icon-grid {
@@ -56,25 +49,31 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
-  overflow: hidden;
 }
 
 .icon-grid img {
   position: absolute;
   width: 40px;
   height: 40px;
-  opacity: 0.05;
+  opacity: 0.06;
   filter: grayscale(100%);
-  transition: transform 0.3s;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
 .normal-content {
   padding: 100px;
-  background: #f5f5f5;
+  background-color: #f5f5f5;
   color: #111;
 }
+
 
 
 
@@ -126,22 +125,19 @@ body {
   </div>
 </section>
 
-<body>
+<section class="hero-section">
   <div class="icon-grid" id="iconGrid"></div>
+  <div class="hero-content">
+    <h1>Benvenuto nella tua Dashboard</h1>
+    <p>Soluzioni smart per aziende moderne</p>
+    <a href="#inizia" class="btn btn-primary">Inizia ora</a>
+  </div>
+</section>
 
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1>Benvenuto nella tua Dashboard</h1>
-      <p>Soluzioni smart per aziende moderne</p>
-      <a href="#inizia" class="btn btn-primary">Inizia ora</a>
-    </div>
-  </section>
-
-  <section style="padding: 100px; background: #111;">
-    <h2>Sezione successiva</h2>
-    <p>Contenuto della pagina continua...</p>
-  </section>
-</body>
+<section class="normal-content">
+  <h2>Sezione successiva</h2>
+  <p>Contenuto della pagina. Qui non ci sono icone.</p>
+</section>
 
 <script>
   const iconGrid = document.getElementById("iconGrid");
@@ -161,17 +157,18 @@ body {
     img.src = icons[Math.floor(Math.random() * icons.length)];
     img.style.top = Math.random() * 100 + "%";
     img.style.left = Math.random() * 100 + "%";
-    img.style.transform = `scale(${0.8 + Math.random() * 0.6})`;
+    img.style.animationDelay = `${Math.random() * 5}s`; // randomizza la fluttuazione
     iconGrid.appendChild(img);
   }
 
-  // Parallasse SOLO dentro l'hero
+  // parallasse leggera solo nello hero
   document.querySelector(".hero-section").addEventListener("mousemove", (e) => {
     const x = e.clientX / window.innerWidth - 0.5;
     const y = e.clientY / window.innerHeight - 0.5;
-    iconGrid.style.transform = `translate(${x * 40}px, ${y * 40}px)`;
+    iconGrid.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
   });
 </script>
+
 
 
 
