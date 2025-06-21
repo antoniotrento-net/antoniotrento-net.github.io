@@ -24,39 +24,41 @@ css: /assets/css/custom-index.css
   overflow: hidden;
 }
 
-body, html {
+body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0f0f0f;
-  color: white;
 }
 
 .hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
-  text-align: center;
+  overflow: hidden; /* 🔑 contiene le icone solo dentro l’hero */
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #0f0f0f;
+  color: white;
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+  text-align: center;
   padding: 2rem;
 }
 
 .icon-grid {
-  position: fixed; /* ✅ cambia da absolute a fixed */
+  position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
-  height: 200%;
+  width: 100%;
+  height: 100%;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .icon-grid img {
@@ -67,6 +69,13 @@ body, html {
   filter: grayscale(100%);
   transition: transform 0.3s;
 }
+
+.normal-content {
+  padding: 100px;
+  background: #f5f5f5;
+  color: #111;
+}
+
 
 
 </style>
@@ -141,29 +150,29 @@ body, html {
     "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png",
     "https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico",
     "https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Salesforce.com_logo.svg/512px-Salesforce.com_logo.svg.png",
-    "https://cdn-icons-png.flaticon.com/512/2111/2111612.png", // Zoom
-    "https://cdn-icons-png.flaticon.com/512/5968/5968520.png", // Slack
-    "https://cdn-icons-png.flaticon.com/512/5968/5968866.png", // Trello
-    "https://cdn-icons-png.flaticon.com/512/888/888879.png",   // Notion
+    "https://cdn-icons-png.flaticon.com/512/2111/2111612.png",
+    "https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
   ];
 
-  const iconCount = 60;
+  const iconCount = 50;
 
   for (let i = 0; i < iconCount; i++) {
     const img = document.createElement("img");
     img.src = icons[Math.floor(Math.random() * icons.length)];
-    img.style.top = Math.random() * 100 + "vh";
-    img.style.left = Math.random() * 100 + "vw";
+    img.style.top = Math.random() * 100 + "%";
+    img.style.left = Math.random() * 100 + "%";
     img.style.transform = `scale(${0.8 + Math.random() * 0.6})`;
     iconGrid.appendChild(img);
   }
 
-  document.addEventListener("mousemove", (e) => {
+  // Parallasse SOLO dentro l'hero
+  document.querySelector(".hero-section").addEventListener("mousemove", (e) => {
     const x = e.clientX / window.innerWidth - 0.5;
     const y = e.clientY / window.innerHeight - 0.5;
-    iconGrid.style.transform = `translate(${x * 50}px, ${y * 50}px)`;
+    iconGrid.style.transform = `translate(${x * 40}px, ${y * 40}px)`;
   });
 </script>
+
 
 
 
