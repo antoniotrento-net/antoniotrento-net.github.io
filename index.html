@@ -15,6 +15,40 @@ css: /assets/css/custom-index.css
   .card-feature { border: 1px solid #e0e0e0; border-radius: 0.5rem; padding: 1.5rem; transition: box-shadow .3s; }
   .card-feature:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
   .testimonial-card { border: 1px solid #0056b3; border-radius: 0.5rem; padding: 1rem; margin: 1rem; }
+
+
+  .hero-icons-section {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #111;
+  position: relative;
+  z-index: 0;
+}
+
+.icon-floating-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.icon-floating-background img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.2;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
 </style>
 
 <!-- HERO SECTION -->
@@ -60,6 +94,15 @@ css: /assets/css/custom-index.css
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="hero-icons-section position-relative overflow-hidden">
+  <div class="icon-floating-background" id="iconFloatingBackground"></div>
+  <div class="container position-relative z-1 text-center py-5 justify-content-center">
+    <h2 class="display-4 fw-bold mb-4">Smetti di eseguire compiti ripetitivi, integriamo e automatizziamo gli strumenti che già usi</h2>
+    <p class="lead mb-4">Posso aiutarti a integrare e automatizzare la maggior parte dei sistemi informatici per rendere più veloci le tue procedure aziendali ed incrementare la produttività dei tuoi colleghi.</p>
+    <a href="#services" class="btn btn-primary btn-lg">Scopri di più</a>
   </div>
 </section>
 
@@ -212,7 +255,6 @@ css: /assets/css/custom-index.css
   </div>
 </section>
 
-<!-- ABOUT & FAQ -->
 
 
 <!-- ABOUT & FAQ -->
@@ -221,3 +263,99 @@ css: /assets/css/custom-index.css
   <h2 class="display-5 fw-bold mb-4">Domande frequenti</h2>
   {% include accordion-faq.html %}
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("iconFloatingBackground");
+  if (!container) return;
+
+  const icons = [
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoft/microsoft-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/editor-ui/public/favicon.png",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discord/discord-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/telegram/telegram-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googledrive/googledrive-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecalendar/googlecalendar-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dropbox/dropbox-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stripe/stripe-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twilio/twilio-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zoom/zoom-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/onedrive/onedrive-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+  ];
+
+  const iconCount = 300;
+
+  for (let i = 0; i < iconCount; i++) {
+    const img = document.createElement("img");
+    img.src = icons[Math.floor(Math.random() * icons.length)];
+    img.style.top = Math.random() * 100 + "%";
+    img.style.left = Math.random() * 100 + "%";
+    img.style.animationDelay = `${Math.random() * 5}s`;
+    img.style.transform = `scale(${0.7 + Math.random() * 0.6})`;
+    container.appendChild(img);
+  }
+
+  const section = document.querySelector(".hero-icons-section");
+  section.addEventListener("mousemove", (e) => {
+    const x = e.clientX / window.innerWidth - 0.5;
+    const y = e.clientY / window.innerHeight - 0.5;
+    container.style.transform = `translate(${x * 25}px, ${y * 25}px)`;
+  });
+});
+</script>
