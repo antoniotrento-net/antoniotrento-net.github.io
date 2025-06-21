@@ -50,9 +50,21 @@ css: /assets/css/custom-index.css
 }
 
 .highlight-white {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 4px;
-  padding: 0.2em 0.4em;
+  position: relative;
+  z-index: 1;
+}
+.highlight-white::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -4px;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.4em;
+  background: white;
+  opacity: 0.7;
+  border-radius: 6px;
 }
 
 
