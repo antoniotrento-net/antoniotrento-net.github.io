@@ -25,25 +25,19 @@ css: /assets/css/custom-index.css
 }
 
 
-.hero-section {
-  position: relative;
-  width: 100%;
+.hero-floating-icons {
   height: 100vh;
   background-color: #0f0f0f;
   color: white;
-  overflow: hidden; /* 🔑 confina le icone */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.hero-content {
-  position: relative;
+.hero-floating-content {
   z-index: 2;
 }
 
-.icon-grid {
+.floating-icon-grid {
   position: absolute;
   top: 0;
   left: 0;
@@ -53,27 +47,20 @@ css: /assets/css/custom-index.css
   pointer-events: none;
 }
 
-.icon-grid img {
+.floating-icon-grid img {
   position: absolute;
   width: 40px;
   height: 40px;
-  opacity: 0.06;
+  opacity: 0.07;
   filter: grayscale(100%);
   animation: float 8s ease-in-out infinite;
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
 }
-
-.normal-content {
-  padding: 100px;
-  background-color: #f5f5f5;
-  color: #111;
-}
-
 
 
 
@@ -125,49 +112,14 @@ css: /assets/css/custom-index.css
   </div>
 </section>
 
-<section class="hero-section">
-  <div class="icon-grid" id="iconGrid"></div>
-  <div class="hero-content">
-    <h1>Benvenuto nella tua Dashboard</h1>
-    <p>Soluzioni smart per aziende moderne</p>
-    <a href="#inizia" class="btn btn-primary">Inizia ora</a>
+<section class="hero-floating-icons position-relative d-flex justify-content-center align-items-center text-center">
+  <div class="floating-icon-grid" id="floatingIconGrid"></div>
+  <div class="hero-floating-content position-relative">
+    <h1 class="display-4 fw-bold mb-4">Nuova Hero Animata</h1>
+    <p class="lead mb-5">Con uno sfondo interattivo e animato</p>
+    <a href="#services" class="btn btn-primary btn-lg px-4 mt-2">Scopri di più</a>
   </div>
 </section>
-
-<section class="normal-content">
-  <h2>Sezione successiva</h2>
-  <p>Contenuto della pagina. Qui non ci sono icone.</p>
-</section>
-
-<script>
-  const iconGrid = document.getElementById("iconGrid");
-  const icons = [
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-    "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png",
-    "https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico",
-    "https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Salesforce.com_logo.svg/512px-Salesforce.com_logo.svg.png",
-    "https://cdn-icons-png.flaticon.com/512/2111/2111612.png",
-    "https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
-  ];
-
-  const iconCount = 50;
-
-  for (let i = 0; i < iconCount; i++) {
-    const img = document.createElement("img");
-    img.src = icons[Math.floor(Math.random() * icons.length)];
-    img.style.top = Math.random() * 100 + "%";
-    img.style.left = Math.random() * 100 + "%";
-    img.style.animationDelay = `${Math.random() * 5}s`; // randomizza la fluttuazione
-    iconGrid.appendChild(img);
-  }
-
-  // parallasse leggera solo nello hero
-  document.querySelector(".hero-section").addEventListener("mousemove", (e) => {
-    const x = e.clientX / window.innerWidth - 0.5;
-    const y = e.clientY / window.innerHeight - 0.5;
-    iconGrid.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
-  });
-</script>
 
 
 
@@ -331,3 +283,33 @@ css: /assets/css/custom-index.css
   <h2 class="display-5 fw-bold mb-4">Domande frequenti</h2>
   {% include accordion-faq.html %}
 </div>
+<script>
+  const iconGrid = document.getElementById("floatingIconGrid");
+  const icons = [
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    "https://www.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png",
+    "https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico",
+    "https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Salesforce.com_logo.svg/512px-Salesforce.com_logo.svg.png",
+    "https://cdn-icons-png.flaticon.com/512/2111/2111612.png",
+    "https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
+  ];
+
+  const iconCount = 60;
+
+  for (let i = 0; i < iconCount; i++) {
+    const img = document.createElement("img");
+    img.src = icons[Math.floor(Math.random() * icons.length)];
+    img.style.top = Math.random() * 100 + "%";
+    img.style.left = Math.random() * 100 + "%";
+    img.style.animationDelay = `${Math.random() * 5}s`;
+    img.style.transform = `scale(${0.8 + Math.random() * 0.6})`;
+    iconGrid.appendChild(img);
+  }
+
+  // parallasse al movimento del mouse
+  document.querySelector(".hero-floating-icons").addEventListener("mousemove", (e) => {
+    const x = e.clientX / window.innerWidth - 0.5;
+    const y = e.clientY / window.innerHeight - 0.5;
+    iconGrid.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+  });
+</script>
