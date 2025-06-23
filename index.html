@@ -290,6 +290,7 @@ css: /assets/css/custom-index.css
   <h2 class="display-5 fw-bold mb-4">Domande frequenti</h2>
   {% include accordion-faq.html %}
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("iconFloatingBackground");
@@ -365,24 +366,46 @@ document.addEventListener("DOMContentLoaded", () => {
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg",
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
   ];
-
   const iconCount = 300;
+  
+  // Definiamo la griglia
+  const cols = 20;  // colonne
+  const rows = 15;  // righe
+  const cellWidth = 100 / cols; // % larghezza cella
+  const cellHeight = 100 / rows; // % altezza cella
 
   for (let i = 0; i < iconCount; i++) {
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+
+    // Posizione base griglia
+    let left = col * cellWidth;
+    let top = row * cellHeight;
+
+    // Piccolo offset random per non essere troppo rigidi (-10% .. +10% della cella)
+    const offsetX = (Math.random() * 0.2 - 0.1) * cellWidth;
+    const offsetY = (Math.random() * 0.2 - 0.1) * cellHeight;
+
     const img = document.createElement("img");
     img.src = icons[Math.floor(Math.random() * icons.length)];
-    img.style.top = Math.random() * 100 + "%";
-    img.style.left = Math.random() * 100 + "%";
+    img.style.position = "absolute";
+    img.style.width = "40px";
+    img.style.height = "40px";
+    img.style.top = `calc(${top}% + ${offsetY}%)`;
+    img.style.left = `calc(${left}% + ${offsetX}%)`;
+    img.style.opacity = "0.15";
+    img.style.animation = `float ${5 + Math.random() * 5}s ease-in-out infinite`;
     img.style.animationDelay = `${Math.random() * 5}s`;
-    img.style.transform = `scale(${0.7 + Math.random() * 0.6})`;
+    
     container.appendChild(img);
   }
 
+  // Movimento del background al mouse, meno invasivo
   const section = document.querySelector(".hero-icons-section");
   section.addEventListener("mousemove", (e) => {
     const x = e.clientX / window.innerWidth - 0.5;
     const y = e.clientY / window.innerHeight - 0.5;
-    container.style.transform = `translate(${x * 25}px, ${y * 25}px)`;
+    container.style.transform = `translate(${x * 15}px, ${y * 15}px)`;
   });
 });
 </script>
