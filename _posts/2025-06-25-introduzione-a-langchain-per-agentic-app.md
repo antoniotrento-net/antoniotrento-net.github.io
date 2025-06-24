@@ -6,8 +6,6 @@ image: assets/images/Introduzione_a_LangChain_per_Agentic_App.jpg
 description: "Scopri cos'è LangChain e come usarlo per creare agentic app intelligenti e scalabili; una guida completa per chi vuole innovare con sviluppo AI."
 ---
 
-![Introduzione a LangChain per Agentic App](assets/images/Introduzione_a_LangChain_per_Agentic_App.jpg)
-
 ## Introduzione a LangChain per Agentic App
 
 Nel panorama in continua evoluzione delle tecnologie di intelligenza artificiale, **LangChain** sta emergendo come una soluzione potente per lo sviluppo di **agentic app**, applicazioni intelligenti in grado di eseguire compiti complessi automatizzando processi decisionali. Questo articolo guiderà i lettori nell'esplorazione di LangChain: cos'è, come funziona, e come può essere utilizzato per creare applicazioni intelligenti e scalabili. Vedremo anche applicazioni pratiche, strumenti collegati e risponderemo alle domande più comuni sull'argomento. 
