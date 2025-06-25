@@ -3,6 +3,7 @@ title: "Introduzione a LangChain per Agentic App"
 date: 2025-06-25 9:00 +0200
 layout: post
 image: assets/images/Introduzione_a_LangChain_per_Agentic_App.jpg
+og_image: assets/images/Introduzione_a_LangChain_per_Agentic_App.jpg
 description: "Scopri cos'è LangChain e come usarlo per creare agentic app intelligenti e scalabili; una guida completa per chi vuole innovare con sviluppo AI."
 ---
 
