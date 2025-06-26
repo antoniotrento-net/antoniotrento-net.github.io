@@ -24,14 +24,41 @@
 {% include nav-bar.html %}
 
 <style>
-  .hero-100hv { height: 100vh; }
-  .hero-overlay-white { background: rgba(255,255,255,0.6); position: absolute; top:0; left:0; width:100%; height:100%; }
-  .btn-primary { background-color: #0056b3; border-color: #0056b3; }
-  .btn-primary:hover { background-color: #004494; border-color: #004494; }
-  .icon { font-size: 2rem; color: #0056b3; margin-right: 0.5rem; }
-  .card-feature { border: 1px solid #e0e0e0; border-radius: 0.5rem; padding: 1.5rem; transition: box-shadow .3s; }
-  .card-feature:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-  .testimonial-card { border: 1px solid #0056b3; border-radius: 0.5rem; padding: 1rem; margin: 1rem; }
+.hero-100hv {
+  height: 60vh;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: brightness(0.6);
+}
+
+.hero-overlay-white {
+  background: rgba(255,255,255,0.4); /* più visibile se vuoi */
+  z-index: 1;
+}
+
+.hero-100hv .container {
+  position: relative;
+  z-index: 2;
+  color: #111;
+}
+
 </style>
 <!-- HERO POST SECTION -->
 <section class="hero-100hv position-relative d-flex flex-column justify-content-center text-center">
