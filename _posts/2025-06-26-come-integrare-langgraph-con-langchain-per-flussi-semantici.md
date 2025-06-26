@@ -1,6 +1,6 @@
 ---
 title: "Come integrare LangGraph con LangChain per flussi semantici"
-date: 2025-06-26 14:00 +0200
+date: 2025-06-26 8:00 +0200
 layout: post
 image: assets/images/Come_integrare_LangGraph_con_LangChain_per_flussi_semantici.jpg
 og_image: assets/images/Come_integrare_LangGraph_con_LangChain_per_flussi_semantici.jpg
