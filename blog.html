@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Blog di Antonio Trento"
 description: "Ultime notizie, aggiornamenti e approfondimenti su integrazione sistemi, app personalizzate e automazioni."
 permalink: /blog/
@@ -7,16 +7,15 @@ permalink: /blog/
 
 <div class="container py-5">
   <div class="text-center mb-5">
-    <h1 class="fw-bold">{{ page.title }}</h1>
+    <h1 class="display-4 fw-bold mb-4">{{ page.title }}</h1>
     {% if page.description %}
       <p class="lead text-muted mt-3">{{ page.description }}</p>
     {% endif %}
   </div>
-
   <div class="row g-4">
     {%- assign date_format = "%-d %B %Y" -%}
-    {%- for post in site.posts -%}
-    <div class="col-md-6 col-lg-4">
+    {%- for post in paginator.posts -%}
+    <div class="col-md-6">
       <div class="card h-100 shadow-sm">
         {%- if post.image %}
         <a href="{{ post.url | relative_url }}">
@@ -45,4 +44,36 @@ permalink: /blog/
     </div>
     {%- endfor -%}
   </div>
+<nav class="d-flex justify-content-center mt-5">
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Indietro</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">&laquo; Indietro</span>
+      </li>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      <li class="page-item {% if page == paginator.page %}active{% endif %}">
+        <a class="page-link" href="{{ paginator.paginate_path | replace: ':num', page | relative_url }}">
+          {{ page }}
+        </a>
+      </li>
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">Avanti &raquo;</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Avanti &raquo;</span>
+      </li>
+    {% endif %}
+  </ul>
+</nav>
+
 </div>
