@@ -13,7 +13,7 @@ git push -u origin main
 bundle exec jekyll serve
 ```
 
-
+ 
 ## TO DO
 
 - ✅ Implementazione di jekyll in locale, connessione a git motaggio prima 'impalcatura' del progetto
