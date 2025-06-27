@@ -277,3 +277,116 @@ Se vuoi, ti preparo:
 	•	Un video demo registrabile via Sora/OpenAI con voce sintetica dell’agente
 
 Fammi sapere che strada vuoi seguire!
+
+
+# chatbot classico
+
+Ecco un chatbot AI completo per il tuo sito Jekyll, integrato in HTML e JavaScript, senza librerie esterne. È personalizzato per Antonio Trento, usa l’API OpenAI e mostra un’icona 💬 fissa in basso a destra.
+
+✅ Cosa fare ora:
+	1.	Sostituisci INSERISCI_LA_TUA_API_KEY_OPENAI con la tua chiave privata.
+	2.	Incolla questo codice nel tuo layout (es. default.html) oppure in una singola pagina .md o .html.
+	3.	Se vuoi risposte più economiche, cambia gpt-4o in gpt-3.5-turbo.
+
+🔐 Sicurezza
+
+Non esporre la tua chiave OpenAI in produzione!
+→ Possiamo trasformare questo frontend in un sistema proxy via n8n o serverless con chiave nascosta lato backend.
+
+⸻
+
+🧠 Vuoi anche:
+	•	una knowledge base Qdrant con le risposte automatiche alle domande frequenti?
+	•	un flusso di prenotazione appuntamenti via Calendly o API?
+	•	la trascrizione salvata?
+
+Fammi sapere e ti espando il sistema.
+
+Ottima domanda: ti spiego come proteggere la tua API Key OpenAI usando una funzione serverless (senza bisogno di server sempre attivi) o con n8n, così che il tuo chatbot funzioni in sicurezza anche sul sito pubblico.
+
+⸻
+
+🧰 Obiettivo
+
+👉 Invece di esporre la chiave OpenAI nel JavaScript visibile ai visitatori, creiamo un intermediario (proxy) che:
+	1.	Riceve il messaggio da utente (POST)
+	2.	Chiama l’API OpenAI con la tua API key (nascosta)
+	3.	Restituisce la risposta al frontend
+
+⸻
+
+🚀 Soluzioni per il backend sicuro (proxy API)
+
+Soluzione	Vantaggi	Dove si ospita
+🟢 n8n self-hosted	Hai già tutto pronto	Sul tuo Raspberry o server
+🔵 Vercel / Netlify function	Gratis, scalabile	Serverless
+🟠 Cloudflare Workers	Ultra veloce, gratuito	Perfetto per progetti piccoli
+⚪ Express API su server	Più controllo	Ma serve hosting sempre attivo
+
+
+⸻
+
+✅ Guida: implementazione con n8n
+
+Hai già n8n installato. Quindi:
+
+1. Crea un nuovo Webhook trigger in n8n
+	•	Metodo: POST
+	•	Path: /chatbot-openai
+
+2. Aggiungi un nodo HTTP Request (verso OpenAI)
+
+POST https://api.openai.com/v1/chat/completions
+Authorization: Bearer LA_TUA_API_KEY
+Content-Type: application/json
+Body:
+{
+  "model": "gpt-4o",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Sei un assistente virtuale italiano per Antonio Trento."
+    },
+    {
+      "role": "user",
+      "content": {{$json["message"]}}
+    }
+  ],
+  "temperature": 0.6
+}
+
+3. Aggiungi un nodo Set per ritornare la risposta
+	•	Estrai data.choices[0].message.content e lo rimandi al client
+
+4. Attiva il webhook e copia l’URL
+
+Es. https://n8n.antoniotrento.net/webhook/chatbot-openai
+
+⸻
+
+🧑‍💻 Ora modifica il JS nel tuo sito
+
+const ENDPOINT = "https://n8n.antoniotrento.net/webhook/chatbot-openai";
+// sostituisci fetch() con:
+const res = await fetch(ENDPOINT, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ message: text })
+});
+
+
+⸻
+
+🔒 Risultato
+
+✅ La tua chiave OpenAI è protetta
+✅ Il chatbot funziona senza esporre segreti
+✅ Facile da scalare o estendere (es. salvataggio Qdrant, prenotazioni…)
+
+⸻
+
+Vuoi che ti prepari il workflow n8n già pronto da importare?
+
+Posso farlo in JSON così lo carichi al volo. Ti basta dirmelo.
