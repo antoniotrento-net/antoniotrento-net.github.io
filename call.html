@@ -104,9 +104,6 @@ css: /assets/css/custom-index.css
   </div>
 </section>
 
-  <!-- Bottone flottante -->
-  <button id="vapi-button" title="Parla con Antonio">🎙️</button>
-
   <!-- Script Vapi.ai -->
   <script>
     var vapiInstance = null;
@@ -114,9 +111,9 @@ css: /assets/css/custom-index.css
     const apiKey = "f13821ec-e1c9-4cc0-aa32-bdc1449b0d0a";   // La tua API key pubblica
 
     const buttonConfig = {
-      // Configurazioni opzionali
-      // theme: "dark",
-      // language: "it-IT"
+    theme: "light",          // oppure "dark"
+    language: "it-IT",       // lingua interfaccia e riconoscimento vocale
+    position: "bottom-right" // posizione fissa bottone
     };
 
     (function (d, t) {
