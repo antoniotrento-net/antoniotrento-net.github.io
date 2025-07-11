@@ -2,8 +2,8 @@
 title: "Sviluppo di agenti AI per il settore educativo"
 date: 2025-07-12 7:30 +0200
 layout: post
-image: assets/images/Sviluppo_di_agenti_AI_per_il_settore_educativo.jpg
-og_image: assets/images/Sviluppo_di_agenti_AI_per_il_settore_educativo.jpg
+image: assets/images/Sviluppo_di_agenti_AI_per_il_settore_educativo2.jpg
+og_image: assets/images/Sviluppo_di_agenti_AI_per_il_settore_educativo2.jpg
 description: "Scopri come sviluppare agenti AI per il settore educativo, rivoluzionando l'apprendimento personalizzato e migliorando l'efficienza amministrativa."
 ---
 
