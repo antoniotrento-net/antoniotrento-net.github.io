@@ -5,41 +5,74 @@ description: "Scopri i progetti e le soluzioni realizzate: integrazione sistemi,
 permalink: /portfolio/
 ---
 
-<section class="py-5">
+<!-- HERO SECTION -->
+<section class="py-6 bg-dark text-white">
   <div class="container text-center">
-    <h1 class="display-4 fw-bold">Il mio Portfolio</h1>
-    <p class="lead mt-3">Progetti che uniscono AI, automazione e ingegneria del software in soluzioni concrete, eleganti e scalabili.</p>
+    <h1 class="display-3 fw-bold mb-3">Progetti di un ingegnere visionario</h1>
+    <p class="lead mx-auto" style="max-width: 720px;">Soluzioni costruite con cura e ambizione: AI, automazione, sistemi interconnessi e UX che lasciano il segno.</p>
   </div>
 </section>
 
-<section class="py-5 bg-white">
+<!-- PORTFOLIO GRID SECTION -->
+<section class="py-6 bg-white">
   <div class="container">
-    <div class="row justify-content-center g-5">
+    <div class="row gy-5 gx-4">
       {% for item in site.portfolio %}
-        <div class="col-12 col-sm-6 col-lg-4 d-flex">
-          <div class="card flex-fill border-0 shadow rounded-4 overflow-hidden hover-shadow">
-            <a href="{{ item.url }}" class="text-decoration-none">
-              <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
-              <div class="card-body">
-                <h5 class="card-title text-dark fw-semibold">{{ item.title }}</h5>
-                {% if item.subtitle %}
-                  <p class="card-text text-muted">{{ item.subtitle }}</p>
-                {% endif %}
-              </div>
-            </a>
-            <div class="card-footer bg-transparent border-0 text-end">
-              <a href="{{ item.url }}" class="btn btn-primary btn-sm px-3 rounded-pill">Scopri di più</a>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-lg rounded-4 position-relative overflow-hidden portfolio-card">
+          <a href="{{ item.url }}" class="text-decoration-none text-dark">
+            <div class="ratio ratio-4x3">
+              <img src="{{ item.image }}" class="img-fluid object-fit-cover w-100 h-100" alt="{{ item.title }}">
             </div>
+            <div class="card-body">
+              <h5 class="fw-bold">{{ item.title }}</h5>
+              {% if item.subtitle %}
+                <p class="text-muted small">{{ item.subtitle }}</p>
+              {% endif %}
+            </div>
+          </a>
+          <div class="card-footer bg-white border-0 text-end">
+            <a href="{{ item.url }}" class="btn btn-outline-dark rounded-pill btn-sm px-4">Scopri di più</a>
           </div>
         </div>
+      </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="bg-light py-5">
+<!-- FAQ SECTION -->
+<section class="py-6 bg-light">
   <div class="container">
-    <h2 class="display-5 fw-bold mb-4 text-center">Domande frequenti</h2>
-    {% include accordion-faq.html %}
+    <h2 class="display-5 fw-bold text-center mb-5">Domande frequenti</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        {% include accordion-faq.html %}
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- CUSTOM CSS -->
+<style>
+  .portfolio-card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+  }
+
+  .portfolio-card img {
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .portfolio-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .btn-outline-dark:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+  }
+</style>
