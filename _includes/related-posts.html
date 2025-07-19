@@ -1,41 +1,21 @@
-{% assign stopwords = "di,che,con,per,del,della,allo,alla,in,un,una,il,la,e,a,da,su,tra,fra,l'" | split: "," %}
-{% assign current_words = page.description | downcase | replace: '.', '' | replace: ',', '' | split: ' ' %}
-{% assign current_keywords = "" | split: "" %}
+{% assign current_url = page.url %}
+{% assign current_date = page.date %}
+{% assign related_posts = "" | split: "" %}
 
-{% for word in current_words %}
-  {% unless stopwords contains word %}
-    {% assign current_keywords = current_keywords | push: word %}
-  {% endunless %}
-{% endfor %}
-
-{% assign scored_posts = "" | split: "" %}
-
-{% for post in site.posts %}
-  {% if post.url != page.url and post.description %}
-    {% assign post_words = post.description | downcase | replace: '.', '' | replace: ',', '' | split: ' ' %}
-    {% assign post_keywords = "" | split: "" %}
-    {% for word in post_words %}
-      {% unless stopwords contains word %}
-        {% assign post_keywords = post_keywords | push: word %}
-      {% endunless %}
-    {% endfor %}
-
-    {% assign score = 0 %}
-    {% for word in current_keywords %}
-      {% if post_keywords contains word %}
-        {% assign score = score | plus: 1 %}
-      {% endif %}
-    {% endfor %}
-
-    {% if score > 0 %}
-      {% assign post_with_score = post | merge: { "similarity_score": score } %}
-      {% assign scored_posts = scored_posts | push: post_with_score %}
+{% if page.related %}
+  {% for rel_url in page.related %}
+    {% assign rel_post = site.posts | where: "url", rel_url | first %}
+    {% if rel_post %}
+      {% assign related_posts = related_posts | push: rel_post %}
     {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% assign related_posts = scored_posts | sort: "similarity_score" | reverse %}
-{% assign related_posts = related_posts | slice: 0, 3 %}
+  {% endfor %}
+{% else %}
+  {% assign older_posts = site.posts | where_exp: "item", "item.date < page.date" | sort: "date" | reverse %}
+  {% assign newer_posts = site.posts | where_exp: "item", "item.date > page.date" | sort: "date" %}
+  {% assign fallback_posts = older_posts | concat: newer_posts %}
+  {% assign fallback_posts = fallback_posts | reject: "url", current_url %}
+  {% assign related_posts = fallback_posts | slice: 0, 3 %}
+{% endif %}
 
 {% if related_posts.size > 0 %}
 <div class="card mt-5 shadow-sm">
@@ -43,12 +23,12 @@
     🔗 Articoli correlati
   </div>
   <ul class="list-group list-group-flush">
-    {% for rel in related_posts %}
+    {% for post in related_posts %}
       <li class="list-group-item">
-        <a href="{{ rel.url | relative_url }}" class="text-primary text-decoration-none">
-          {{ rel.title }}
+        <a href="{{ post.url | relative_url }}" class="text-primary text-decoration-none">
+          {{ post.title }}
         </a><br>
-        <small class="text-muted">{{ rel.date | date: "%d %b %Y" }}</small>
+        <small class="text-muted">{{ post.date | date: "%d %b %Y" }}</small>
       </li>
     {% endfor %}
   </ul>
