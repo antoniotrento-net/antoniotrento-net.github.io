@@ -1,34 +1,56 @@
-{% assign current_words = include.current.title | downcase | split: ' ' %}
-{% assign related = "" | split: "" %}
+{% assign stopwords = "di,che,con,per,del,della,allo,alla,in,un,una,il,la,e,a,da,su,tra,fra,l'" | split: "," %}
+{% assign current_words = page.description | downcase | replace: '.', '' | replace: ',', '' | split: ' ' %}
+{% assign current_keywords = "" | split: "" %}
+
+{% for word in current_words %}
+  {% unless stopwords contains word %}
+    {% assign current_keywords = current_keywords | push: word %}
+  {% endunless %}
+{% endfor %}
+
+{% assign scored_posts = "" | split: "" %}
 
 {% for post in site.posts %}
-  {% if post.url != include.current.url %}
-    {% assign match_score = 0 %}
-    {% assign title_words = post.title | downcase | split: ' ' %}
-    {% for word in current_words %}
-      {% if title_words contains word %}
-        {% assign match_score = match_score | plus: 1 %}
+  {% if post.url != page.url and post.description %}
+    {% assign post_words = post.description | downcase | replace: '.', '' | replace: ',', '' | split: ' ' %}
+    {% assign post_keywords = "" | split: "" %}
+    {% for word in post_words %}
+      {% unless stopwords contains word %}
+        {% assign post_keywords = post_keywords | push: word %}
+      {% endunless %}
+    {% endfor %}
+
+    {% assign score = 0 %}
+    {% for word in current_keywords %}
+      {% if post_keywords contains word %}
+        {% assign score = score | plus: 1 %}
       {% endif %}
     {% endfor %}
-    {% if match_score > 1 %}
-      {% assign related = related | push: post %}
+
+    {% if score > 0 %}
+      {% assign post_with_score = post | merge: { "similarity_score": score } %}
+      {% assign scored_posts = scored_posts | push: post_with_score %}
     {% endif %}
   {% endif %}
 {% endfor %}
 
-{% if related.size > 0 %}
-  <div class="card mt-4">
-    <div class="card-header bg-primary text-white">
-      Articoli correlati
-    </div>
-    <ul class="list-group list-group-flush">
-      {% for post in related limit:3 %}
-        <li class="list-group-item">
-          <a href="{{ post.url }}" class="text-decoration-none">
-            {{ post.title }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+{% assign related_posts = scored_posts | sort: "similarity_score" | reverse %}
+{% assign related_posts = related_posts | slice: 0, 3 %}
+
+{% if related_posts.size > 0 %}
+<div class="card mt-5 shadow-sm">
+  <div class="card-header bg-dark text-white fw-bold">
+    🔗 Articoli correlati
   </div>
+  <ul class="list-group list-group-flush">
+    {% for rel in related_posts %}
+      <li class="list-group-item">
+        <a href="{{ rel.url | relative_url }}" class="text-primary text-decoration-none">
+          {{ rel.title }}
+        </a><br>
+        <small class="text-muted">{{ rel.date | date: "%d %b %Y" }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 {% endif %}
