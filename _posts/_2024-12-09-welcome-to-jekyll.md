@@ -3,6 +3,13 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2024-12-09 09:18:11 +0100
 categories: jekyll update
+image: assets/images/Introduzione_a_LangChain_per_Agentic_App.jpg
+og_image: assets/images/Introduzione_a_LangChain_per_Agentic_App.jpg
+description: "Scopri cos'è LangChain e come usarlo per creare agentic app intelligenti e scalabili; una guida completa per chi vuole innovare con sviluppo AI."
+related:
+  - /altro-articolo/
+  - /un-altro-post/
+  - /terzo-articolo/
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
