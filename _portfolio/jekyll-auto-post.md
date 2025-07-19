@@ -6,6 +6,7 @@ description: "Sistema automatico che genera e pubblica articoli in un sito Jekyl
 image: "/assets/images/portfolio/jekyll-auto-post/jekyll-auto-post.jpg"
 image-header: "/assets/images/portfolio/jekyll-auto-post/jekyll-auto-post.jpg"
 image-paint: "/assets/images/portfolio/jekyll-auto-post/jekyll-auto-post.jpg"
+tags: [AI, Automazione, backend]
 ---
 
 **Jekyll Auto Post** è un progetto backend sviluppato per **automatizzare completamente la creazione, generazione e pubblicazione di articoli** su siti web statici Jekyll. Il sistema è progettato per ricevere input da un file CSV e orchestrare l'intero flusso di pubblicazione grazie a un workflow intelligente in n8n.

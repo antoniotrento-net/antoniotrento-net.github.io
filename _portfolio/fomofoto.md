@@ -6,6 +6,7 @@ description: "Sito portfolio AMP fotografico sviluppato da Antonio Trento"
 image: "/assets/images/portfolio/fomofoto/fomofoto.jpg"
 image-header:
 image-paint: "/assets/images/portfolio/fomofoto/fomofoto.jpg"
+tags: [Frontend, AMP, Webdesign, Blog]
 ---
 
 

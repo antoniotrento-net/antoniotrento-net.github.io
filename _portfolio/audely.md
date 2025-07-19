@@ -6,6 +6,7 @@ description: "MVP di assistente vocale AI per gestire prenotazioni Google Calend
 image: "/assets/images/portfolio/audely/audely-logo-video.jpg"
 image-header: "/assets/images/portfolio/audely/audely-logo-video.jpg"
 image-paint: "/assets/images/portfolio/audely/audely-logo-video.jpg"
+tags: [AI, Automazione, Webdesign, PhoneCalls]
 ---
 
 Audely è un progetto personale sviluppato come MVP di un assistente vocale AI agentico focalizzato su due funzioni principali: la gestione di prenotazioni tramite Google Calendar e la risposta automatizzata a domande frequenti (FAQ), emulando un servizio clienti di base.
