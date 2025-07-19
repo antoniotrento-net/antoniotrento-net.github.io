@@ -451,3 +451,111 @@ Ti basta dirmi se vuoi usare:
 ---
 
 Pronto a partire con il workflow JSON completo?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Airtable
+
+Per connettere **n8n** ad **Airtable**, segui questi passaggi:
+
+---
+
+## ✅ 1. **Crea un account Airtable (se non l'hai già)**
+
+Vai su [https://airtable.com/](https://airtable.com/) e crea un account gratuito.
+
+---
+
+## ✅ 2. **Ottieni l’API Key o il Personal Access Token**
+
+### Dal 2024 Airtable **ha dismesso le API Key classiche**, quindi usa i **Personal Access Token (PAT)**:
+
+### 🔹 Crea un PAT:
+
+1. Vai su: [https://airtable.com/create/tokens](https://airtable.com/create/tokens)
+2. Dai un nome al token, es. `n8n-token`
+3. Concedi i permessi **"data.records\:read", "data.records\:write"**, ecc. per le **workspace/base** che ti servono
+4. Copia il token
+
+---
+
+## ✅ 3. **Accedi a n8n**
+
+* Se è in locale: vai su `http://localhost:5678`
+* Se è su server: accedi all’URL pubblico del tuo n8n
+
+---
+
+## ✅ 4. **Crea le credenziali Airtable su n8n**
+
+1. Vai in **"Credentials"** (Credenziali)
+2. Clicca **"New Credential"**
+3. Cerca e scegli **"Airtable Personal Access Token API"**
+4. Inserisci:
+
+   * **Access Token**: incolla il PAT
+   * (Opzionale) **Base ID**: puoi anche impostarlo direttamente nel nodo
+
+---
+
+## ✅ 5. **Recupera Base ID e Table ID di Airtable**
+
+1. Vai su [https://airtable.com/api](https://airtable.com/api)
+2. Seleziona la base che vuoi usare
+3. In alto troverai il tuo **Base ID** (es. `appXXXXXXXXXXXXXX`)
+4. Il **nome della tabella** lo trovi nell’interfaccia Airtable (es. `Tasks`, `Leads`, ecc.)
+
+---
+
+## ✅ 6. **Crea un Workflow su n8n con un nodo Airtable**
+
+1. Clicca su `+` e aggiungi un nodo: **Airtable**
+2. Seleziona l’azione (es. `List Records`, `Create Record`, `Update Record`)
+3. Scegli:
+
+   * Le credenziali create
+   * Il **Base ID**
+   * Il **Table name**
+4. Configura i campi richiesti (es. i campi da scrivere, filtri, limiti, ecc.)
+
+---
+
+## ✅ 7. **Testa il nodo e collega al flusso**
+
+* Premi **Execute Node** per vedere se funziona
+* Collega il nodo ad altri step del tuo flusso (webhook, email, Google Sheets, ecc.)
+
+---
+
+## ✅ 8. (Facoltativo) **Usa Airtable in automazioni complesse**
+
+* Puoi usare Airtable per:
+
+  * Ricevere nuovi dati
+  * Scrivere risultati dopo una chiamata API
+  * Aggiornare task
+  * Inviare email automatiche dopo inserimento dati
+
+---
+
+Se mi dici **cosa vuoi fare con Airtable**, posso fornirti un esempio **concreto di workflow n8n**.
