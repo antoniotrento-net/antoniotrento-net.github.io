@@ -1,0 +1,34 @@
+{% assign current_words = include.current.title | downcase | split: ' ' %}
+{% assign related = "" | split: "" %}
+
+{% for post in site.posts %}
+  {% if post.url != include.current.url %}
+    {% assign match_score = 0 %}
+    {% assign title_words = post.title | downcase | split: ' ' %}
+    {% for word in current_words %}
+      {% if title_words contains word %}
+        {% assign match_score = match_score | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if match_score > 1 %}
+      {% assign related = related | push: post %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if related.size > 0 %}
+  <div class="card mt-4">
+    <div class="card-header bg-primary text-white">
+      Articoli correlati
+    </div>
+    <ul class="list-group list-group-flush">
+      {% for post in related limit:3 %}
+        <li class="list-group-item">
+          <a href="{{ post.url }}" class="text-decoration-none">
+            {{ post.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
