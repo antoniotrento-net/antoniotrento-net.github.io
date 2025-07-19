@@ -53,46 +53,7 @@
 {% comment %}
 {% include cookie-consent.html %}
 {% endcomment %}
-<!-- CTA Audely con pulsante X -->
-<div id="cta-audely" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #000; color: #fff; padding: 16px 24px; text-align: center; z-index: 9999; box-shadow: 0 -4px 10px rgba(0,0,0,0.2);">
-  <!-- Pulsante chiudi -->
-  <button id="cta-close-btn" aria-label="Chiudi" style="position: absolute; top: 8px; right: 12px; background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;">
-    &times;
-  </button>
-
-  <div style="max-width: 800px; margin: 0 auto;">
-    <p class="mb-2" style="font-size: 1rem;">
-      🤖 L’AI sta rivoluzionando il business. <strong>Se non la usi tu, lo farà la concorrenza.</strong>
-    </p>
-    <a href="https://antoniotrento.net/contatti/" class="btn btn-primary" style="background-color: #38bdf8; border: none; color: #000; font-weight: bold; padding: 10px 20px; border-radius: 8px; text-decoration: none;">
-      Prenota una call gratuita
-    </a>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let ctaShown = false;
-    const cta = document.getElementById("cta-audely");
-    const closeBtn = document.getElementById("cta-close-btn");
-
-    window.addEventListener("scroll", function () {
-      const scrollY = window.scrollY || window.pageYOffset;
-      const documentHeight = document.documentElement.scrollHeight;
-      const windowHeight = window.innerHeight;
-      const scrollPercent = (scrollY + windowHeight) / documentHeight;
-
-      if (!ctaShown && scrollPercent >= 0.5) {
-        cta.style.display = "block";
-        ctaShown = true;
-      }
-    });
-
-    closeBtn.addEventListener("click", function () {
-      cta.style.display = "none";
-    });
-  });
-</script>
+{% include popup-down.html %}
 
 </main>
 <script src="{{ '/assets/js/bootstrap/bootstrap.bundle.min.js' | relative_url }}"></script>
