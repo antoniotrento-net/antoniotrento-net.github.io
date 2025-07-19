@@ -1,48 +1,41 @@
 ---
 layout: default
 title: Antonio Trento - Portfolio
-description: "Scopri i progetti e le soluzioni realizzate: integrazione sistemi, app personalizzate, automazioni e AI."
+description: "Progetti di automazione, AI, app vocali e integrazione avanzata. Scopri i lavori realizzati."
 permalink: /portfolio/
 ---
 
-<div class="hero-100hv position-relative d-flex flex-column justify-content-end">
-  <picture>
-    <source srcset="/assets/images/index/hero-bg-antonio-trento-mobile.jpg" media="(max-width: 768px)">
-    <img src="/assets/images/index/hero-bg-antonio-trento.jpg" class="hero-bg img-fluid" alt="Sfondo Antonio Trento">
-  </picture>
-  <div class="hero-overlay-white"></div>
-  <div class="container col-xxl-8 py-5 position-relative">
-    <div class="row justify-content-center py-5">
-      <div class="col-12 col-md-8 text-center">
-        <h1 class="display-5 fw-bold mb-3">Portfolio</h1>
-        <p class="lead">Una selezione dei miei progetti: integrazione sistemi, automazioni, app su misura e soluzioni AI.</p>
+<section class="py-5 text-center bg-light">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Portfolio</h1>
+    <p class="lead">Soluzioni reali sviluppate per semplificare il lavoro, automatizzare processi e integrare sistemi intelligenti.</p>
+  </div>
+</section>
+
+<section class="container py-5">
+  {% for item in site.portfolio %}
+    <div class="row align-items-center py-5 {% if forloop.index0 modulo 2 == 1 %}flex-row-reverse{% endif %}">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <a href="{{ item.url }}">
+          <img src="{{ item.image }}" alt="{{ item.title }}" class="img-fluid rounded-4 shadow-sm">
+        </a>
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold">{{ item.title }}</h2>
+        {% if item.subtitle %}
+          <p class="text-muted fst-italic">{{ item.subtitle }}</p>
+        {% endif %}
+        <p>{{ item.description }}</p>
+        <a href="{{ item.url }}" class="btn btn-primary mt-2">Scopri di più</a>
       </div>
     </div>
+    <hr class="my-5">
+  {% endfor %}
+</section>
+
+<section class="bg-white py-5 border-top">
+  <div class="container">
+    <h2 class="display-6 fw-bold mb-4 text-center">Domande frequenti</h2>
+    {% include accordion-faq.html %}
   </div>
-</div>
-
-<div class="container py-5">
-  <div class="row g-4">
-    {% for item in site.portfolio %}
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm">
-          <a href="{{ item.url }}">
-            <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">{{ item.title }}</h5>
-            {% if item.subtitle %}<p class="card-text">{{ item.subtitle }}</p>{% endif %}
-            <a href="{{ item.url }}" class="btn btn-outline-primary btn-sm">Dettagli</a>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
-
-{% include about.html %}
-
-<div class="container py-5">
-  <h2 class="display-5 fw-bold mb-4">Domande frequenti</h2>
-  {% include accordion-faq.html %}
-</div>
+</section>
