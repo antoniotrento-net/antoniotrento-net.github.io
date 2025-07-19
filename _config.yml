@@ -97,6 +97,7 @@ highlighter: rouge
 
 include:
   - assets
+  - robots.txt
 
 keywords:
   - automazione
