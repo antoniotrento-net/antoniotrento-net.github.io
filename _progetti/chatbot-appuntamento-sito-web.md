@@ -456,6 +456,74 @@ Pronto a partire con il workflow JSON completo?
 
 
 
+Il messaggio di errore che ricevi è chiaro: **il tuo server n8n non sta permettendo richieste CORS dal tuo dominio frontend**.
+
+---
+
+## 🛑 Problema
+
+Quando il browser prova a chiamare il webhook `https://n8n.antoniotrento.net/webhook/antoniotrento-net-chatbot`, **blocca la richiesta perché manca l'header CORS**:
+
+```
+Access-Control-Allow-Origin: *
+```
+
+Oppure:
+
+```
+Access-Control-Allow-Origin: https://tuosito.it
+```
+
+---
+
+## ✅ Soluzione
+
+### 🔧 1. **Abilita CORS in n8n**
+
+Se stai usando n8n **self-hosted (es. via Docker)**, devi aggiungere questa variabile nel file `.env` o nel `docker-compose.yml`:
+
+#### Esempio `.env`
+
+```env
+N8N_GENERIC_CORS_ORIGINS=https://tuosito.it
+```
+
+Oppure per test locali:
+
+```env
+N8N_GENERIC_CORS_ORIGINS=*
+```
+
+#### Esempio `docker-compose.yml`
+
+```yaml
+environment:
+  - N8N_GENERIC_CORS_ORIGINS=https://tuosito.it
+```
+
+Dopo aver aggiunto questa variabile:
+
+### 🔁 2. **Riavvia il container**
+
+```bash
+docker compose down
+docker compose up -d
+```
+
+---
+
+### 📌 Note importanti
+
+* Non usare `*` in produzione se invii o ricevi **dati sensibili** (meglio specificare il dominio reale).
+* Il tuo frontend deve essere servito da `https://` se anche n8n lo è (niente mix http/https).
+
+---
+
+### ✅ Testa di nuovo
+
+Dopo il riavvio, apri la console del browser e prova a inviare un messaggio: l’errore CORS non dovrebbe più comparire e il bot risponderà.
+
+Se vuoi, posso aiutarti a modificare direttamente il tuo `docker-compose.yml` o script di deploy. Vuoi farlo ora?
 
 
 
