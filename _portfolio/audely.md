@@ -26,11 +26,13 @@ Audely rappresenta un passo concreto verso la realizzazione di assistenti vocali
 ---
 
 Per scoprire il progetto, demo e codice sorgente visita:
+
 🌐 **Sito web:** [https://audely.github.io](https://audely.github.io)
 
 ---
 
 Il repository con il codice è disponibile qui:  
+
 📂 **Repository GitHub:** [https://github.com/antonio/audely](https://github.com/antonio/audely)
 ---
 
