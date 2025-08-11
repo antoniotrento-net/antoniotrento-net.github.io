@@ -39,6 +39,7 @@ Questo progetto è stato pensato per **mettere la potenza dei dati nelle mani de
 
 ### 1. Analisi Base
 - Calcolo diretto del churn rate con formula:
+
 ```
 
 (Clienti Persi / Clienti Totali) × 100
