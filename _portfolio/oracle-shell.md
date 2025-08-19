@@ -6,7 +6,7 @@ description: "Shell interattiva per esplorare e fare reverse engineering su data
 image: "/assets/images/portfolio/oracle-shell/oracle-shell.jpg"
 image-header: "/assets/images/portfolio/oracle-shell/oracle-shell.jpg"
 image-paint: "/assets/images/portfolio/oracle-shell/oracle-shell.jpg"
-tags: [python, shell, backend, tools]
+tags: [python, backend, reverse-engineering, data-discovery, cli, dba-tools]
 ---
 
 ## Panoramica
