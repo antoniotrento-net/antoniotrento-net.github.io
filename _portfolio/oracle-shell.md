@@ -1,73 +1,59 @@
 ---
 layout: portfolio
-title: "Jekyll Auto Post – Workflow AI per Generazione e Pubblicazione Automatica"
-date: 2025-07-19
-description: "Sistema automatico che genera e pubblica articoli in un sito Jekyll partendo da un CSV, con contenuti scritti da AI e commit su GitHub, integrato con automazioni n8n."
-image: "/assets/images/portfolio/jekyll-auto-post/jekyll-auto-post.jpg"
-image-header: "/assets/images/portfolio/jekyll-auto-post/jekyll-auto-post.jpg"
-image-paint: "/assets/images/portfolio/jekyll-auto-post/jekyll-auto-post.jpg"
-tags: [AI, Automazione, backend]
+title: "oracle-shell – Reverse engineering per DB Oracle"
+date: 2025-08-19
+description: "Shell interattiva per esplorare e fare reverse engineering su database Oracle: REPL, comandi meta, ricerca colonne (es. IBAN), esecuzione batch e config via .env"
+image: "/assets/images/portfolio/oracle-shell/oracle-shell.jpg"
+image-header: "/assets/images/portfolio/oracle-shell/oracle-shell.jpg"
+image-paint: "/assets/images/portfolio/oracle-shell/oracle-shell.jpg"
+tags: [python, shell, backend, tools]
 ---
 
-**Jekyll Auto Post** è un progetto backend sviluppato per **automatizzare completamente la creazione, generazione e pubblicazione di articoli** su siti web statici Jekyll. Il sistema è progettato per ricevere input da un file CSV e orchestrare l'intero flusso di pubblicazione grazie a un workflow intelligente in n8n.
+## Panoramica
 
----
+**oracle-shell** è una utility da terminale pensata per **fare reverse engineering su database Oracle** quando la documentazione è scarsa o nulla. Consente di scoprire velocemente **dove vivono davvero i dati**, mappare tabelle/colonne e verificare flussi applicativi con ricerche mirate (es. *IBAN*).
 
-### Caratteristiche principali
+> Progetto portfolio di **Antonio Trento**.
 
-- **Integrazione con AI generativa**: tramite modelli GPT-4o-mini, il sistema genera automaticamente testi editoriali coerenti e ottimizzati per SEO a partire da un semplice input testuale.
-- **Pipeline n8n completamente automatizzata**: il CSV viene letto in automatico, vengono scelti gli articoli ancora da pubblicare, trasformati in file Markdown compatibili con Jekyll e inviati su GitHub tramite commit diretto su `main`.
-- **Gestione immagini e SEO**: il sistema può anche generare immagini di copertina personalizzate (tramite OpenAI Image API o Sora) e includerle nel frontmatter, ottimizzando i contenuti per la condivisione social.
-- **Pubblicazione multi-piattaforma**: ogni articolo può essere automaticamente condiviso su social media come Twitter/X, LinkedIn o Facebook, ed eventualmente inoltrato a una newsletter.
+## Problema
 
----
+In molti contesti enterprise il database è ampio, storico e poco omogeneo. Serviva uno strumento **leggero e immediato** per:
 
-### Utilizzo reale
+* esplorare schemi e tabelle senza IDE pesanti,
+* cercare **campi chiave** (es. IBAN) in tutto il DB,
+* lanciare query in sequenza con **sicurezza su DML** (commit/rollback espliciti).
 
-Il sistema **è già utilizzato in produzione su vari siti attivi** come:
+## Soluzione
 
-- 🔗 [antoniotrento.net](https://antoniotrento.net) — sito personale e portfolio tecnico
-- 🔗 [audely.github.io](https://audely.github.io) — progetto di receptionist AI vocale automatica
-- 🔗 [fomofoto.net](https://fomofoto.net) — esperimento editoriale di pubblicazione visuale e fotografica
+* **REPL SQL**: esecuzione quando termini con `;`, multi-riga, messaggistica chiara.
+* **Comandi meta**:
 
-Questo conferma l'affidabilità del sistema in scenari eterogenei, dalla pubblicazione tecnica all'editoria multimediale.
+  * `\schemas`, `\tables [pattern]`, `\d owner.tabella`, `\find %TESTO%`.
+* **Ricerca rapida “investigativa”**: pattern su dizionari Oracle per trovare colonne candidate (es. tutte quelle che contengono “IBAN”), con snippet pronti per verifiche record-level.
+* **Batch mode**: `--file` per script `.sql` separati da `;`.
+* **Config via `.env`**: nessuna credenziale hardcoded; pronto per ambienti diversi.
 
----
+## Come viene usato
 
-### Tecnologie usate
+Un caso tipico è il **tracciamento end-to-end**:
 
-- **Jekyll** per la generazione del sito statico
-- **n8n** per l’automazione backend low-code
-- **GitHub API** per versioning e deploy continuo
-- **OpenAI GPT-4o-mini** per la scrittura dei contenuti
-- **Image AI (DALL·E / Sora)** per le immagini automatiche
-- **Docker** per l’ambiente di esecuzione
-- **CSV** come input e sistema di stato semplificato
+1. si inserisce un **valore fittizio** dal frontend (es. un IBAN di test),
+2. con `\find %IBAN%` si individuano le colonne candidate,
+3. si lancia una **ricerca normalizzata** (maiuscolo, senza spazi/trattini) per capire **quali tabelle** vengono realmente aggiornate,
+4. si procede a verifiche/patch scriptate con DML e **commit controllato**.
 
----
+## Stack & dettagli
 
-### Vantaggi strategici
+* **Python** + `oracledb` (Instant Client)
+* Output tabellare leggibile, **limite righe** configurabile (`--limit`)
+* Supporto Windows; encoding UTF-8 e fallback compatibili con prompt datati
 
-Questo progetto è una dimostrazione pratica di come AI e automazione possano ridurre drasticamente il tempo, il costo e la complessità nella gestione di contenuti digitali. Il sistema consente la **scalabilità editoriale** con intervento umano quasi nullo, mantenendo **alta qualità e coerenza visiva**.
+## Risultato
 
-Grazie alla sua architettura modulare, può essere adattato ad altri casi d’uso come:
+Riduce drasticamente il tempo di discovery: da “giorni a colpi di SELECT casuali” a **minuti** con un flusso guidato. Ideale per **migrazioni**, **refactoring di integrazioni** e **audit**.
 
-- redazioni digitali
-- knowledge base tecniche
-- marketplace di contenuti
-- siti multilingua con pubblicazione automatica
+## Codice sorgente
 
----
+* GitHub: **[antonio-backend-projects/oracle-shell](https://github.com/antonio-backend-projects/oracle-shell)**
 
-### Codice e demo
-
-🔧 Codice sorgente disponibile su GitHub:  
-**[github.com/antonio-backend-projects/jekyll-recipe-ai](https://github.com/antonio-backend-projects/jekyll-recipe-ai)**
-
-🌐 Demo pubblica:  
-**[antonio-backend-projects.github.io/jekyll-recipe-ai](https://antonio-backend-projects.github.io/jekyll-recipe-ai)**
-
----
-
-Jekyll Auto Post è un perfetto esempio di orchestrazione intelligente tra AI, automazione e strumenti open-source. Rappresenta una **soluzione scalabile, robusta e già testata sul campo**, pensata per creator, aziende, e sviluppatori che vogliono un sistema editoriale automatico sempre attivo.
 
