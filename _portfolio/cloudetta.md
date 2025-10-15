@@ -376,45 +376,6 @@ Lo sviluppo di Cloudetta dimostra una competenza profonda e trasversale in:
 
 ---
 
-## 🧠 Dettagli Tecnici
-
-### Configurazione
-Tutti i parametri sono gestiti tramite `.env`, permettendo setup riproducibili:
-```bash
-MAIL_PROVIDER=sendgrid
-DJANGO_SECRET_KEY=...
-ODOO_DB_PASSWORD=...
-NEXTCLOUD_DB_PASSWORD=...
-````
-
-### Deploy
-
-Installazione in un unico comando:
-
-```bash
-chmod +x install.sh
-./install.sh
-```
-
-### Backup
-
-Backup completi schedulati:
-
-```bash
-docker exec -it backup /backup/backup.sh
-```
-
-### Restore
-
-Ripristino manuale o automatico (prossimamente via `restore.sh`):
-
-```bash
-psql -U user -d db < dump.sql
-tar -xzvf volume.tar.gz -C /var/lib/docker/volumes/...
-```
-
----
-
 ## 🧰 DevOps e Automazione
 
 Cloudetta è costruita attorno a **Docker Compose**, ma l’intera architettura è facilmente migrabile a **Kubernetes** o **Portainer**.
