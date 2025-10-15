@@ -2,11 +2,11 @@
 layout: portfolio
 title: "Cloudetta"
 date: 2025-10-05
-description: "Cloudetta è una piattaforma open-source integrata per la gestione aziendale cloud, che unisce ERP, SaaS, automazione e documentazione in un unico stack modulare."
+description: "Cloudetta è un ecosistema digitale open-source e sovrano per PMI. Integra ERP, marketing, BI, e collaborazione in uno stack Docker unificato, per un controllo totale dei dati e dei processi aziendali."
 image: "/assets/images/portfolio/cloudetta/cloudetta.jpg"
 image-header: "/assets/images/portfolio/cloudetta/cloudetta.jpg"
 image-paint: "/assets/images/portfolio/cloudetta/cloudetta.jpg"
-tags: [Open Source, SaaS, ERP, Docker, Odoo, Django, n8n, Nextcloud, DevOps, Cloud Automation, Stripe, System Integration]
+tags: [Open Source, DevOps, Cloud, Docker, Odoo, Django, Mautic, Apache Superset, Business Intelligence, n8n, Prometheus, Grafana, Loki, CrowdSec, Restic, System Architecture, SaaS]
 ---
 
 > *"L’obiettivo non era costruire l’ennesima suite gestionale, ma una piattaforma unificata, realmente open-source, capace di offrire a qualsiasi azienda — anche la più piccola — la potenza e l’integrazione di un ecosistema enterprise."*
@@ -17,78 +17,112 @@ Il progetto rappresenta la sintesi di anni di esperienza in **integrazione di si
 
 ---
 
-## 🌍 Visione
-
-> *Cloudetta è il “Business Cloud” open-source: un ecosistema integrato che collega persone, dati e processi, eliminando la frammentazione e semplificando l’automazione.*
-
-Dove molte aziende usano dieci strumenti scollegati (gestionali, ticketing, file sharing, automazioni), Cloudetta unisce tutto in un’unica architettura coerente, distribuita via **Docker Compose** e pronta per il deploy in **on-premise**, **VPS** o **Kubernetes**.
+> "L'obiettivo di Cloudetta non è fornire software, ma restituire sovranità. È un ecosistema digitale integrato, open-source e self-hosted, che permette alle aziende di possedere e controllare i propri strumenti e i propri dati, liberandosi dal vendor lock-in."
 
 ---
 
-## 🏗️ Architettura: Un Ecosistema Modulare
+## La Visione: Un Ecosistema Digitale Unificato
 
-L’architettura di Cloudetta segue un approccio **multi-layer** in cui ogni servizio è un modulo indipendente, connesso attraverso API e orchestrato da un reverse proxy centralizzato (**Caddy**).
+Cloudetta nasce per risolvere la frammentazione che affligge le PMI: decine di servizi cloud disconnessi, costi mensili crescenti e dati aziendali sparsi presso terzi. La piattaforma aggrega i migliori strumenti open-source in un unico **stack coerente e pre-integrato**, orchestrato da Docker e installabile su qualsiasi infrastruttura (cloud, on-premise, VPS).
 
-*(Di seguito un diagramma architetturale in formato [Mermaid](https://mermaid.js.org/) incluso nel README ufficiale.)*
-
-### 1. Core Application Layer
-
-Il cuore dell’ecosistema è composto da:
-
-- **Django + Stripe** – per la gestione di utenti, abbonamenti e API.  
-  Include webhook automatici, API REST e autenticazione sicura.  
-- **Odoo ERP** – la colonna vertebrale gestionale: CRM, vendite, contabilità, con moduli italiani (`l10n_it`, `l10n_it_edi`) per la **fatturazione elettronica SDI/PEC**.  
-- **n8n Orchestrator** – l’automazione visiva. Gestisce flussi come:
-  - Creazione ticket su Redmine da un ordine Django
-  - Upload fatture su Nextcloud
-  - Invio email automatiche post-pagamento
-
-### 2. Collaboration & Documentation Layer
-
-Lato documentazione e collaborazione:
-
-- **Nextcloud** – per archiviare, condividere e sincronizzare documenti aziendali e fatture PDF.
-- **Redmine** – per il ticketing tecnico e il project management.
-- **DokuWiki** – per manuali interni e knowledge base operativa.
-
-### 3. Infrastructure Layer
-
-- **Caddy Reverse Proxy** – gestisce SSL automatico e instradamento dei domini `*.example.com` o `*.localhost`.  
-  Compatibile con **Cloudflare Tunnel**, consente deploy sicuri senza porte pubbliche.  
-- **Backup Container** – esegue backup giornalieri (DB, volumi, immagini Docker) alle 02:00, con log e restore rapido.
-
-### 4. Integration Layer
-
-Il ponte tra tutti i servizi:
-- Workflow **Django ↔ Odoo ↔ Nextcloud ↔ Redmine** via **n8n**.
-- Sincronizzazione bidirezionale di clienti, prodotti e documenti.
-- API REST unificate per automazioni esterne.
+Il risultato è un ambiente di lavoro centralizzato, dove i processi fluiscono senza interruzioni tra i vari reparti, dall'ERP al marketing, dalla collaborazione alla business intelligence.
 
 ---
 
-## ⚙️ Stack Tecnologico
+## I Componenti: Una Suite Aziendale Completa
 
-| Componente | Tecnologia | Ruolo |
-|-------------|-------------|-------|
-| **Backend Core** | Django + Stripe | Gestione utenti, abbonamenti, API |
-| **ERP** | Odoo + PostgreSQL | Contabilità, CRM, SDI/PEC |
-| **Automazione** | n8n (Node.js) | Workflow orchestration |
-| **Storage** | Nextcloud + MariaDB | File sharing e backup |
-| **Ticketing** | Redmine + MariaDB | Supporto e project management |
-| **Proxy** | Caddy | SSL + routing |
-| **Backup** | Bash + cron | Dump e tar periodici |
+Cloudetta è modulare. Ogni strumento è un container indipendente ma interconnesso, raggruppato per aree funzionali.
+
+### 1. Gestione e Operatività
+Il nucleo che governa l'azienda.
+- **Odoo (ERP):** La colonna vertebrale gestionale. Unisce CRM, vendite, acquisti, magazzino, contabilità e fatturazione elettronica italiana (l10n_it, l10n_it_edi).
+- **Django + Stripe (SaaS & Billing):** Il motore per la creazione di servizi SaaS, gestisce utenti, abbonamenti, pagamenti e fornisce API sicure per l'integrazione.
+
+### 2. Marketing e Comunicazione
+Strumenti per acquisire clienti e facilitare la collaborazione interna.
+- **Mautic (Marketing Automation):** Piattaforma per la gestione di campagne email, lead nurturing, segmentazione del pubblico e landing page.
+- **Mattermost (Team Chat):** L'alternativa open-source a Slack. Canali di discussione, team, integrazioni e notifiche centralizzate per una comunicazione interna fluida.
+
+### 3. Produttività e Collaborazione
+L'ufficio digitale dove il lavoro viene svolto e documentato.
+- **Nextcloud (File Sharing):** Archiviazione, condivisione e sincronizzazione sicura dei file aziendali, con client desktop e mobile.
+- **Redmine (Project Management):** Strumento robusto per il tracciamento di ticket, la gestione di progetti complessi e il monitoraggio delle attività.
+- **DokuWiki (Knowledge Base):** Un wiki semplice e potente per costruire la base di conoscenza interna, documentare procedure e manuali.
+
+### 4. Analisi e Decisioni Strategiche
+Trasformare i dati grezzi in insight per guidare le scelte aziendali.
+- **Apache Superset (Business Intelligence):** Il cruscotto di BI che si connette ai database di Odoo, Django e Mautic. Permette di creare dashboard interattive per visualizzare KPI di vendita, metriche di marketing e andamento degli abbonamenti.
+- **Plausible / Umami (Web Analytics):** Una soluzione di analytics cookieless e rispettosa della privacy per monitorare il traffico e l'utilizzo delle applicazioni web (es. portale Django, sito Odoo) senza compromettere i dati degli utenti.
 
 ---
 
-## 💡 Filosofia di Design
+## Il Sistema Nervoso: n8n per l'Automazione dei Workflow
 
-Cloudetta non è un semplice “docker-compose.yml” — è un **ecosistema integrato**, concepito per essere estensibile e manutenibile nel tempo.
+**n8n** è il collante che trasforma questa collezione di strumenti in un vero ecosistema. Attraverso i suoi workflow visuali, automatizza i processi che attraversano più applicazioni.
 
-- **Open-source & Self-hosted** → nessun lock-in, il codice è tuo.  
-- **Modulare** → ogni servizio può essere disattivato o sostituito.  
-- **Sicuro by design** → Caddy + SSL + gestione centralizzata degli accessi.  
-- **DevOps ready** → stesso stack in locale e in produzione.  
-- **Scalable** → pronto per Docker Swarm o Kubernetes.
+**Esempi di flussi di lavoro integrati:**
+- **Onboarding Cliente Automatizzato:** Un nuovo ordine in **Odoo** scatena un workflow in **n8n** che:
+  1. Aggiunge il cliente a una campagna di benvenuto su **Mautic**.
+  2. Crea un task di "kick-off" su **Redmine** per il project manager.
+  3. Invia una notifica al team vendite su un canale **Mattermost** dedicato.
+  4. Crea una cartella cliente condivisa su **Nextcloud**.
+- **Sincronizzazione Dati:** I dati dei clienti vengono mantenuti allineati tra **Odoo** e **Django**.
+- **Notifiche Intelligenti:** Eventi critici (es. un pagamento fallito su Stripe) generano ticket automatici su **Redmine** e allerte su **Mattermost**.
+
+---
+
+## Architettura e Fondamenta DevOps
+
+Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e manutenibilità.
+
+- **Gateway e Sicurezza Perimetrale:**
+  - **Caddy Server:** Reverse proxy automatico che gestisce tutto il traffico in entrata, fornisce certificati SSL/TLS e instrada le richieste ai servizi corretti.
+  - **CrowdSec:** Sistema di prevenzione delle intrusioni (IPS) che analizza i log di Caddy per identificare e bloccare traffico malevolo in tempo reale.
+
+- **Stack di Osservabilità (Monitoring & Logging):**
+  - **Prometheus & Grafana:** Monitoraggio proattivo delle performance di ogni container, dell'uso di CPU/RAM e dello stato dell'infrastruttura. Dashboard preconfigurate in Grafana offrono una vista completa sulla salute del sistema.
+  - **Loki & Promtail:** Sistema di logging centralizzato. Tutti i log dei container vengono raccolti, indicizzati e resi ricercabili tramite Grafana, semplificando il troubleshooting.
+
+- **Data Integrity e Disaster Recovery:**
+  - **Restic & MinIO:** Soluzione di backup robusta. Restic esegue backup crittografati, deduplicati e incrementali di tutti i volumi Docker e li archivia su uno storage S3-compatibile fornito da MinIO, garantendo restore rapidi e sicuri.
+  - **Trivy:** Scanner di vulnerabilità che analizza periodicamente le immagini Docker in uso per identificare falle di sicurezza note, permettendo un hardening proattivo.
+
+---
+
+## Tabella Tecnologica Completa
+
+| Ambito | Strumento | Tecnologia | Ruolo Principale |
+|---|---|---|---|
+| **Gateway** | Caddy | Go | Reverse Proxy, SSL automatico, Routing |
+| **ERP & CRM** | Odoo | Python, PostgreSQL | Gestione aziendale, Fatturazione Elettronica |
+| **SaaS & Billing** | Django | Python, PostgreSQL | Gestione abbonamenti, API, pagamenti Stripe |
+| **Marketing** | Mautic | PHP, MariaDB | Marketing Automation, Campagne Email |
+| **Team Chat** | Mattermost | Go, React, PostgreSQL | Comunicazione interna, Notifiche |
+| **File Storage** | Nextcloud | PHP, MariaDB | Archiviazione e condivisione file |
+| **Project Mgmt** | Redmine | Ruby on Rails, MariaDB | Ticketing, Gestione progetti |
+| **Knowledge Base**| DokuWiki | PHP | Documentazione interna, Wiki |
+| **Automazione** | n8n | Node.js, Vue.js | Orchestrazione workflow tra servizi |
+| **Business Intel.**| Apache Superset | Python, React | Creazione dashboard e analisi dati |
+| **Web Analytics** | Plausible/Umami | Go/Node.js | Statistiche d'uso cookieless |
+| **Monitoring** | Prometheus, Grafana | Go, TypeScript | Raccolta metriche e visualizzazione |
+| **Logging** | Loki, Promtail | Go | Aggregazione e ricerca log |
+| **Backup** | Restic, MinIO | Go | Backup crittografati su storage S3 |
+| **Sicurezza** | CrowdSec, Trivy | Go | Intrusion Prevention, Scansione vulnerabilità |
+| **Orchestrazione**| Docker Compose | YAML | Definizione e gestione dello stack |
+
+---
+
+## Competenze Dimostrate
+
+Lo sviluppo di Cloudetta dimostra una competenza profonda e trasversale in:
+
+- **System Architecture & DevOps:** Progettazione di architetture a microservizi complesse, containerizzate e resilienti.
+- **Full-Stack Development:** Padronanza di ecosistemi diversi (Python/Django, PHP, Ruby, Go, Node.js).
+- **Integrazione di Sistemi:** Capacità di far dialogare applicativi eterogenei tramite API, webhook e middleware di automazione (n8n).
+- **Cloud & Infrastructure Management:** Gestione di stack Docker, networking, storage persistente e sicurezza perimetrale.
+- **Osservabilità e Affidabilità (SRE):** Implementazione di stack completi per monitoring, logging e alerting (Prometheus, Grafana, Loki).
+- **Sicurezza Informatica:** Hardening di sistemi, gestione degli accessi, backup e disaster recovery (Caddy, CrowdSec, Restic).
+- **Business Process Analysis:** Comprensione dei flussi aziendali per tradurli in soluzioni tecniche integrate (ERP, CRM, Marketing).
 
 ---
 
@@ -128,18 +162,6 @@ Ripristino manuale o automatico (prossimamente via `restore.sh`):
 psql -U user -d db < dump.sql
 tar -xzvf volume.tar.gz -C /var/lib/docker/volumes/...
 ```
-
----
-
-## 🤝 Integrazioni Pronte
-
-| Integrazione           | Funzione                                 |
-| ---------------------- | ---------------------------------------- |
-| **Django → Redmine**   | Crea ticket da ordini o errori pagamento |
-| **Django → Nextcloud** | Carica fatture PDF automaticamente       |
-| **Odoo → Django**      | Sincronizza clienti/prodotti             |
-| **n8n → Email/SMS**    | Invia notifiche transazionali            |
-| **Backup → Nextcloud** | Replica automatica dei backup            |
 
 ---
 
