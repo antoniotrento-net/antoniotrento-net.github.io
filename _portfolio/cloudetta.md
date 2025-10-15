@@ -93,6 +93,25 @@ Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e 
 
 Questo diagramma mostra come i vari componenti di Cloudetta interagiscono tra loro, dal gateway di ingresso fino ai servizi di backend e agli stack operativi.
 <style>
+  .mermaid-toolbar{
+  position:absolute; top:.5rem; right:.5rem; z-index:2;
+  display:flex; gap:.4rem;
+  background:rgba(255,255,255,.85);      /* più leggibile su tema chiaro */
+  backdrop-filter: blur(4px);
+  padding:.25rem; border-radius:10px; border:1px solid #e5e7eb;
+  box-shadow: 0 4px 14px rgba(0,0,0,.12);
+}
+.mermaid-toolbar button{
+  padding:.35rem .55rem; border:0; border-radius:8px; cursor:pointer;
+  background:#111827; color:#fff; font:600 14px/1 system-ui;
+}
+.mermaid-toolbar button:active{ transform: translateY(1px); }
+
+/* In fullscreen mantieni la toolbar visibile e separata dal bordo */
+.mermaid-wrap:fullscreen .mermaid-toolbar,
+.mermaid-wrap:-webkit-full-screen .mermaid-toolbar{
+  top:1rem; right:1rem;
+}
 /* Wrapper base */
 .mermaid-wrap {
   position: relative;
@@ -165,7 +184,12 @@ Questo diagramma mostra come i vari componenti di Cloudetta interagiscono tra lo
 </style>
 
 <div id="cloudetta-diagram" class="mermaid-wrap">
-  <button class="mermaid-toolbar" type="button" aria-label="Schermo intero">⛶</button>
+    <div class="mermaid-toolbar" role="toolbar" aria-label="Controlli diagramma">
+    <button type="button" data-action="zoom-in"  aria-label="Zoom in"  title="Zoom in">＋</button>
+    <button type="button" data-action="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+    <button type="button" data-action="reset"    aria-label="Reset"    title="Adatta e centra">⟲</button>
+    <button type="button" data-action="fs"       aria-label="Schermo intero" title="Schermo intero">⛶</button>
+  </div>
 <div class="mermaid">
 graph TD
     subgraph Utente
@@ -264,15 +288,16 @@ graph TD
 </div>
 </div>
 <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
-  // Tema chiaro + impostazioni di resa più nitide
+  // Tema chiaro + resa controllata
   mermaid.initialize({
-    startOnLoad: false,                 // render controllato
+    startOnLoad: false,
     securityLevel: 'loose',
-    theme: 'base',                      // base è neutro/chiaro
+    theme: 'base',
     themeVariables: {
-      background: '#ffffff',            // sfondo bianco
+      background: '#ffffff',
       primaryColor: '#ffffff',
       primaryTextColor: '#111827',
       primaryBorderColor: '#e5e7eb',
@@ -281,57 +306,78 @@ document.addEventListener('DOMContentLoaded', async () => {
       tertiaryColor: '#f3f4f6',
       fontFamily: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"'
     },
-    flowchart: {
-      htmlLabels: true,
-      padding: 8,                       // riduce margini e “scatola nera”
-      useMaxWidth: true                 // usa tutta la larghezza disponibile
-    }
+    flowchart: { htmlLabels: true, padding: 8, useMaxWidth: true }
   });
 
   const wrap  = document.getElementById('cloudetta-diagram');
-  const btn   = wrap?.querySelector('.mermaid-toolbar');
   const block = wrap?.querySelector('.mermaid');
-  if (!wrap || !block) return;
+  const tb    = wrap?.querySelector('.mermaid-toolbar');
+  if (!wrap || !block || !tb) return;
 
-  // Render del SOLO blocco
+  // render del diagramma
   await mermaid.run({ nodes: [block] });
 
   const svg = wrap.querySelector('svg');
+  if (!svg || !window.svgPanZoom) return;
 
-  // Fit “responsive” fuori da full-screen
-  function fitNormal() {
-    if (!svg) return;
+  // inizializza pan/zoom
+  const panZoom = svgPanZoom(svg, {
+    zoomEnabled: true,
+    panEnabled: true,
+    controlIconsEnabled: false,  // usiamo la nostra toolbar
+    fit: true, center: true,
+    minZoom: 0.2, maxZoom: 10,
+    contain: true,               // evita di “perdere” il grafico ai bordi
+    dblClickZoomEnabled: true
+  });
+
+  // helper: adatta e centra
+  function fitCenter() {
+    panZoom.resize();
+    panZoom.fit();
+    panZoom.center();
+  }
+
+  // stato normale: SVG responsive
+  function setResponsive() {
     svg.removeAttribute('width');
     svg.removeAttribute('height');
     svg.style.width = '100%';
     svg.style.height = 'auto';
   }
-  fitNormal();
-  window.addEventListener('resize', fitNormal);
+  setResponsive();
+  window.addEventListener('resize', () => { setResponsive(); fitCenter(); });
 
-  // Fullscreen toggle
-  btn?.addEventListener('click', async () => {
+  // toolbar handlers
+  tb.querySelector('[data-action="zoom-in"]') .addEventListener('click', () => panZoom.zoomBy(1.2));
+  tb.querySelector('[data-action="zoom-out"]').addEventListener('click', () => panZoom.zoomBy(1/1.2));
+  tb.querySelector('[data-action="reset"]')   .addEventListener('click', fitCenter);
+  tb.querySelector('[data-action="fs"]')      .addEventListener('click', async () => {
     if (!document.fullscreenElement) {
       await wrap.requestFullscreen?.();
-      setTimeout(() => { /* ridisegna bounding box in FS */
-        // In FS non forziamo width/height: ci pensa il CSS FS sopra
-        // ma un tick aiuta i browser a ricalcolare il layout
-      }, 120);
     } else {
       await document.exitFullscreen?.();
     }
   });
 
-  // quando entri/esci dal full-screen, un piccolo delay per stabilizzare layout
+  // migliora UX mouse: zoom al cursore
+  svg.addEventListener('wheel', () => {
+    // piccolo ritardo per stabilizzare il bounding box dopo lo scroll
+    setTimeout(() => panZoom.updateBBox(), 16);
+  }, { passive: true });
+
+  // ricalcoli quando entri/esci dal full-screen
   document.addEventListener('fullscreenchange', () => {
-    setTimeout(() => {
-      if (!document.fullscreenElement) {
-        fitNormal(); // rimetto il comportamento responsive standard
-      }
-    }, 120);
+    // in FS il sizing è guidato dal CSS (95vw x 92vh), qui aggiorniamo il viewport interno
+    setTimeout(() => { panZoom.resize(); panZoom.updateBBox(); fitCenter(); }, 120);
+    if (!document.fullscreenElement) {
+      setResponsive();
+      setTimeout(() => { panZoom.updateBBox(); fitCenter(); }, 60);
+    }
   }, { passive: true });
 });
 </script>
+
 
 
 
