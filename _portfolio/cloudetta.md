@@ -182,11 +182,12 @@ graph TD
     Promtail -- Log --> Loki
     Loki --> Grafana
     Prometheus --> Grafana
-    Django -- Metriche & Log --> Prometheus & Promtail
-    Odoo -- Metriche & Log --> Prometheus & Promtail
+    Django -- "Metriche & Log" --> Prometheus
+    Django -- "Metriche & Log" --> Promtail
+    Odoo -- "Metriche & Log" --> Prometheus
+    Odoo -- "Metriche & Log" --> Promtail
     Restic -- Backup dei Volumi --> MinIO
-    
-end
+
 </div>
 
 <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
