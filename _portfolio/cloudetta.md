@@ -93,20 +93,77 @@ Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e 
 
 Questo diagramma mostra come i vari componenti di Cloudetta interagiscono tra loro, dal gateway di ingresso fino ai servizi di backend e agli stack operativi.
 <style>
-.mermaid-wrap { position: relative; border-radius: 8px; overflow: hidden; }
-.mermaid-wrap .mermaid { display:block; overflow:auto; }
-.mermaid-wrap svg { width: 100%; height: auto; }
+/* Wrapper base */
+.mermaid-wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;                 /* sfondo bianco anche non-FS */
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0,0,0,.05);
+}
+
+/* Contenuto mermaid */
+.mermaid-wrap .mermaid {
+  display: block;
+  overflow: auto;
+  min-height: 520px;                /* leggibile anche non in FS */
+  padding: 12px;
+}
+
+/* L’SVG di Mermaid si adatti al contenitore */
+.mermaid-wrap svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Toolbar */
 .mermaid-toolbar{
   position:absolute; top:.5rem; right:.5rem; z-index:2;
-  padding:.4rem .6rem; border:0; border-radius:6px; cursor:pointer;
-  background:rgba(0,0,0,.65); color:#fff; font:600 14px/1 system-ui;
+  padding:.35rem .55rem; border:0; border-radius:8px; cursor:pointer;
+  background:rgba(0,0,0,.62); color:#fff; font:600 14px/1 system-ui;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
 }
+
+/* FULLSCREEN: centrato, quasi tutto schermo, sfondo bianco */
+.mermaid-wrap:fullscreen,
+.mermaid-wrap:-webkit-full-screen {
+  background: #fff;           /* sfondo bianco */
+  display: flex;              /* centrare verticalmente/orizzontalmente */
+  align-items: center;
+  justify-content: center;
+}
+
+/* il contenitore del diagramma si espande in FS */
 .mermaid-wrap:fullscreen .mermaid,
 .mermaid-wrap:-webkit-full-screen .mermaid {
-  width: 100vw; height: 100vh; overflow:auto; background:#fff;
+  background: #fff;
+  width: 100vw;
+  height: 100vh;              /* spazio utile per centrare */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;                 /* niente padding in FS */
+  overflow: hidden;           /* tolgo scrollbar esterna */
 }
-.mermaid-wrap .mermaid{ min-height: 480px; }
+
+/* l’SVG occupa quasi tutto lo schermo, mantenendo proporzioni */
+.mermaid-wrap:fullscreen svg,
+.mermaid-wrap:-webkit-full-screen svg {
+  width: 95vw;                /* larghezza quasi piena */
+  height: 92vh;               /* altezza quasi piena */
+  max-width: 95vw;
+  max-height: 92vh;
+  display: block;
+  margin: 0 auto;
+}
+
+/* tema chiaro coerente con la pagina (fallback se il tema del sito è scuro) */
+:root {
+  color-scheme: light;
+}
 </style>
+
 <div id="cloudetta-diagram" class="mermaid-wrap">
   <button class="mermaid-toolbar" type="button" aria-label="Schermo intero">⛶</button>
 <div class="mermaid">
@@ -209,45 +266,73 @@ graph TD
 <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', async () => {
-  // Inizializza senza autoscan: renderizziamo noi il blocco specifico
-  mermaid.initialize({ startOnLoad: false, securityLevel: 'loose' });
+  // Tema chiaro + impostazioni di resa più nitide
+  mermaid.initialize({
+    startOnLoad: false,                 // render controllato
+    securityLevel: 'loose',
+    theme: 'base',                      // base è neutro/chiaro
+    themeVariables: {
+      background: '#ffffff',            // sfondo bianco
+      primaryColor: '#ffffff',
+      primaryTextColor: '#111827',
+      primaryBorderColor: '#e5e7eb',
+      lineColor: '#374151',
+      secondaryColor: '#f9fafb',
+      tertiaryColor: '#f3f4f6',
+      fontFamily: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"'
+    },
+    flowchart: {
+      htmlLabels: true,
+      padding: 8,                       // riduce margini e “scatola nera”
+      useMaxWidth: true                 // usa tutta la larghezza disponibile
+    }
+  });
 
-  const wrap = document.getElementById('cloudetta-diagram');
-  const btn  = wrap?.querySelector('.mermaid-toolbar');
+  const wrap  = document.getElementById('cloudetta-diagram');
+  const btn   = wrap?.querySelector('.mermaid-toolbar');
   const block = wrap?.querySelector('.mermaid');
   if (!wrap || !block) return;
 
-  // Render SOLO del blocco in questa pagina
+  // Render del SOLO blocco
   await mermaid.run({ nodes: [block] });
 
-  // Adatta l’SVG al contenitore
   const svg = wrap.querySelector('svg');
-  const fit = () => {
+
+  // Fit “responsive” fuori da full-screen
+  function fitNormal() {
     if (!svg) return;
-    // larghezza piena del contenitore
     svg.removeAttribute('width');
     svg.removeAttribute('height');
     svg.style.width = '100%';
     svg.style.height = 'auto';
-  };
-  fit();
-  window.addEventListener('resize', fit);
+  }
+  fitNormal();
+  window.addEventListener('resize', fitNormal);
 
   // Fullscreen toggle
   btn?.addEventListener('click', async () => {
     if (!document.fullscreenElement) {
       await wrap.requestFullscreen?.();
-      // piccolo delay per calcolare bounding box in FS
-      setTimeout(fit, 120);
+      setTimeout(() => { /* ridisegna bounding box in FS */
+        // In FS non forziamo width/height: ci pensa il CSS FS sopra
+        // ma un tick aiuta i browser a ricalcolare il layout
+      }, 120);
     } else {
       await document.exitFullscreen?.();
     }
   });
 
-  // quando esci dal full-screen, rifai il fit
-  document.addEventListener('fullscreenchange', () => setTimeout(fit, 120), { passive: true });
+  // quando entri/esci dal full-screen, un piccolo delay per stabilizzare layout
+  document.addEventListener('fullscreenchange', () => {
+    setTimeout(() => {
+      if (!document.fullscreenElement) {
+        fitNormal(); // rimetto il comportamento responsive standard
+      }
+    }, 120);
+  }, { passive: true });
 });
 </script>
+
 
 
 
