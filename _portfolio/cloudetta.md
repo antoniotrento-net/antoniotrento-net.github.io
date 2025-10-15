@@ -90,7 +90,7 @@ Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e 
 ---
 
 ## Tabella Tecnologica Completa
-
+<div class="table-responsive">
 | Ambito | Strumento | Tecnologia | Ruolo Principale |
 |---|---|---|---|
 | **Gateway** | Caddy | Go | Reverse Proxy, SSL automatico, Routing |
@@ -109,7 +109,7 @@ Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e 
 | **Backup** | Restic, MinIO | Go | Backup crittografati su storage S3 |
 | **Sicurezza** | CrowdSec, Trivy | Go | Intrusion Prevention, Scansione vulnerabilità |
 | **Orchestrazione**| Docker Compose | YAML | Definizione e gestione dello stack |
-
+</div>
 ---
 
 ## Competenze Dimostrate
