@@ -91,6 +91,7 @@ Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e 
 
 ## Tabella Tecnologica Completa
 <div class="table-responsive">
+  {{ "
 | Ambito | Strumento | Tecnologia | Ruolo Principale |
 |---|---|---|---|
 | **Gateway** | Caddy | Go | Reverse Proxy, SSL automatico, Routing |
@@ -100,7 +101,7 @@ Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e 
 | **Team Chat** | Mattermost | Go, React, PostgreSQL | Comunicazione interna, Notifiche |
 | **File Storage** | Nextcloud | PHP, MariaDB | Archiviazione e condivisione file |
 | **Project Mgmt** | Redmine | Ruby on Rails, MariaDB | Ticketing, Gestione progetti |
-| **Knowledge Base**| DokuWiki | PHP | Documentazione interna, Wiki |
+| **Knowledge Base** | DokuWiki | PHP | Documentazione interna, Wiki |
 | **Automazione** | n8n | Node.js, Vue.js | Orchestrazione workflow tra servizi |
 | **Business Intel.**| Apache Superset | Python, React | Creazione dashboard e analisi dati |
 | **Web Analytics** | Plausible/Umami | Go/Node.js | Statistiche d'uso cookieless |
@@ -109,6 +110,7 @@ Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e 
 | **Backup** | Restic, MinIO | Go | Backup crittografati su storage S3 |
 | **Sicurezza** | CrowdSec, Trivy | Go | Intrusion Prevention, Scansione vulnerabilità |
 | **Orchestrazione**| Docker Compose | YAML | Definizione e gestione dello stack |
+" | markdownify }}
 </div>
 ---
 
