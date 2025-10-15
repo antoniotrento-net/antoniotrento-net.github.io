@@ -93,7 +93,7 @@ Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e 
 
 Questo diagramma mostra come i vari componenti di Cloudetta interagiscono tra loro, dal gateway di ingresso fino ai servizi di backend e agli stack operativi.
 
-```mermaid
+<div class="mermaid">
 graph TD
     subgraph Utente
         Client[Browser / Client API]
@@ -187,12 +187,13 @@ graph TD
     Restic -- Backup dei Volumi --> MinIO
     
 end
-```
+</div>
 
-<!-- Caricamento di Mermaid.js e inizializzazione solo per questa pagina -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
-  mermaid.initialize({ startOnLoad: true });
+  document.addEventListener('DOMContentLoaded', () => {
+    mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+  });
 </script>
 
 
