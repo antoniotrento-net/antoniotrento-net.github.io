@@ -92,7 +92,23 @@ Cloudetta è costruita su principi DevOps per garantire stabilità, sicurezza e 
 ## Diagramma Architetturale Interattivo
 
 Questo diagramma mostra come i vari componenti di Cloudetta interagiscono tra loro, dal gateway di ingresso fino ai servizi di backend e agli stack operativi.
-
+<style>
+.mermaid-wrap { position: relative; border-radius: 8px; overflow: hidden; }
+.mermaid-wrap .mermaid { display:block; overflow:auto; }
+.mermaid-wrap svg { width: 100%; height: auto; }
+.mermaid-toolbar{
+  position:absolute; top:.5rem; right:.5rem; z-index:2;
+  padding:.4rem .6rem; border:0; border-radius:6px; cursor:pointer;
+  background:rgba(0,0,0,.65); color:#fff; font:600 14px/1 system-ui;
+}
+.mermaid-wrap:fullscreen .mermaid,
+.mermaid-wrap:-webkit-full-screen .mermaid {
+  width: 100vw; height: 100vh; overflow:auto; background:#fff;
+}
+.mermaid-wrap .mermaid{ min-height: 480px; }
+</style>
+<div id="cloudetta-diagram" class="mermaid-wrap">
+  <button class="mermaid-toolbar" type="button" aria-label="Schermo intero">⛶</button>
 <div class="mermaid">
 graph TD
     subgraph Utente
@@ -189,13 +205,51 @@ graph TD
     Restic -- Backup dei Volumi --> MinIO
 
 </div>
-
+</div>
 <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+document.addEventListener('DOMContentLoaded', async () => {
+  // Inizializza senza autoscan: renderizziamo noi il blocco specifico
+  mermaid.initialize({ startOnLoad: false, securityLevel: 'loose' });
+
+  const wrap = document.getElementById('cloudetta-diagram');
+  const btn  = wrap?.querySelector('.mermaid-toolbar');
+  const block = wrap?.querySelector('.mermaid');
+  if (!wrap || !block) return;
+
+  // Render SOLO del blocco in questa pagina
+  await mermaid.run({ nodes: [block] });
+
+  // Adatta l’SVG al contenitore
+  const svg = wrap.querySelector('svg');
+  const fit = () => {
+    if (!svg) return;
+    // larghezza piena del contenitore
+    svg.removeAttribute('width');
+    svg.removeAttribute('height');
+    svg.style.width = '100%';
+    svg.style.height = 'auto';
+  };
+  fit();
+  window.addEventListener('resize', fit);
+
+  // Fullscreen toggle
+  btn?.addEventListener('click', async () => {
+    if (!document.fullscreenElement) {
+      await wrap.requestFullscreen?.();
+      // piccolo delay per calcolare bounding box in FS
+      setTimeout(fit, 120);
+    } else {
+      await document.exitFullscreen?.();
+    }
   });
+
+  // quando esci dal full-screen, rifai il fit
+  document.addEventListener('fullscreenchange', () => setTimeout(fit, 120), { passive: true });
+});
 </script>
+
+
 
 
 ## Tabella Tecnologica Completa
