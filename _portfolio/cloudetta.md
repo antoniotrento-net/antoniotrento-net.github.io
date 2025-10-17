@@ -196,7 +196,7 @@ Per le aziende che desiderano adottare Cloudetta, offro:
 * Branding e deployment automatizzati
 * Formazione team tecnico e operativo
 
-📩 **Contatto diretto:** [antonio@antoniotrento.net](mailto:antonio@antoniotrento.net)
+📩 **Contatto diretto:** [info@antoniotrento.net](mailto:info@antoniotrento.net)
 
 ---
 
