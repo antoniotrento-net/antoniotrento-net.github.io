@@ -30,7 +30,8 @@ description: "Una selezione dei miei progetti personali e professionali nell’a
   <!-- 🔽 GRIGLIA PROGETTI -->
   <div class="row g-4" id="portfolio-grid">
     {%- assign date_format = "%-d %B %Y" -%}
-    {%- for post in site.portfolio -%}
+    {%- assign projects = site.portfolio | sort: "date" | reverse -%}
+    {%- for post in projects -%}
     {% assign tags = post.tags | join: " " | downcase %}
     <div class="col-md-6 portfolio-item" data-tags="{{ tags }}">
       <div class="card h-100 shadow-sm">
