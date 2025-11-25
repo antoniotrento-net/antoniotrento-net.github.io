@@ -76,21 +76,16 @@ enabled: true
       </a>
       {% endif %}
 
-      {% for page_num in (1..paginator.total_pages) %}
-      {% if page_num == paginator.page %}
+      {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
       <span
         class="w-10 h-10 flex items-center justify-center rounded-full bg-black dark:bg-white text-white dark:text-black font-bold">
-        {{ page_num }}
+        {{ page }}
       </span>
-      {% elsif page_num == 1 %}
-      <a href="{{ '/blog/' | relative_url }}"
-        class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
-        {{ page_num }}
-      </a>
       {% else %}
-      <a href="{{ site.paginate_path | relative_url | replace: ':num', page_num }}"
+      <a href="{{ paginator.paginate_path | replace: ':num', page | relative_url }}"
         class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-white/10 hover:bg-gray-100 dark:hover:bg-white/5 transition-colors">
-        {{ page_num }}
+        {{ page }}
       </a>
       {% endif %}
       {% endfor %}
