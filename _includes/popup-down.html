@@ -1,15 +1,18 @@
 <!-- CTA Audely con pulsante X -->
-<div id="cta-audely" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #000; color: #fff; padding: 16px 24px; text-align: center; z-index: 9999; box-shadow: 0 -4px 10px rgba(0,0,0,0.2);">
+<div id="cta-audely"
+  class="hidden fixed bottom-0 left-0 w-full bg-black text-white py-4 px-6 text-center z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.2)]">
   <!-- Pulsante chiudi -->
-  <button id="cta-close-btn" aria-label="Chiudi" style="position: absolute; top: 8px; right: 12px; background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;">
+  <button id="cta-close-btn" aria-label="Chiudi"
+    class="absolute top-2 right-3 bg-transparent border-none text-white text-xl cursor-pointer hover:text-gray-300 transition-colors">
     &times;
   </button>
 
-  <div style="max-width: 800px; margin: 0 auto;">
-    <p class="mb-2 text-white" style="font-size: 1rem;">
+  <div class="max-w-4xl mx-auto">
+    <p class="mb-2 text-white text-base">
       🤖 L’AI sta rivoluzionando il business. <strong>Se non la usi tu, lo farà la concorrenza.</strong>
     </p>
-    <a href="https://antoniotrento.net/contatti/" class="btn btn-primary" style="background-color: #38bdf8; border: none; color: #000; font-weight: bold; padding: 10px 20px; border-radius: 8px; text-decoration: none;">
+    <a href="https://antoniotrento.net/contatti/"
+      class="inline-block bg-brand-blue text-black font-bold py-2 px-5 rounded-lg hover:bg-white transition-colors">
       Prenota una call gratuita
     </a>
   </div>
@@ -28,13 +31,13 @@
       const scrollPercent = (scrollY + windowHeight) / documentHeight;
 
       if (!ctaShown && scrollPercent >= 0.5) {
-        cta.style.display = "block";
+        cta.classList.remove('hidden');
         ctaShown = true;
       }
     });
 
     closeBtn.addEventListener("click", function () {
-      cta.style.display = "none";
+      cta.classList.add('hidden');
     });
   });
 </script>

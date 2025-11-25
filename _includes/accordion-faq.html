@@ -1,25 +1,21 @@
-<style>
-    /* Modifiche CSS direttamente nel file head */
-    .accordion-button:not(.collapsed) {
-        background-color: #f8f9fa !important;  /* Colore grigio chiaro */
-        color: inherit;
-        box-shadow: none;
-    }
-</style>
 <!-- Accordion FAQ -->
-<div class="accordion" id="faqAccordion">
+<div class="space-y-4" id="faqAccordion">
     {% for faq in site.faq %}
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="heading{{ forloop.index }}">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.index }}" aria-expanded="false" aria-controls="collapse{{ forloop.index }}">
-                {{ faq.question }}
-            </button>
-        </h2>
-        <div id="collapse{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.index }}" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-                {{ faq.answer }}
-            </div>
+    <details
+        class="group bg-white dark:bg-neutral-800 border border-gray-100 dark:border-white/5 rounded-[2rem] p-6 hover:shadow-md transition-all cursor-pointer">
+        <summary class="flex justify-between items-center font-bold text-xl list-none select-none">
+            {{ faq.question }}
+            <span
+                class="bg-gray-50 dark:bg-white/10 w-8 h-8 rounded-full flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </span>
+        </summary>
+        <div
+            class="mt-4 text-gray-500 dark:text-gray-400 leading-relaxed overflow-hidden transition-all duration-300 ease-in-out">
+            {{ faq.answer }}
         </div>
-    </div>
+    </details>
     {% endfor %}
 </div>

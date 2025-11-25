@@ -2,100 +2,67 @@
 layout: default
 ---
 
-<article class="portfolio-item">
+<article class="py-32 px-6 bg-white dark:bg-neutral-950 transition-colors min-h-screen">
+
   {% if page.image-header %}
-    <div class="portfolio-header" style="background-image: url('{{ page.image-header }}');"></div>
+  <div class="w-full h-[400px] bg-cover bg-center mb-12 rounded-[2.5rem] shadow-2xl reveal"
+    style="background-image: url('{{ page.image-header }}');"></div>
   {% endif %}
 
-  <div class="mostre-container">
-    <h1>{{ page.title }}</h1>
-    {% assign mesi = "Gennaio,Febbraio,Marzo,Aprile,Maggio,Giugno,Luglio,Agosto,Settembre,Ottobre,Novembre,Dicembre" | split: "," %}
-    {% assign mese_index = page.date | date: "%m" | minus: 1 %}
-    {% assign mese_italiano = mesi[mese_index] %}
-    <p class="date">{{ page.date | date: "%d" }} {{ mese_italiano }} {{ page.date | date: "%Y" }}</p>
-    
-    <p class="description">{{ page.description }}</p>
+  <div class="max-w-4xl mx-auto">
 
+    <header class="mb-12 reveal">
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4 leading-tight">{{ page.title }}</h1>
+
+      {% assign mesi = "Gennaio,Febbraio,Marzo,Aprile,Maggio,Giugno,Luglio,Agosto,Settembre,Ottobre,Novembre,Dicembre" |
+      split: "," %}
+      {% assign mese_index = page.date | date: "%m" | minus: 1 %}
+      {% assign mese_italiano = mesi[mese_index] %}
+      <p class="text-xl text-gray-500 dark:text-gray-400 font-medium">{{ page.date | date: "%d" }} {{ mese_italiano }}
+        {{ page.date | date: "%Y" }}</p>
+
+      {% if page.description %}
+      <p class="mt-6 text-2xl text-gray-600 dark:text-gray-300 leading-relaxed">{{ page.description }}</p>
+      {% endif %}
+    </header>
 
     {% if page.gallery %}
-      <div class="gallery">
-        {% for image in page.gallery %}
-          <div class="gallery-item">
-            <img src="{{ image }}" alt="Gallery image">
-          </div>
-        {% endfor %}
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16 reveal">
+      {% for image in page.gallery %}
+      <div class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <img src="{{ image }}" alt="Gallery image"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
       </div>
+      {% endfor %}
+    </div>
     {% endif %}
 
-    <div class="portfolio-content">
+    <div class="prose prose-lg dark:prose-invert max-w-none reveal delay-200 mb-16">
       {{ content }}
     </div>
-    <!-- Slider Bootstrap -->
+
+    <!-- Slider Replacement (Horizontal Scroll) -->
     {% if page.slider %}
-    <div id="carouselExampleIndicators" class="carousel slide mb-4" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            {% for image in page.slider %}
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %} aria-label="Slide {{ forloop.index }}"></button>
-            {% endfor %}
+    <div class="mb-16 reveal">
+      <div class="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-hide">
+        {% for image in page.slider %}
+        <div class="snap-center shrink-0 w-[80vw] md:w-[600px] rounded-2xl overflow-hidden shadow-lg">
+          <img src="{{ image }}" class="w-full h-full object-cover" alt="Slider Image">
         </div>
-        <div class="carousel-inner">
-            {% for image in page.slider %}
-            <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <img src="{{ image }}" class="d-block w-100" alt="Slider Image">
-            </div>
-            {% endfor %}
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        {% endfor %}
+      </div>
+      <p class="text-center text-sm text-gray-400 mt-2">Scorri per vedere altro</p>
     </div>
     {% endif %}
-    {% include accordion-faq.html %}
+
+    <div class="mt-16">
+      {% include accordion-faq.html %}
+    </div>
+
   </div>
-{% include about.html %}
+
+  <div class="mt-20">
+    {% include about.html %}
+  </div>
+
 </article>
-
-<style>
-  .portfolio-header {
-    width: 100%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .mostre-container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  .main-image img {
-    width: 100%;
-    margin: 20px 0;
-    border-radius: 10px;
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .gallery-item img {
-    width: 100%;
-    border-radius: 5px;
-  }
-
-  .description {
-    font-size: 1.2em;
-    color: #555;
-  }
-</style>
-

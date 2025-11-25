@@ -1,572 +1,603 @@
 ---
 layout: default
-# SEO
-title: Antonio Trento – Integrazione Sistemi, App Personalizzate & Automazioni
-description: "Riduci i colli di bottiglia, automatizza i flussi e ottimizza le risorse del tuo business con soluzioni IT personalizzate, flessibili e scalabili."
-css: /assets/css/custom-index.css
+title: Antonio Trento – System Architect & AI Integrator
+description: "Costruisco ecosistemi digitali scalabili e agenti AI autonomi. Trasformo processi complessi in flussi
+automatizzati per il business del futuro."
 ---
 
-<style>
-  .hero-100hv { height: 100vh; }
-  .hero-overlay-white { background: rgba(255,255,255,0.6); position: absolute; top:0; left:0; width:100%; height:100%; }
-  .btn-primary { background-color: #0056b3; border-color: #0056b3; }
-  .btn-primary:hover { background-color: #004494; border-color: #004494; }
-  .icon { font-size: 2rem; color: #0056b3; margin-right: 0.5rem; }
-  .card-feature { border: 1px solid #e0e0e0; border-radius: 0.5rem; padding: 1.5rem; transition: box-shadow .3s; }
-  .card-feature:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-  .testimonial-card { border: 1px solid #0056b3; border-radius: 0.5rem; padding: 1rem; margin: 1rem; }
+<!-- Hero Section -->
+<section
+    class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden min-h-[90vh] flex flex-col justify-center bg-white dark:bg-neutral-950">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
 
-
-  .hero-100hv {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .icon-floating-background i {
-    position: absolute;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    user-select: none;
-    will-change: transform;
-  }
-
-
-  .icon-floating-background svg {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    opacity: 0.15;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    user-select: none;
-    will-change: transform;
-  }
-
-  @keyframes float-up-down {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-  }
-
-  @keyframes float-left-right {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(20px); }
-  }
-
-.highlight-white {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  padding: 0 4px;
-  line-height: 1.4;
-}
-
-.highlight-white::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  opacity: 0.7;
-  border-radius: 6px;
-}
-
-/* Sfondo circuito animato */
-.animated-circuit-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%;
-  height: 300%;
-  background-image: 
-    radial-gradient(circle, rgba(0, 123, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px, 40px 40px, 40px 40px;
-  animation: circuitMove 120s linear infinite;
-  z-index: 0;
-  pointer-events: none;
-}
-
-@keyframes circuitMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(40px, 40px); }
-}
-
-
-canvas#neuralNetworkBg {
-  pointer-events: none;
-  z-index: 0;
-}
-
-</style>
-<!-- HERO SECTION -->
-<section class="hero-100hv d-flex flex-column justify-content-center text-center bg-light">
-  <div class="icon-floating-background" id="iconFloatingBackground"></div>
-  <div class="container container-max800 position-relative" style="z-index:1;">
-    <h1 class="display-4 fw-bold mb-4">
-      Elimina i colli di bottiglia, moltiplica l'efficienza
-    </h1>
-    <p class="lead mb-4">Ciao, sono <strong>Antonio Trento</strong>, il tuo partner strategico per semplificare sistemi complessi e far crescere il tuo business.</p>
-    <a href="#services" class="btn btn-primary btn-lg px-4 mt-5">Scopri i vantaggi</a>
-  </div>
-</section>
-<!-- HERO SECTION -->
-
-
-<!-- FEATURES SECTION -->
-<section class="container-fluid py-5 bg-white">
-  <div class="container">
-    <div class="row g-4 justify-content-center">
-
-      <!-- Dati Sincronizzati -->
-      <div class="col-md-4 d-flex">
-        <div class="card-feature text-center d-flex flex-column align-items-center p-4 shadow-sm rounded h-100 w-100">
-          <i class="icon fas fa-sync-alt mb-3 fs-1 text-primary"></i>
-          <h4>Dati Sincronizzati</h4>
-          <p class="px-2">Accedi istantaneamente a informazioni allineate tra ERP, CRM e strumenti operativi, eliminando gli errori manuali e garantendo coerenza dati in ogni dipartimento. Decisioni più rapide e processi privi di interruzioni.</p>
+        <div class="relative z-10 reveal active">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-xs font-bold tracking-wide uppercase mb-8 cursor-default">
+                <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
+                System Architect & AI Integrator
+            </div>
+            <h1 class="text-6xl lg:text-8xl font-black tracking-tighter leading-[1.05] mb-8">
+                Costruisco <br>
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-brand-red to-brand-yellow">l'Infrastruttura
+                    del Futuro.</span>
+            </h1>
+            <p class="text-xl text-gray-500 dark:text-gray-400 mb-10 max-w-lg leading-relaxed font-light">
+                Non mi limito a scrivere codice. Progetto ecosistemi digitali sovrani, scalabili e potenziati
+                dall'Intelligenza Artificiale.
+                Dal 2013, trasformo la complessità in automazione.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects"
+                    class="px-10 py-5 rounded-full bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-brand-blue dark:hover:bg-brand-blue dark:hover:text-white hover:scale-105 transition-all duration-300 text-lg shadow-xl shadow-brand-blue/20">
+                    Esplora i Progetti
+                </a>
+                <a href="#contact"
+                    class="px-10 py-5 rounded-full border border-gray-200 dark:border-white/20 font-bold hover:border-black dark:hover:border-white hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-lg bg-white dark:bg-transparent flex items-center gap-2 group">
+                    Parliamone
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
         </div>
-      </div>
 
-      <!-- Agentic App -->
-      <div class="col-md-4 d-flex">
-        <div class="card-feature text-center d-flex flex-column align-items-center p-4 shadow-sm rounded h-100 w-100">
-          <i class="icon fas fa-robot mb-3 fs-1 text-primary"></i>
-          <h4>Agentic App</h4>
-          <p class="px-2">Applicazioni intelligenti alimentate da AI: anticipano i bisogni degli utenti, personalizzano i flussi di lavoro e potenziano l'efficienza automatizzando decisioni complesse in tempo reale.</p>
+        <!-- Decorative Visuals -->
+        <div
+            class="relative h-[400px] lg:h-[600px] flex items-center justify-center select-none pointer-events-none reveal delay-200">
+            <!-- Background Orbit -->
+            <div
+                class="absolute w-[600px] h-[600px] border border-gray-100 dark:border-white/5 rounded-full animate-[spin_60s_linear_infinite]">
+                <div
+                    class="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 bg-gray-200 dark:bg-neutral-800 rounded-full">
+                </div>
+                <div
+                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-brand-gray dark:bg-neutral-800 rounded-full">
+                </div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="relative z-10">
+                <div
+                    class="absolute -top-20 -left-20 w-32 h-32 rounded-full bg-brand-yellow/10 dark:bg-brand-yellow/20 animate-float backdrop-blur-sm">
+                </div>
+                <div
+                    class="absolute -bottom-32 -right-10 w-48 h-48 rounded-full bg-brand-blue/5 dark:bg-brand-blue/10 animate-float-delayed backdrop-blur-sm">
+                </div>
+
+                <!-- Main Visual Card -->
+                <div class="relative w-80 h-96 group">
+                    <div
+                        class="absolute inset-0 bg-gray-100 dark:bg-white/5 rounded-[2.5rem] rotate-[-6deg] opacity-60 scale-90 translate-y-4 transition-transform group-hover:rotate-[-8deg]">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gray-200 dark:bg-white/10 rounded-[2.5rem] rotate-[-3deg] opacity-80 scale-95 translate-y-2 transition-transform group-hover:rotate-[-4deg]">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-white dark:bg-neutral-900 rounded-[2.5rem] shadow-2xl flex flex-col p-8 justify-between border border-gray-50 dark:border-white/10 animate-float overflow-hidden">
+
+                        <!-- Code/Terminal Visual -->
+                        <div class="font-mono text-xs text-gray-400 space-y-2">
+                            <div class="flex gap-2">
+                                <span class="text-brand-red">def</span> <span
+                                    class="text-brand-blue">optimize_system</span>(self):
+                            </div>
+                            <div class="pl-4 text-gray-500">
+                                # Automating complexity
+                            </div>
+                            <div class="pl-4">
+                                infrastructure = <span class="text-brand-yellow">Docker</span>.compose()
+                            </div>
+                            <div class="pl-4">
+                                ai_agent = <span class="text-brand-green">LLM</span>.connect()
+                            </div>
+                            <div class="pl-4">
+                                return <span class="text-brand-blue">"Scalability"</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="h-2 w-full bg-gray-100 dark:bg-white/10 rounded-full mb-3 overflow-hidden">
+                                <div class="h-full w-2/3 bg-brand-blue animate-[loading_2s_ease-in-out_infinite]"></div>
+                            </div>
+                            <div class="h-2 w-full bg-gray-100 dark:bg-white/10 rounded-full mb-8 overflow-hidden">
+                                <div class="h-full w-1/3 bg-brand-red"></div>
+                            </div>
+                            <h3 class="text-3xl font-black mb-1">100%</h3>
+                            <p class="text-gray-400 text-sm">Automazione Attiva</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Automazione 24/7 -->
-      <div class="col-md-4 d-flex">
-        <div class="card-feature text-center d-flex flex-column align-items-center p-4 shadow-sm rounded h-100 w-100">
-          <i class="icon fas fa-cogs mb-3 fs-1 text-primary"></i>
-          <h4>Automazione 24/7</h4>
-          <p class="px-2">Esegui task ripetitivi senza sosta, con notifiche proattive, reportistica avanzata e integrazioni automatiche, liberando il tuo team per concentrarsi su progetti strategici ad alto valore.</p>
-        </div>
-      </div>
 
     </div>
-  </div>
 </section>
 
+<!-- Philosophy Section -->
+<section class="py-32 px-6 bg-brand-surface dark:bg-neutral-900 transition-colors">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Text -->
+        <div class="reveal">
+            <div
+                class="inline-block px-4 py-1.5 rounded-full bg-brand-red/10 dark:bg-brand-red/20 text-brand-red dark:text-red-400 text-xs font-bold tracking-wide uppercase mb-6">
+                La Mia Filosofia</div>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6 leading-tight">Non solo codice, ma
+                ecosistemi.</h2>
+            <p class="text-xl text-gray-500 dark:text-gray-400 mb-8">
+                L'obiettivo non è fornire semplice software, ma restituire <strong>sovranità</strong>. Unisco la
+                robustezza di Linux e Docker con l'intelligenza degli agenti AI per creare piattaforme che scalano con
+                il tuo business, senza vendor lock-in.
+            </p>
 
-
-
-<!-- HERO CON CIRCUITO ANIMATO 
-<section class="hero-100hv d-flex flex-column justify-content-center text-center bg-light position-relative overflow-hidden">
-  <div class="animated-circuit-bg position-absolute w-100 h-100 top-0 start-0"></div>
-
-  <div class="container container-max800 position-relative" style="z-index: 1;">
-    <h2 class="display-4 fw-bold mb-4">
-      <span class="highlight-white">Smetti di eseguire compiti ripetitivi, integriamo e automatizziamo gli strumenti che già usi</span>
-    </h2>
-    <p class="lead mb-4"><span class="highlight-white">Posso aiutarti a integrare e automatizzare la maggior parte dei sistemi informatici per rendere più veloci le tue procedure aziendali ed incrementare la produttività dei tuoi colleghi.</span></p>
-    <a href="#services" class="btn btn-primary btn-lg">Scopri di più</a>
-  </div>
-</section>-->
-
-
-<section class="hero-100hv d-flex flex-column justify-content-center text-center bg-light position-relative overflow-hidden">
-  <canvas id="neuralNetworkBg" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 0;"></canvas>
-
-  <div class="container container-max800 position-relative" style="z-index: 1;">
-    <h2 class="display-4 fw-bold mb-4">
-      Smetti di eseguire compiti ripetitivi, integriamo e automatizziamo gli strumenti che già usi
-    </h2>
-    <p class="lead mb-4">Posso aiutarti a integrare e automatizzare la maggior parte dei sistemi informatici per rendere più veloci le tue procedure aziendali ed incrementare la produttività dei tuoi colleghi.</p>
-    <a href="#services" class="btn btn-primary btn-lg">Scopri di più</a>
-  </div>
-</section>
-
-
-
-<!-- VALUE PROPOSITION -->
-<section id="value" class="container py-5">
-  <h2 class="display-5 fw-bold mb-4 text-center">Perché affidarti a me</h2>
-  <p class="text-center mb-5">Ogni progetto nasce da un'analisi approfondita: non offro soluzioni "taglia unica", ma strategie su misura per i tuoi obiettivi.</p>
-  <div class="row text-center gy-4">
-    <div class="col-md-4">
-      <i class="icon fas fa-fast-forward"></i>
-      <h3 class="h4 mt-2">Implementazioni Veloci</h3>
-      <p>Dal concept al go-live in meno di 4 settimane, per non perdere nemmeno un'opportunità.</p>
-    </div>
-    <div class="col-md-4">
-      <i class="icon fas fa-chart-line"></i>
-      <h3 class="h4 mt-2">ROI Misurabile</h3>
-      <p>Risparmi concreti fino al 30% sui costi operativi grazie a processi ottimizzati.</p>
-    </div>
-    <div class="col-md-4">
-      <i class="icon fas fa-life-ring"></i>
-      <h3 class="h4 mt-2">Supporto Continuo</h3>
-      <p>Monitoraggio proattivo e interventi rapidi per garantire performance e uptime elevati.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES SECTION -->
-<section id="services" class="container-fluid py-5 bg-light">
-  <div class="container">
-    <h2 class="display-5 fw-bold mb-4 text-center">I miei servizi</h2>
-    <p class="text-center mb-5">Soluzioni integrate per ogni fase del tuo percorso digitale, dal disegno architetturale all'automazione avanzata.</p>
-    <div class="row g-4">
-
-      <!-- Integrazione Sistemi -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <i class="fas fa-link fa-3x text-primary mb-3"></i>
-            <h5 class="card-title mb-3">Integrazione Sistemi</h5>
-            <p>Progetto ecosistemi IT coesi, con API e middleware su misura:</p>
-            <ul class="text-start">
-              <li>✔ Connessioni in tempo reale</li>
-              <li>✔ Gestione errori proattiva</li>
-              <li>✔ Scalabilità e sicurezza</li>
+            <ul class="space-y-6 mb-8">
+                <li class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center text-brand-blue shadow-sm shrink-0">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Sovranità dei Dati</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">I tuoi dati rimangono tuoi. Infrastrutture
+                            self-hosted e sicure.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center text-brand-red shadow-sm shrink-0">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Automazione Cognitiva</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">Agenti AI che non solo rispondono, ma
+                            agiscono ed eseguono task complessi.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center text-brand-yellow shadow-sm shrink-0">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Architetture Modulari</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">Sistemi basati su Docker che crescono e si
+                            adattano senza rompersi.</p>
+                    </div>
+                </li>
             </ul>
-          </div>
         </div>
-      </div>
-
-      <!-- Agentic App -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <i class="fas fa-robot fa-3x text-primary mb-3"></i>
-            <h5 class="card-title mb-3">Agentic App</h5>
-            <p>Soluzioni AI-driven che trasformano dati grezzi in esperienze proattive e personalizzate:</p>
-            <ul class="text-start">
-              <li>✔ Analisi predittiva per anticipare le esigenze degli utenti</li>
-              <li>✔ Automazione delle decisioni ripetitive con modelli intelligenti</li>
-              <li>✔ Interfacce adattive che evolvono con l’utilizzo</li>
-            </ul>
-          </div>
+        <!-- Image/Visual -->
+        <div
+            class="relative h-[600px] bg-gray-200 dark:bg-neutral-800 rounded-[3rem] reveal delay-200 overflow-hidden group border border-transparent dark:border-white/5">
+            <img src="/assets/images/index/hero-bg-antonio-trento-mobile.jpg" alt="Antonio Trento al lavoro"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-10 left-10 text-white max-w-xs">
+                <p class="font-bold text-2xl mb-2">"La tecnologia deve essere un acceleratore, non un freno."</p>
+                <p class="text-white/60 text-sm">- Antonio Trento</p>
+            </div>
         </div>
-      </div>
-
-      <!-- Automazione Workflow -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center d-flex flex-column align-items-center">
-            <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
-            <h5 class="card-title mb-3">Automazione Workflow</h5>
-            <p>Workflow intelligenti che riducono fino al 90% le task ripetitive:</p>
-            <ul class="text-start">
-              <li>✔ Pianificazione automatica</li>
-              <li>✔ Notifiche e report in tempo reale</li>
-              <li>✔ Integrazione tool esterni</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
-
-    <div class="text-center mt-4">
-      <a href="#case-studies" class="btn btn-primary btn-lg px-5">Vedi qualche esempio</a>
-    </div>
-  </div>
 </section>
 
+<!-- Featured Projects Section -->
+<section id="projects" class="py-32 px-6 bg-white dark:bg-neutral-950 transition-colors">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-20 text-center reveal">
+            <span
+                class="inline-block px-4 py-1.5 rounded-full bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-xs font-bold tracking-wide uppercase mb-6">Portfolio</span>
+            <h2 class="text-5xl md:text-6xl font-black tracking-tight mb-6">Innovazione in Produzione.</h2>
+            <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">Progetti reali che dimostrano la
+                potenza dell'integrazione tra DevOps e AI.</p>
+        </div>
 
-<!-- CASE STUDIES SECTION 
-<section id="case-studies" class="container-fluid py-5 bg-light">
-  <div class="container">
-    <h2 class="display-5 fw-bold mb-4 text-center">Case Study</h2>
-    <p class="text-center mb-5">Di seguito alcuni esempi di progetti recenti, con risultati tangibili e metodi collaudati.</p>
-    <div class="row gy-4">
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Progetto A</h5>
-            <p>Soluzione personalizzata per sincronizzare sistemi e ridurre tempi di processo.</p>
-          </div>
+        <div class="grid lg:grid-cols-3 gap-8">
+
+            <!-- Project 1: Cloudetta -->
+            <a href="/portfolio/cloudetta/" class="group block reveal delay-100">
+                <div
+                    class="relative h-[400px] rounded-[2.5rem] overflow-hidden mb-6 border border-gray-100 dark:border-white/5 shadow-lg">
+                    <div class="absolute inset-0 bg-gray-200 dark:bg-neutral-800">
+                        <img src="/assets/images/portfolio/cloudetta/cloudetta.jpg" alt="Cloudetta"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full">Docker</span>
+                            <span
+                                class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full">Odoo</span>
+                            <span
+                                class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full">Open
+                                Source</span>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-2">Cloudetta</h3>
+                        <p class="text-white/80 line-clamp-2">L'ecosistema digitale sovrano per PMI. ERP, CRM, BI e
+                            Marketing in un unico stack unificato.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 2: Meetly -->
+            <a href="/portfolio/meetly/" class="group block reveal delay-200">
+                <div
+                    class="relative h-[400px] rounded-[2.5rem] overflow-hidden mb-6 border border-gray-100 dark:border-white/5 shadow-lg">
+                    <div class="absolute inset-0 bg-gray-200 dark:bg-neutral-800">
+                        <img src="/assets/images/portfolio/meetly/meetly.jpg" alt="Meetly"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full">AI
+                                Agent</span>
+                            <span
+                                class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full">FastAPI</span>
+                            <span
+                                class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full">GPT-4o</span>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-2">Meetly</h3>
+                        <p class="text-white/80 line-clamp-2">L'assistente AI autonomo che negozia appuntamenti e
+                            gestisce la tua agenda Google Calendar.</p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Project 3: BrokerFlow AI -->
+            <a href="/portfolio/broker-flow-ai/" class="group block reveal delay-300">
+                <div
+                    class="relative h-[400px] rounded-[2.5rem] overflow-hidden mb-6 border border-gray-100 dark:border-white/5 shadow-lg">
+                    <div class="absolute inset-0 bg-gray-200 dark:bg-neutral-800">
+                        <img src="/assets/images/portfolio/broker-flow-ai/broker-flow-ai.jpg" alt="BrokerFlow AI"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full">Automation</span>
+                            <span
+                                class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full">OCR</span>
+                            <span
+                                class="px-3 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full">FinTech</span>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-2">BrokerFlow AI</h3>
+                        <p class="text-white/80 line-clamp-2">Digitalizzazione assicurativa end-to-end. Estrazione dati
+                            da PDF e generazione preventivi automatica.</p>
+                    </div>
+                </div>
+            </a>
+
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Progetto B</h5>
-            <p>App mobile integrata con processi aziendali, con interfaccia semplice e rapida.</p>
-          </div>
+
+        <div class="text-center mt-12">
+            <a href="/portfolio/"
+                class="inline-flex items-center gap-2 font-bold text-lg hover:text-brand-blue transition-colors">
+                Vedi tutti i progetti <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Progetto C</h5>
-            <p>Workflow automatico implementato per ottimizzare attività ripetitive.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>-->
-
-<!-- BLOG SECTION -->
-<section id="blog" class="container py-5">
-  <h2 class="display-5 fw-bold mb-4 text-center">Dal Blog</h2>
-  <p class="text-center mb-5">Scopri approfondimenti, novità e casi d'uso reali sull'automazione e l'AI.</p>
-  <div class="row gy-4">
-    {% for post in site.posts limit:3 %}
-      <div class="col-12 col-md-4">
-        <div class="card h-100 shadow-sm border-0">
-          {% if post.image %}
-            <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}">
-          {% endif %}
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">{{ post.title }}</h5>
-            <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-            <a href="{{ post.url | relative_url }}" class="btn btn-primary mt-auto">Leggi</a>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
 </section>
 
-
-<!-- TESTIMONIAL SECTION 
-<section id="testimonials" class="container py-5">
-  <h2 class="display-5 fw-bold mb-4 text-center">Testimonianze</h2>
-  <p class="text-center mb-5">Feedback di clienti soddisfatti che hanno migliorato i propri processi IT.</p>
-  <div class="row gy-4">
-    <div class="col-md-4">
-      <div class="testimonial-card">
-        <p>“Un supporto fondamentale per semplificare flussi complessi, consigliato!”</p>
-        <footer>— Cliente Anonimo</footer>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="testimonial-card">
-        <p>“Risultati visibili in tempi record, comunicazione sempre chiara e diretta.”</p>
-        <footer>— Utente Soddisfatto</footer>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="testimonial-card">
-        <p>“Professionalità e competenza: il progetto è andato oltre le aspettative.”</p>
-        <footer>— Manager XYZ</footer>
-      </div>
-    </div>
-  </div>
-</section>-->
-
-<!-- PROCESS SECTION -->
-<section id="process" class="container-fluid py-5 bg-light position-relative">
-  <div class="container position-relative">
-    <h2 class="display-5 fw-bold mb-5 text-center">Il mio metodo di lavoro</h2>
-
-    <!-- Linea verticale centrale -->
-    <div class="position-absolute d-none d-md-block start-50 translate-middle-x bg-primary"
-         style="top: 150px; height: calc(100% - 170px); width: 4px; z-index: 0;"></div>
-
-    <!-- STEP 1 -->
-    <div class="row mb-5 align-items-center">
-      <div class="col-md-6 text-end pe-4">
-        <h5 class="fw-bold text-primary mb-1">1. Analisi</h5>
-        <p class="mb-0">Audit completo dei sistemi e definizione degli obiettivi.</p>
-      </div>
-      <div class="col-md-6 ps-5 position-relative">
-        <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-             style="width: 42px; height: 42px; z-index: 1;">
-          <i class="fas fa-search"></i>
+<!-- Stats Section -->
+<section class="py-20 bg-brand-black dark:bg-black text-white reveal">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            <div class="text-center group">
+                <h3
+                    class="text-5xl md:text-6xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 group-hover:to-white transition-all">
+                    10+</h3>
+                <p class="text-gray-500 font-medium tracking-wide text-sm uppercase">Anni di Esperienza</p>
+            </div>
+            <div class="text-center group">
+                <h3
+                    class="text-5xl md:text-6xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 group-hover:to-white transition-all">
+                    50+</h3>
+                <p class="text-gray-500 font-medium tracking-wide text-sm uppercase">Progetti Consegnati</p>
+            </div>
+            <div class="text-center group">
+                <h3
+                    class="text-5xl md:text-6xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 group-hover:to-white transition-all">
+                    100%</h3>
+                <p class="text-gray-500 font-medium tracking-wide text-sm uppercase">Open Source</p>
+            </div>
+            <div class="text-center group">
+                <h3
+                    class="text-5xl md:text-6xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 group-hover:to-white transition-all">
+                    24/7</h3>
+                <p class="text-gray-500 font-medium tracking-wide text-sm uppercase">Monitoraggio</p>
+            </div>
         </div>
-      </div>
     </div>
-
-    <!-- STEP 2 -->
-    <div class="row mb-5 align-items-center flex-row-reverse">
-      <div class="col-md-6 text-start ps-4">
-        <h5 class="fw-bold text-primary mb-1">2. Progettazione</h5>
-        <p class="mb-0">Wireframe, pianificazione e validazione del design.</p>
-      </div>
-      <div class="col-md-6 pe-5 position-relative text-end">
-        <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-             style="width: 42px; height: 42px; margin-left: auto; z-index: 1;">
-          <i class="fas fa-drafting-compass"></i>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 3 -->
-    <div class="row mb-5 align-items-center">
-      <div class="col-md-6 text-end pe-4">
-        <h5 class="fw-bold text-primary mb-1">3. Sviluppo</h5>
-        <p class="mb-0">Iterazioni snelle, test continui e feedback rapidi.</p>
-      </div>
-      <div class="col-md-6 ps-5 position-relative">
-        <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-             style="width: 42px; height: 42px; z-index: 1;">
-          <i class="fas fa-code"></i>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 4 -->
-    <div class="row mb-5 align-items-center flex-row-reverse">
-      <div class="col-md-6 text-start ps-4">
-        <h5 class="fw-bold text-primary mb-1">4. Deploy</h5>
-        <p class="mb-0">Rilascio controllato e formazione del team.</p>
-      </div>
-      <div class="col-md-6 pe-5 position-relative text-end">
-        <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-             style="width: 42px; height: 42px; margin-left: auto; z-index: 1;">
-          <i class="fas fa-rocket"></i>
-        </div>
-      </div>
-    </div>
-
-    <!-- STEP 5 -->
-    <div class="row mb-0 align-items-center">
-      <div class="col-md-6 text-end pe-4">
-        <h5 class="fw-bold text-primary mb-1">5. Supporto</h5>
-        <p class="mb-0">Monitoraggio, manutenzione evolutiva e report periodici.</p>
-      </div>
-      <div class="col-md-6 ps-5 position-relative">
-        <div class="timeline-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center"
-             style="width: 42px; height: 42px; z-index: 1;">
-          <i class="fas fa-tools"></i>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
+<!-- Process Section -->
+<section id="process" class="py-32 px-6 bg-brand-surface dark:bg-neutral-900 overflow-hidden transition-colors">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+            <span
+                class="inline-block px-4 py-1.5 rounded-full border border-gray-200 dark:border-white/10 text-xs font-bold tracking-wide uppercase mb-6 text-gray-400">Il
+                Metodo Antigravity</span>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6">Come opero.</h2>
+            <p class="text-xl text-gray-500 dark:text-gray-400">Un approccio ingegneristico per risultati prevedibili e
+                scalabili.</p>
+        </div>
 
+        <div class="relative">
+            <!-- Connecting Line (Desktop) -->
+            <div
+                class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-100 dark:bg-white/5 -translate-y-1/2 z-0">
+            </div>
 
+            <div class="grid md:grid-cols-3 gap-12 relative z-10">
+                <!-- Step 1 -->
+                <div
+                    class="bg-white dark:bg-neutral-900 border border-transparent dark:border-white/5 p-8 reveal delay-100 rounded-[2rem] shadow-sm hover:-translate-y-2 transition-transform duration-500">
+                    <div
+                        class="w-20 h-20 bg-black dark:bg-white text-white dark:text-black rounded-[2rem] flex items-center justify-center text-3xl font-black mb-6 mx-auto shadow-xl shadow-brand-blue/20 rotate-3 transform hover:rotate-0 transition-all">
+                        1</div>
+                    <h3 class="text-2xl font-bold text-center mb-4">Analisi Strategica</h3>
+                    <p class="text-center text-gray-500 dark:text-gray-400">Audit completo dell'infrastruttura esistente
+                        e definizione degli obiettivi di business. Niente codice prima di aver capito il "perché".</p>
+                </div>
+                <!-- Step 2 -->
+                <div
+                    class="bg-white dark:bg-neutral-900 border border-transparent dark:border-white/5 p-8 reveal delay-200 rounded-[2rem] shadow-sm hover:-translate-y-2 transition-transform duration-500">
+                    <div
+                        class="w-20 h-20 bg-brand-blue text-white rounded-[2rem] flex items-center justify-center text-3xl font-black mb-6 mx-auto shadow-xl shadow-brand-blue/20 -rotate-3 transform hover:rotate-0 transition-all">
+                        2</div>
+                    <h3 class="text-2xl font-bold text-center mb-4">Architettura & Sviluppo</h3>
+                    <p class="text-center text-gray-500 dark:text-gray-400">Progettazione di sistemi modulari e sviluppo
+                        iterativo. Container Docker, API robuste e logiche di automazione avanzate.</p>
+                </div>
+                <!-- Step 3 -->
+                <div
+                    class="bg-white dark:bg-neutral-900 border border-transparent dark:border-white/5 p-8 reveal delay-300 rounded-[2rem] shadow-sm hover:-translate-y-2 transition-transform duration-500">
+                    <div
+                        class="w-20 h-20 bg-white dark:bg-black border-4 border-black dark:border-white text-black dark:text-white rounded-[2rem] flex items-center justify-center text-3xl font-black mb-6 mx-auto shadow-xl rotate-3 transform hover:rotate-0 transition-all">
+                        3</div>
+                    <h3 class="text-2xl font-bold text-center mb-4">Integrazione AI & Deploy</h3>
+                    <p class="text-center text-gray-500 dark:text-gray-400">Potenziamento con agenti AI, rilascio
+                        controllato in produzione e monitoraggio continuo (24/7).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- Services Grid -->
+<section id="services" class="py-32 px-6 bg-white dark:bg-neutral-950 transition-colors">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-20 reveal">
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6">Competenze Core.</h2>
+            <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl">Un toolkit completo per affrontare ogni sfida
+                digitale.</p>
+        </div>
 
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service 1 -->
+            <div
+                class="p-8 rounded-[2rem] bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-white/5 hover:bg-white dark:hover:bg-neutral-800 transition-all hover:shadow-xl reveal delay-100 group">
+                <i
+                    class="fas fa-server text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
+                <h3 class="text-xl font-bold mb-3">DevOps & Cloud</h3>
+                <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Docker, Kubernetes, CI/CD pipelines.
+                    Infrastrutture che non dormono mai.</p>
+            </div>
+            <!-- Service 2 -->
+            <div
+                class="p-8 rounded-[2rem] bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-white/5 hover:bg-white dark:hover:bg-neutral-800 transition-all hover:shadow-xl reveal delay-200 group">
+                <i
+                    class="fas fa-robot text-4xl text-brand-red mb-6 group-hover:scale-110 transition-transform block"></i>
+                <h3 class="text-xl font-bold mb-3">AI Agents</h3>
+                <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Sviluppo di agenti autonomi con
+                    LangChain, n8n e LLM (GPT-4, Llama).</p>
+            </div>
+            <!-- Service 3 -->
+            <div
+                class="p-8 rounded-[2rem] bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-white/5 hover:bg-white dark:hover:bg-neutral-800 transition-all hover:shadow-xl reveal delay-300 group">
+                <i
+                    class="fas fa-code text-4xl text-brand-yellow mb-6 group-hover:scale-110 transition-transform block"></i>
+                <h3 class="text-xl font-bold mb-3">Full Stack Dev</h3>
+                <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Python, Node.js, FastAPI. Codice
+                    pulito, performante e manutenibile.</p>
+            </div>
+            <!-- Service 4 -->
+            <div
+                class="p-8 rounded-[2rem] bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-white/5 hover:bg-white dark:hover:bg-neutral-800 transition-all hover:shadow-xl reveal delay-400 group">
+                <i
+                    class="fas fa-network-wired text-4xl text-brand-green mb-6 group-hover:scale-110 transition-transform block"></i>
+                <h3 class="text-xl font-bold mb-3">System Integration</h3>
+                <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">API, Webhook, Middleware. Faccio
+                    parlare sistemi che non si conoscono.</p>
+            </div>
+        </div>
 
-<!-- ABOUT & FAQ -->
-{% include about.html %}
-<div class="container py-5">
-  <h2 class="display-5 fw-bold mb-4">Domande frequenti</h2>
-  {% include accordion-faq.html %}
-</div>
+        <div class="text-center mt-12">
+            <a href="/portfolio/"
+                class="inline-flex items-center gap-2 font-bold text-lg hover:text-brand-blue transition-colors">
+                Vedi tutti i progetti <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
-<!-- ICONS FLUTTUANTI -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("iconFloatingBackground");
-  if (!container) return;
+<!-- Target Audience Section -->
+<section id="target" class="py-32 px-6 bg-brand-surface dark:bg-neutral-900 overflow-hidden transition-colors">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+            <span
+                class="inline-block px-4 py-1.5 rounded-full border border-gray-200 dark:border-white/10 text-xs font-bold tracking-wide uppercase mb-6 text-gray-400">Target</span>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6">A chi mi rivolgo.</h2>
+            <p class="text-xl text-gray-500 dark:text-gray-400">Soluzioni architetturali calibrate per ogni stadio di
+                crescita.</p>
+        </div>
 
-  const icons = [
-    { class: "fas fa-envelope", color: "#0072C6" },         // Email
-    { class: "fas fa-cloud", color: "#00A1F1" },             // Cloud / Azure / cloud software
-    { class: "fas fa-database", color: "#f39c12" },          // Database / SAP
-    { class: "fas fa-plug", color: "#2ecc71" },              // Integrazione
-    { class: "fas fa-network-wired", color: "#34495e" },     // Networking / connessione
-    { class: "fas fa-diagram-project", color: "#9b59b6" },   // Automazione processi
-    { class: "fas fa-gears", color: "#e67e22" },             // Integrazione sistemi
-    { class: "fas fa-laptop-code", color: "#1abc9c" },       // Sviluppo software
-    { class: "fas fa-envelope-open-text", color: "#c0392b" },// Email marketing / CRM
-    { class: "fas fa-users-gear", color: "#2980b9" },        // Team & tools
-    { class: "fas fa-chart-line", color: "#27ae60" },        // Produttività / KPI
-    { class: "fas fa-shield-alt", color: "#8e44ad" },        // Sicurezza / compliance
-    { class: "fas fa-circle-nodes", color: "#d35400" }       // API / reti di software
-  ];
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Startup -->
+            <div
+                class="bg-white dark:bg-neutral-800 p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 group border border-transparent dark:border-white/5 reveal delay-100">
+                <div
+                    class="w-16 h-16 bg-brand-yellow/10 rounded-2xl flex items-center justify-center text-brand-yellow text-3xl mb-8 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Startups & Scaleups</h3>
+                <p class="text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Hai bisogno di un MVP solido o di scalare rapidamente? Progetto architetture cloud-native pronte per
+                    la crescita esponenziale, riducendo il time-to-market.
+                </p>
+            </div>
 
-  const iconCount = 45;
+            <!-- PMI -->
+            <div
+                class="bg-white dark:bg-neutral-800 p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 group border border-transparent dark:border-white/5 reveal delay-200">
+                <div
+                    class="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center text-brand-blue text-3xl mb-8 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">PMI & Aziende</h3>
+                <p class="text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Digitalizza i processi operativi. Implemento ERP (Odoo), CRM e automazioni che liberano il tuo team
+                    da compiti ripetitivi, aumentando la produttività.
+                </p>
+            </div>
 
-  for (let i = 0; i < iconCount; i++) {
-    const iconData = icons[i % icons.length];
-    const iEl = document.createElement("i");
+            <!-- Enterprise -->
+            <div
+                class="bg-white dark:bg-neutral-800 p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 group border border-transparent dark:border-white/5 reveal delay-300">
+                <div
+                    class="w-16 h-16 bg-brand-red/10 rounded-2xl flex items-center justify-center text-brand-red text-3xl mb-8 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                <p class="text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Modernizzazione di sistemi legacy e integrazione di AI in flussi corporate. Sicurezza, compliance e
+                    architetture a microservizi per la massima resilienza.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    iEl.className = iconData.class;
-    iEl.style.color = iconData.color;
+<!-- AI Vision Section -->
+<section id="ai-vision"
+    class="py-32 px-6 bg-black text-white rounded-[3rem] mx-2 lg:mx-6 relative overflow-hidden reveal shadow-2xl">
+    <!-- Background Abstract -->
+    <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/20 rounded-full blur-[100px] pointer-events-none animate-pulse-slow">
+    </div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-red/20 rounded-full blur-[100px] pointer-events-none animate-pulse-slow"
+        style="animation-delay: 2s;"></div>
 
-    const size = 30 + Math.random() * 30;
-    iEl.style.fontSize = `${size}px`;
-    iEl.style.position = "absolute";
+    <div class="max-w-5xl mx-auto relative z-10 text-center">
+        <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-xs font-bold tracking-wide uppercase mb-8 text-white">
+            <i class="fas fa-brain text-brand-blue"></i>
+            Visione
+        </div>
+        <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-8 leading-tight">
+            "L'Intelligenza Artificiale non è magia.<br>
+            È la nuova elettricità per il tuo business."
+        </h2>
+        <p class="text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
+            Non lasciare che il futuro ti colga impreparato. Integrare agenti autonomi oggi significa definire gli
+            standard di domani.
+        </p>
+    </div>
+</section>
 
-    iEl.style.top = `${5 + Math.random() * 90}%`;
-    iEl.style.left = `${5 + Math.random() * 90}%`;
+<!-- Blog / News Section -->
+<section id="blog" class="py-32 px-6 bg-brand-surface dark:bg-neutral-900 transition-colors">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-16 reveal">
+            <div>
+                <h2 class="text-4xl font-black mb-2">Dal Blog.</h2>
+                <p class="text-gray-500 dark:text-gray-400 text-lg">Approfondimenti su automazione, AI e tech trend.</p>
+            </div>
+            <a href="{{ '/blog/' | relative_url }}"
+                class="hidden md:block font-bold text-brand-blue hover:text-black dark:hover:text-white transition-colors">Vedi
+                tutti gli articoli →</a>
+        </div>
 
-    iEl.style.opacity = (0.1 + Math.random() * 0.15).toFixed(2);
+        <div class="grid md:grid-cols-3 gap-8">
+            {% for post in site.posts limit:3 %}
+            <article class="group cursor-pointer reveal delay-100">
+                <div
+                    class="h-60 bg-gray-100 dark:bg-neutral-900 rounded-[2rem] mb-6 overflow-hidden relative border border-gray-100 dark:border-white/5">
+                    {% if post.image %}
+                    <img src="{{ post.image | relative_url }}"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        alt="{{ post.title }}">
+                    {% endif %}
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/5 dark:group-hover:bg-white/5 transition-colors">
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2 group-hover:text-brand-blue transition-colors">{{ post.title }}</h3>
+                <p class="text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">{{ post.excerpt | strip_html }}</p>
+                <div class="flex items-center gap-2 text-sm text-gray-400">
+                    <span>{{ post.date | date: "%d %b %Y" }}</span>
+                    <a href="{{ post.url | relative_url }}"
+                        class="text-brand-blue font-bold hover:underline ml-2">Leggi</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
-    const anim = Math.random() < 0.5 ? "float-up-down" : "float-left-right";
-    const duration = 3000 + Math.random() * 4000;
-    iEl.style.animation = `${anim} ${duration}ms ease-in-out infinite`;
-    iEl.style.animationDelay = `${Math.random() * duration}ms`;
+<!-- FAQ Section -->
+<section class="py-24 px-6 bg-white dark:bg-neutral-950 transition-colors">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-black mb-12 text-center reveal">Domande Frequenti.</h2>
+        {% include accordion-faq.html %}
+    </div>
+</section>
 
-    container.appendChild(iEl);
-  }
+<!-- Contact Form Section -->
+<section id="contact" class="py-32 px-6 bg-brand-surface dark:bg-neutral-900 transition-colors">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+            <h2 class="text-5xl font-black mb-6">Parliamone.</h2>
+            <p class="text-xl text-gray-500 dark:text-gray-400 mb-12">
+                Hai un progetto complesso? Cerchi un partner tecnico per scalare la tua infrastruttura?
+                <br><br>
+                Non uso form automatici. Preferisco il contatto diretto e professionale.
+            </p>
 
-  // 🔴 Rimosso il parallax mousemove perché causava il bug
-});
-</script>
+            <div class="space-y-8">
+                <div class="flex items-start gap-6">
+                    <div
+                        class="w-12 h-12 rounded-full bg-white dark:bg-neutral-800 border border-transparent dark:border-white/5 flex items-center justify-center shadow-sm">
+                        <i class="fas fa-envelope text-black dark:text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Email</h4>
+                        <a href="mailto:info@antoniotrento.net"
+                            class="text-gray-500 dark:text-gray-400 hover:text-brand-blue transition-colors">info@antoniotrento.net</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<!-- RETE NEURALE ASTRATTA -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const canvas = document.getElementById("neuralNetworkBg");
-  const ctx = canvas.getContext("2d");
+        <div
+            class="bg-white dark:bg-neutral-800 border border-transparent dark:border-white/5 p-12 rounded-[2.5rem] shadow-xl reveal delay-200 text-center flex flex-col justify-center items-center h-full min-h-[400px]">
 
-  let width, height;
-  const nodes = [];
-  const nodeCount = 50;
-  const maxDistance = 150;
+            <div
+                class="w-24 h-24 bg-[#0077b5] rounded-3xl flex items-center justify-center text-white text-5xl mb-8 shadow-lg shadow-blue-900/20">
+                <i class="fab fa-linkedin-in"></i>
+            </div>
 
-  function resizeCanvas() {
-    width = canvas.width = canvas.offsetWidth;
-    height = canvas.height = canvas.offsetHeight;
-  }
+            <h3 class="text-3xl font-black mb-4">Connettiamoci su LinkedIn</h3>
+            <p class="text-gray-500 dark:text-gray-400 mb-10 max-w-sm">
+                Il modo più veloce per raggiungermi. Scrivimi un messaggio diretto per discutere del tuo progetto.
+            </p>
 
-  window.addEventListener("resize", resizeCanvas);
-  resizeCanvas();
-
-  // Inizializza nodi
-  for (let i = 0; i < nodeCount; i++) {
-    nodes.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5
-    });
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, width, height);
-
-    // Disegna linee tra nodi vicini
-    for (let i = 0; i < nodeCount; i++) {
-      const a = nodes[i];
-      for (let j = i + 1; j < nodeCount; j++) {
-        const b = nodes[j];
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < maxDistance) {
-          ctx.strokeStyle = `rgba(0,123,255,${1 - dist / maxDistance})`;
-          ctx.lineWidth = 1;
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.stroke();
-        }
-      }
-    }
-
-    // Disegna nodi
-    for (const node of nodes) {
-      ctx.beginPath();
-      ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
-      ctx.fillStyle = "#007bff";
-      ctx.fill();
-
-      node.x += node.vx;
-      node.y += node.vy;
-
-      // Bounce ai bordi
-      if (node.x < 0 || node.x > width) node.vx *= -1;
-      if (node.y < 0 || node.y > height) node.vy *= -1;
-    }
-
-    requestAnimationFrame(draw);
-  }
-
-  draw();
-});
-</script>
+            <a href="https://www.linkedin.com/in/antoniotrento" target="_blank"
+                class="px-10 py-5 rounded-full bg-[#0077b5] text-white font-bold hover:bg-[#006097] hover:scale-105 transition-all duration-300 text-lg shadow-xl shadow-blue-900/20 flex items-center gap-3">
+                <span>Vai al Profilo</span>
+                <i class="fas fa-external-link-alt text-sm"></i>
+            </a>
+        </div>
+    </div>
+</section>

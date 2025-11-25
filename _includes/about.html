@@ -1,43 +1,64 @@
-<!-- ABOUT SECTION: about.html -->
-<div class="container col-xxl-12 py-5" id="about">
-  <div class="row flex-lg-row-reverse align-items-center py-5">
-    <!-- Immagine ritratto -->
-    <div class="col-sm-8 col-lg-6">
-      <img src="/assets/images/index/hero-bg-antonio-trento-mobile.jpg" class="d-block mx-lg-auto img-fluid about-image" alt="Ritratto di Antonio Trento" loading="lazy">
+<section class="py-32 px-6 bg-brand-surface dark:bg-neutral-900 transition-colors">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <!-- Text -->
+    <div class="reveal">
+      <div
+        class="inline-block px-4 py-1.5 rounded-full bg-brand-red/10 dark:bg-brand-red/20 text-brand-red dark:text-red-400 text-xs font-bold tracking-wide uppercase mb-6">
+        La Mia Filosofia</div>
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6 leading-tight">Non solo codice, ma
+        ecosistemi.</h2>
+      <p class="text-xl text-gray-500 dark:text-gray-400 mb-8">
+        L'obiettivo non è fornire semplice software, ma restituire <strong>sovranità</strong>. Unisco la
+        robustezza di Linux e Docker con l'intelligenza degli agenti AI per creare piattaforme che scalano con
+        il tuo business, senza vendor lock-in.
+      </p>
+
+      <ul class="space-y-6 mb-8">
+        <li class="flex items-start gap-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center text-brand-blue shadow-sm shrink-0">
+            <i class="fas fa-database"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg">Sovranità dei Dati</h4>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">I tuoi dati rimangono tuoi. Infrastrutture
+              self-hosted e sicure.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center text-brand-red shadow-sm shrink-0">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg">Automazione Cognitiva</h4>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Agenti AI che non solo rispondono, ma
+              agiscono ed eseguono task complessi.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-white dark:bg-white/5 flex items-center justify-center text-brand-yellow shadow-sm shrink-0">
+            <i class="fas fa-cubes"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg">Architetture Modulari</h4>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Sistemi basati su Docker che crescono e si
+              adattano senza rompersi.</p>
+          </div>
+        </li>
+      </ul>
     </div>
-    <!-- Descrizione dettagliata -->
-    <div class="col-lg-6">
-      <h3 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Antonio Trento – Il Tuo Esperto di Innovazione Digitale</h3>
-      <p class="mb-4">
-        Sono <strong>Antonio Trento</strong>, consulente IT con oltre <strong>10 anni di esperienza</strong> nel trasformare la complessità tecnologica in soluzioni chiare, scalabili e orientate al risultato. 
-        Dall’<em>automazione intelligente</em> all’<em>integrazione AI</em>, accompagno aziende e professionisti nel loro percorso verso il futuro digitale.
-      </p>
-      <p class="mb-4">
-        Le mie competenze coprono ogni fase del ciclo tecnologico:
-      </p>
-      <ul class="list-unstyled mb-4">
-        <li>• <strong>Linux &amp; Docker</strong>: ambienti containerizzati affidabili e facilmente scalabili.</li>
-        <li>• <strong>Python &amp; n8n</strong>: automazioni visive e flessibili, integrate con AI per processi fluidi e intelligenti.</li>
-        <li>• <strong>Front-end &amp; Back-end</strong>: interfacce intuitive e sistemi robusti su architetture moderne.</li>
-        <li>• <strong>MySQL &amp; Database Design</strong>: modelli dati performanti, query ottimizzate e backup strategici.</li>
-        <li>• <strong>AI &amp; LangChain</strong>: agenti conversazionali, classificazione smart e analisi predittive su misura.</li>
-        <li>• <strong>LangGraph</strong>: visualizzazione semantica dei processi per AI più performanti e affidabili.</li>
-      </ul>
-      <p class="mb-4">
-        Il mio metodo unisce:
-      </p>
-      <ul class="list-unstyled mb-4">
-        <li>✔️ <strong>Analisi mirata</strong> per identificare esigenze reali e obiettivi concreti.</li>
-        <li>✔️ <strong>Soluzioni su misura</strong> con le tecnologie più evolute.</li>
-        <li>✔️ <strong>Sviluppo iterativo</strong> per risultati rapidi e sempre ottimizzati.</li>
-        <li>✔️ <strong>Supporto costante</strong> per crescere insieme nel tempo.</li>
-      </ul>
-      <p class="mb-4">
-        Vuoi portare automazione e intelligenza nei tuoi processi? <strong>Parliamone</strong>: la prima <strong>consulenza è gratuita</strong> e senza impegno.
-      </p>
-      <a href="https://forms.gle/umf4DVQuoTPkdhnF7" class="btn btn-lg btn-primary mt-3 px-4 py-2 shadow-sm">
-        🚀 Prenota la tua consulenza gratuita
-      </a>
+    <!-- Image/Visual -->
+    <div
+      class="relative h-[600px] bg-gray-200 dark:bg-neutral-800 rounded-[3rem] reveal delay-200 overflow-hidden group border border-transparent dark:border-white/5">
+      <img src="/assets/images/index/hero-bg-antonio-trento-mobile.jpg" alt="Antonio Trento al lavoro"
+        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      <div class="absolute bottom-10 left-10 text-white max-w-xs">
+        <p class="font-bold text-2xl mb-2">"La tecnologia deve essere un acceleratore, non un freno."</p>
+        <p class="text-white/60 text-sm">- Antonio Trento</p>
+      </div>
     </div>
   </div>
-</div>
+</section>

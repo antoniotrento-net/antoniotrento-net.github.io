@@ -1,29 +1,54 @@
 ---
 permalink: /404.html
 layout: default
+title: "404 - Pagina Non Trovata"
 ---
 
-<div class="hero-100hv position-relative d-flex flex-column justify-content-end">
-  <picture>
-    <!-- Immagine per mobile -->
-    <source srcset="/assets/images/index/hero-bg-franco-trento-mobile.jpg" media="(max-width: 768px)">
-    <!-- Immagine per desktop (fallback) -->
-    <img src="/assets/images/index/hero-bg-franco-trento.jpg" class="hero-bg img-fluid" alt="Sfondo Franco Trento">
-  </picture>
-  
-  <div class="hero-overlay-white"></div>
-  
-  <div class="container col-xxl-8 py-5 position-relative">
-      <div class="row d-flex flex-column justify-content-end g-5 py-5">
-          <div class="col-12 col-sm-10 col-md-8 col-lg-8">
-              <h1 class="display-5 fw-bold lh-1 mb-5">404</h1>
-              <p class="fs-5">La pagina che stai cercando non esiste!</p>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="/" class="btn btn-custom-secondary btn-lg px-4 me-md-2">
-                  <i class="fa-solid fa-house"></i>  Torna alla Home
-                </a>
-            </div>
-          </div>
-      </div>
+<section
+  class="min-h-screen flex items-center justify-center px-6 py-32 bg-gradient-to-br from-white via-brand-surface to-white dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950 transition-colors">
+  <div class="max-w-4xl mx-auto text-center">
+
+    <!-- Animated 404 Number -->
+    <div class="mb-12 reveal">
+      <h1
+        class="text-[200px] md:text-[300px] font-black leading-none tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-brand-red to-brand-yellow animate-pulse-slow">
+        404
+      </h1>
+    </div>
+
+    <!-- Error Message -->
+    <div class="mb-12 reveal delay-100">
+      <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6">
+        Ops! Pagina non trovata.
+      </h2>
+      <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        La pagina che stai cercando non esiste o è stata spostata.
+        <br class="hidden md:block">
+        Torna alla home o esplora il portfolio.
+      </p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center reveal delay-200">
+      <a href="{{ '/' | relative_url }}"
+        class="px-10 py-5 rounded-full bg-black dark:bg-white text-white dark:text-black font-bold hover:bg-brand-blue dark:hover:bg-brand-blue dark:hover:text-white hover:scale-105 transition-all duration-300 text-lg shadow-xl shadow-brand-blue/20 inline-flex items-center justify-center gap-2">
+        <i class="fas fa-home"></i>
+        Torna alla Home
+      </a>
+      <a href="{{ '/portfolio/' | relative_url }}"
+        class="px-10 py-5 rounded-full border border-gray-200 dark:border-white/20 font-bold hover:border-black dark:hover:border-white hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-lg bg-white dark:bg-transparent inline-flex items-center justify-center gap-2 group">
+        Esplora il Portfolio
+        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+      </a>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div
+      class="absolute top-20 left-10 w-32 h-32 rounded-full bg-brand-yellow/10 dark:bg-brand-yellow/20 animate-float backdrop-blur-sm -z-10">
+    </div>
+    <div
+      class="absolute bottom-20 right-10 w-48 h-48 rounded-full bg-brand-blue/5 dark:bg-brand-blue/10 animate-float-delayed backdrop-blur-sm -z-10">
+    </div>
+
   </div>
-</div>
+</section>
