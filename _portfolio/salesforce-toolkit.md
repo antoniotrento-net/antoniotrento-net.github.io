@@ -9,7 +9,7 @@ image-paint: "/assets/images/portfolio/salesforce-toolkit/salesforce-toolkit.jpg
 tags: [Salesforce, Python, Library, ETL, Data Integration, API, CLI, Logging, Automation]
 ---
 
-> *"In ogni progetto enterprise finivo per riscrivere da zero le stesse integrazioni Salesforce. Ho deciso di trasformare quel codice sparso in un toolkit unico, robusto e riusabile, progettato come se dovesse andare in produzione domani."*
+> *"In ogni progetto enterprise finivo per riscrivere da zero le stesse integrazioni Salesforce. Ho deciso di trasformare quel codice sparso in un toolkit unico, robusto e riusabile, progettato come se dovesse andare in produzione domani."* 
 
 **Salesforce Toolkit** è una libreria Python pensata per sviluppatori, data engineer e team di integrazione che lavorano quotidianamente con Salesforce.
 
