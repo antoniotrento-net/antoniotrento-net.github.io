@@ -21,7 +21,7 @@ Invece di avere mille script ad-hoc per autenticarsi, fare CRUD, gestire mapping
 - un framework di **sync/ETL** dichiarativo,
 - logging e CLI pensati per ambienti reali.
 
-È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile. Ora è anche **Docker-ready** e pubblicato su **[PyPI](https://pypi.org/project/salesforce-toolkit/1.0.0/){: rel="nofollow"}**.
+È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile. Ora è anche **Docker-ready** e pubblicato su **[PyPI](https://pypi.org/project/salesforce-toolkit/1.0.1/){: rel="nofollow"}**.
 
 ---
 
