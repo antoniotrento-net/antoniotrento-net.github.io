@@ -9,7 +9,7 @@ image-paint: "/assets/images/portfolio/salesforce-toolkit/salesforce-toolkit.jpg
 tags: [Salesforce, Python, Library, ETL, Data Integration, API, CLI, Logging, Automation, Docker, DevOps]
 ---
 
-> *"In ogni progetto enterprise finivo per riscrivere da zero le stesse integrazioni Salesforce. Ho deciso di trasformare quel codice sparso in un toolkit unico, robusto e riusabile, progettato come se dovesse andare in produzione domani."* 
+> *In ogni progetto enterprise finivo per riscrivere da zero le stesse integrazioni Salesforce. Ho deciso di trasformare quel codice sparso in un toolkit unico, robusto e riusabile, progettato come se dovesse andare in produzione domani.* 
 
 **Salesforce Toolkit** è una libreria Python pensata per sviluppatori, data engineer e team di integrazione che lavorano quotidianamente con Salesforce.
 
@@ -21,7 +21,7 @@ Invece di avere mille script ad-hoc per autenticarsi, fare CRUD, gestire mapping
 - un framework di **sync/ETL** dichiarativo,
 - logging e CLI pensati per ambienti reali.
 
-È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile. Ora è anche **Docker-ready** e pubblicabile su **PyPI**.
+È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile. Ora è anche **Docker-ready** e pubblicato su **[PyPI](https://pypi.org/project/salesforce-toolkit/1.0.0/){: rel="nofollow"}**.
 
 ---
 
