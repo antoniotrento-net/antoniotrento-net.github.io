@@ -6,7 +6,7 @@ description: "Salesforce Toolkit è una libreria Python production-ready pensata
 image: "/assets/images/portfolio/salesforce-toolkit/salesforce-toolkit.jpg"
 image-header: "/assets/images/portfolio/salesforce-toolkit/salesforce-toolkit.jpg"
 image-paint: "/assets/images/portfolio/salesforce-toolkit/salesforce-toolkit.jpg"
-tags: [Salesforce, Python, Library, ETL, Data Integration, API, CLI, Logging, Automation]
+tags: [Salesforce, Python, Library, ETL, Data Integration, API, CLI, Logging, Automation, Docker, DevOps]
 ---
 
 > *"In ogni progetto enterprise finivo per riscrivere da zero le stesse integrazioni Salesforce. Ho deciso di trasformare quel codice sparso in un toolkit unico, robusto e riusabile, progettato come se dovesse andare in produzione domani."* 
@@ -21,7 +21,7 @@ Invece di avere mille script ad-hoc per autenticarsi, fare CRUD, gestire mapping
 - un framework di **sync/ETL** dichiarativo,
 - logging e CLI pensati per ambienti reali.
 
-È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile.
+È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile. Ora è anche **Docker-ready** e pubblicabile su **PyPI**.
 
 ---
 
@@ -128,6 +128,26 @@ Questo rende Salesforce Toolkit adatto sia a task occasionali (un export veloce)
 
 ---
 
+## DevOps & Distribuzione
+
+Uno degli obiettivi principali era rendere questo toolkit un **prodotto** distribuibile e riproducibile, non solo codice sorgente.
+
+### 🐳 Docker & Riproducibilità
+Il progetto include un ambiente **Docker** completo che isola l'esecuzione.
+- `Dockerfile` ottimizzato per Python 3.11-slim.
+- Volume mapping intelligente per gestire certificati (`certs/`) e config senza "sporcare" il container.
+- Garantisce che i test (e le pipeline) girino allo stesso modo su un laptop Windows, un Mac o un server Linux CI/CD.
+
+### 📦 Pubblicazione PyPI
+Il pacchetto è strutturato secondo gli standard moderni di packaging Python (`pyproject.toml` / `setup.py`):
+- Build automatico di wheel (`.whl`) e source distribution (`.tar.gz`).
+- Pronto per la distribuzione su **PyPI**, rendendolo installabile con un semplice:
+  ```bash
+  pip install salesforce-toolkit
+  ```
+
+---
+
 ## Configurazione dichiarativa
 
 Nel repository sono presenti file di esempio che mostrano l’approccio **config-first**:
@@ -151,17 +171,10 @@ Questo approccio permette di:
 
 ## Esempi & documentazione
 
-Per ridurre il tempo di onboarding, il progetto include una serie di esempi pratici in `examples/`:
+Per ridurre il tempo di onboarding, il progetto include una serie di esempi pratici in `examples/` e guide dettagliate:
 
-- `01_basic_authentication.py` – autenticazione e creazione del client,
-- `02_crud_operations.py` – operazioni CRUD complete su oggetti Salesforce,
-- `03_data_sync_pipeline.py` – esempio end-to-end di pipeline ETL.
-
-La documentazione di supporto comprende:
-
-- `README.md` – panoramica completa del toolkit e delle sue feature,
-- `docs/QUICK_START.md` – guida “5 minuti per iniziare”,
-- `docs/SALESFORCE_SETUP_GUIDE.md` – setup lato Salesforce (app, permessi, certificati).
+- **Guide**: `QUICK_START`, `DOCKER_GUIDE` e `PUBLISHING_GUIDE` per coprire ogni aspetto, dall'uso base alla pubblicazione.
+- **Esempi**: Script completi per CRUD (`02_crud_operations.py`) e pipeline (`03_data_sync_pipeline.py`).
 
 ---
 
@@ -169,10 +182,10 @@ La documentazione di supporto comprende:
 
 Più che una singola feature, **Salesforce Toolkit** rappresenta un modo di progettare integrazioni enterprise:
 
-- **Design di librerie riusabili** in Python, con moduli chiari e separazione delle responsabilità.
+- **Design di librerie riusabili** in Python, con moduli chiari e separazione delle responsabilità (SOLID).
 - **Integrazione profonda con API Salesforce**, incluse le complessità di autenticazione e gestione sessioni.
 - **Progettazione di pipeline ETL** robuste, osservabili e configurabili.
-- **Approccio “config-driven”**, che permette a team diversi di collaborare senza toccare continuamente il codice.
+- **DevOps Mindset**: Containerizzazione (**Docker**), Packaging (**PyPI**) e gestione configurazioni (YAML/.env).
 - **Attenzione alla production-readiness**: logging, struttura del pacchetto, esempi, documentazione, test.
 
 In un contesto reale, questo toolkit permette di:
