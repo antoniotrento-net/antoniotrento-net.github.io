@@ -1,8 +1,8 @@
 ---
 layout: portfolio
-title: "Salesforce Toolkit"
+title: "Kinetic Core"
 date: 2025-12-05
-description: "Salesforce Toolkit è una libreria Python production-ready pensata per rendere semplici e affidabili l’integrazione, il sync dati e le operazioni ETL verso Salesforce, con autenticazione sicura, client ad alto livello, mapping flessibile e pipeline dichiarative."
+description: "Kinetic Core è una libreria Python production-ready pensata per rendere semplici e affidabili l’integrazione, il sync dati e le operazioni ETL verso Salesforce, con autenticazione sicura, client ad alto livello, mapping flessibile e pipeline dichiarative."
 image: "/assets/images/portfolio/kinetic-core/kinetic-core.jpg"
 image-header: "/assets/images/portfolio/kinetic-core/kinetic-core.jpg"
 image-paint: "/assets/images/portfolio/kinetic-core/kinetic-core.jpg"
@@ -11,7 +11,7 @@ tags: [Salesforce, Python, Library, ETL, Data Integration, API, CLI, Logging, Au
 
 > *In ogni progetto enterprise finivo per riscrivere da zero le stesse integrazioni Salesforce. Ho deciso di trasformare quel codice sparso in un toolkit unico, robusto e riusabile, progettato come se dovesse andare in produzione domani.* 
 
-**Salesforce Toolkit** è una libreria Python pensata per sviluppatori, data engineer e team di integrazione che lavorano quotidianamente con Salesforce.
+**Kinetic Core** è una libreria Python pensata per sviluppatori, data engineer e team di integrazione che lavorano quotidianamente con Salesforce.
 
 Invece di avere mille script ad-hoc per autenticarsi, fare CRUD, gestire mapping e sincronizzazioni, il toolkit offre un set coerente di componenti:
 
@@ -21,7 +21,7 @@ Invece di avere mille script ad-hoc per autenticarsi, fare CRUD, gestire mapping
 - un framework di **sync/ETL** dichiarativo,
 - logging e CLI pensati per ambienti reali.
 
-È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile. Ora è anche **Docker-ready** e pubblicato su **[PyPI](https://pypi.org/project/kinetic-core/1.0.1/){: rel="nofollow"}**.
+È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile. Ora è anche **Docker-ready** e pubblicato su **[PyPI](https://pypi.org/project/kinetic-core/){: rel="nofollow"}**.
 
 ---
 
@@ -124,7 +124,7 @@ Da terminale è possibile:
 - creare/aggiornare/eliminare record,
 - lanciare pipeline di sync definite in YAML.
 
-Questo rende Salesforce Toolkit adatto sia a task occasionali (un export veloce) sia a pipeline schedulate via cron/CI.
+Questo rende Kinetic Core adatto sia a task occasionali (un export veloce) sia a pipeline schedulate via cron/CI.
 
 ---
 
@@ -180,7 +180,7 @@ Per ridurre il tempo di onboarding, il progetto include una serie di esempi prat
 
 ## Cosa dimostra questo progetto
 
-Più che una singola feature, **Salesforce Toolkit** rappresenta un modo di progettare integrazioni enterprise:
+Più che una singola feature, **Kinetic Core** rappresenta un modo di progettare integrazioni enterprise:
 
 - **Design di librerie riusabili** in Python, con moduli chiari e separazione delle responsabilità (SOLID).
 - **Integrazione profonda con API Salesforce**, incluse le complessità di autenticazione e gestione sessioni.
