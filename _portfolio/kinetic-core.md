@@ -3,9 +3,9 @@ layout: portfolio
 title: "Salesforce Toolkit"
 date: 2025-12-05
 description: "Salesforce Toolkit è una libreria Python production-ready pensata per rendere semplici e affidabili l’integrazione, il sync dati e le operazioni ETL verso Salesforce, con autenticazione sicura, client ad alto livello, mapping flessibile e pipeline dichiarative."
-image: "/assets/images/portfolio/salesforce-toolkit/salesforce-toolkit.jpg"
-image-header: "/assets/images/portfolio/salesforce-toolkit/salesforce-toolkit.jpg"
-image-paint: "/assets/images/portfolio/salesforce-toolkit/salesforce-toolkit.jpg"
+image: "/assets/images/portfolio/kinetic-core/kinetic-core.jpg"
+image-header: "/assets/images/portfolio/kinetic-core/kinetic-core.jpg"
+image-paint: "/assets/images/portfolio/kinetic-core/kinetic-core.jpg"
 tags: [Salesforce, Python, Library, ETL, Data Integration, API, CLI, Logging, Automation, Docker, DevOps]
 ---
 
@@ -21,7 +21,7 @@ Invece di avere mille script ad-hoc per autenticarsi, fare CRUD, gestire mapping
 - un framework di **sync/ETL** dichiarativo,
 - logging e CLI pensati per ambienti reali.
 
-È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile. Ora è anche **Docker-ready** e pubblicato su **[PyPI](https://pypi.org/project/salesforce-toolkit/1.0.1/){: rel="nofollow"}**.
+È un progetto orientato alla **manutenibilità**: nessun “quick & dirty”, ma codice strutturato, documentato e testabile. Ora è anche **Docker-ready** e pubblicato su **[PyPI](https://pypi.org/project/kinetic-core/1.0.1/){: rel="nofollow"}**.
 
 ---
 
@@ -143,7 +143,7 @@ Il pacchetto è strutturato secondo gli standard moderni di packaging Python (`p
 - Build automatico di wheel (`.whl`) e source distribution (`.tar.gz`).
 - Pronto per la distribuzione su **PyPI**, rendendolo installabile con un semplice:
   ```bash
-  pip install salesforce-toolkit
+  pip install kinetic-core
   ```
 
 ---
@@ -196,4 +196,4 @@ In un contesto reale, questo toolkit permette di:
 
 > Se vuoi approfondire l’implementazione interna dei moduli (`auth`, `core`, `mapping`, `pipeline`, `logging`), puoi esplorare il codice sorgente direttamente su GitHub.
 >
-> **[Esplora il progetto su GitHub](https://github.com/antonio-backend-projects/salesforce-toolkit)**
+> **[Esplora il progetto su GitHub](https://github.com/KineticMCP/kinetic-core)**
