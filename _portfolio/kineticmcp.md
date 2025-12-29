@@ -15,7 +15,7 @@ tags: [AI Agents, Model Context Protocol, Salesforce, System of Action, Python, 
 
 Il progetto nasce da una frustrazione tecnica precisa: gli strumenti di automazione esistenti (Zapier, n8n, Flow Builder) sono **deterministici**. Richiedono che un umano disegni ogni singolo step del processo. Ma il business è **caotico**. KineticMCP introduce un layer di **intelligenza adattiva** che permette al sistema di decidere *come* risolvere un problema, non solo di eseguire uno script pre-scritto.
 
-Sito Ufficiale: **[kineticmcp.github.io](https://kineticmcp.github.io){: rel="nofollow" target="_blank"}**
+Sito Ufficiale: **[kineticmcp.com](https://kineticmcp.com){: rel="nofollow" target="_blank"}**
 
 ---
 
