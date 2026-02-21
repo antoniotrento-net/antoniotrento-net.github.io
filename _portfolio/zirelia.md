@@ -72,7 +72,7 @@ In pratica: se il QA layer rileva che il post generato è inconsistente con la p
 
 La **memoria a lungo termine** è implementata via ChromaDB con embeddings OpenAI. Ogni post viene salvato come vettore semantico: l'agente non cerca solo i post recenti per data, ma recupera i contenuti *semanticamente simili* a quello che sta per generare, evitando ripetizioni tematiche anche a distanza di settimane.
 
-Per approfondire l'architettura interna: [The Brain: Inside Zirelia's LLM-Powered Content Engine](https://zirelia.github.io/architecture/ai/the-brain-inside-zirelias-llm-powered-content-engine/){: rel="nofollow" target="_blank"}
+Per approfondire l'architettura interna: [Il Cervello: Dentro il Motore di Contenuto LLM di Zirelia](https://zirelia.github.io/architettura/ai/the-brain-it/){: rel="nofollow" target="_blank"}
 
 ---
 
@@ -89,7 +89,7 @@ Il workflow di training è documentato nel progetto e compatibile con:
 
 Il LoRA viene poi caricato su Replicate come modello privato e richiamato dall'agente ad ogni generazione tramite API, con un costo di circa $0.055 per immagine con FLUX.1 pro.
 
-Guida completa: [Visual Consistency at Scale: Training a LoRA for Your AI Influencer](https://zirelia.github.io/guide/image-generation/visual-consistency-at-scale-training-a-lora-for-your-ai-influencer/){: rel="nofollow" target="_blank"}
+Guida completa: [Coerenza Visiva su Scala: Addestrare un LoRA per il Tuo AI Influencer](https://zirelia.github.io/guida/generazione-immagini/visual-identity-lora-it/){: rel="nofollow" target="_blank"}
 
 ---
 
@@ -99,7 +99,7 @@ Il modo migliore per validare un sistema del genere è costruire qualcosa di rea
 
 Il risultato: crescita organica dei follower, engagement reale, nessun ban. La cosa più interessante non sono i numeri — è che i follower interagiscono con la persona come se fosse reale, rispondono ai post, citano concetti che la persona ha espresso settimane prima. La coerenza narrativa costruita dalla memoria RAG funziona.
 
-I dettagli completi, i dati di engagement e l'analisi tecnica dell'esperimento sono nel case study: [Sienna Fox — Building a Virtual Influencer from Zero](https://zirelia.github.io/case-study/results/case-study-sienna-fox-building-a-virtual-influencer-from-zero/){: rel="nofollow" target="_blank"}
+I dettagli completi, i dati di engagement e l'analisi tecnica dell'esperimento sono nel case study: [Case Study: Sienna Fox — Costruire un Virtual Influencer da Zero](https://zirelia.github.io/case-study/risultati/case-study-sienna-it/){: rel="nofollow" target="_blank"}
 
 ---
 
@@ -113,7 +113,7 @@ Il modulo anti-detection include:
 - **Human-like delays** tra le operazioni API
 - **Monitoraggio proattivo** dei segnali di shadow-ban (analisi dell'engagement rate)
 
-Approfondimento: [Anti-Ban Strategy: Come Crescere un Account di Virtual Influencer Senza Essere Sospesi](https://zirelia.github.io/guide/safety/anti-ban-strategy-how-to-grow-a-virtual-influencer-account-without-getting-suspended/){: rel="nofollow" target="_blank"}
+Approfondimento: [Anti-Ban Strategy: Come Crescere un Account di Virtual Influencer Senza Essere Sospesi](https://zirelia.github.io/guida/sicurezza/anti-ban-strategy-it/){: rel="nofollow" target="_blank"}
 
 ---
 
