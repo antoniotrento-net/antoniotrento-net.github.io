@@ -8,7 +8,7 @@ image: "/assets/images/portfolio/ai-report-video-analizer/ai-report-video-analiz
 image-header: "/assets/images/portfolio/ai-report-video-analizer/ai-report-video-analizer.jpg"
 image-paint: "/assets/images/portfolio/ai-report-video-analizer/ai-report-video-analizer.jpg"
 tags: [Python, Claude API, Whisper, ffmpeg, Docker, AI, Vision, NLP]
-github: https://github.com/antoniotrento/ai-report-video-analizer
+github: https://github.com/antonio-backend-projects/ai-report-video-analizer
 status: released
 ---
 
@@ -16,7 +16,7 @@ status: released
 
 > *Un tool Python single-file che trasforma automaticamente registrazioni video — screencast aziendali, tutorial, riunioni — in report strutturati pronti per la documentazione, l'audit di processo o la knowledge base, usando Claude Vision e Whisper AI.*
 
-Repository: **[github.com/antoniotrento/ai-report-video-analizer](https://github.com/antoniotrento/ai-report-video-analizer){: rel="nofollow" target="_blank"}**
+Repository: **[github.com/antonio-backend-projects/ai-report-video-analizer](https://github.com/antonio-backend-projects/ai-report-video-analizer){: rel="nofollow" target="_blank"}**
 
 ---
 
@@ -503,6 +503,21 @@ Alcune direzioni di sviluppo identificate durante l'uso:
 **Supporto GPU locale per Whisper**: faster-whisper supporta CUDA via CTranslate2. Un rilevamento automatico della GPU disponibile e un'ottimizzazione automatica del `compute_type` (float16 su GPU vs float32 su CPU) ridurrebbero i tempi di trascrizione di un ordine di grandezza su hardware appropriato.
 
 ---
+
+## 🚀 Provalo subito
+
+Il repository include un video di esempio funzionante (`videos/ted_clint_smith.mp4`): clonare il repository, configurare la `ANTHROPIC_API_KEY` nel `.env`, installare `faster-whisper`, e il primo test è immediato:
+
+```bash
+git clone https://github.com/antonio-backend-projects/ai-report-video-analizer
+cd ai-report-video-analizer
+cp .env.example .env
+# inserire ANTHROPIC_API_KEY nel .env
+pip install anthropic python-dotenv faster-whisper
+python analyze_video.py videos/ted_clint_smith.mp4 --audio --whisper-model base
+```
+
+L'output arriva in `output/` in streaming real-time.
 
 ---
 
