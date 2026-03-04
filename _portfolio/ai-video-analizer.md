@@ -490,6 +490,22 @@ La strategia di ottimizzazione costi più efficace è usare Sonnet invece di Opu
 
 ---
 
+## 🚀 Cosa dimostra questo progetto
+
+Questo progetto non è solo uno script in Python, ma una dimostrazione concreta di **System Integration e Architettura Software** applicata all'AI generativa.
+
+### 1. Capacità di problem solving sui limiti infrastrutturali
+Il limite hard codato di 25 MB di OpenAI Whisper per i file audio avrebbe reso impossibile analizzare le tipiche riunioni o i tutorial lunghi. Piuttosto che cercare complesse librerie esterne o caricare l'audio su storage in cloud, ho progettato un sistema a due livelli (compressione MP3 a 32kbps + chunking automatico con `ffmpeg`) che risolve il problema alla radice, processando file di ore di durata in modo completamente trasparente per l'utente, e gestendo la ricombinazione testuale e la pulizia della cache locale autonomamente.
+
+### 2. Integrazione multimodale (Vision, NLP e Audio)
+Ho dimostrato la capacità di coordinare modelli AI di natura completamente diversa (estrazione audio da un lato, estrazione visiva frame-per-frame dall'altro) all'interno della stessa pipeline, facendoli infine collidere nel prompt analitico del Claude Opus finale. Non si tratta solo di fare chiamate API, ma di orchestrare flussi concorrenti temporizzati.
+
+### 3. Sviluppo orientato alla Produzione e al Deploy
+Ho impacchettato una complessa pipeline composta da dipendenze OS (`ffmpeg`), dipendenze Python (`PyTorch` e i backend di Whisper), storage locale di modelli (`huggingface cache`) e secret management (`.env`) in un singolo layer `docker-compose`. Grazie ai `lazy imports`, il runtime Python non crasha se mancano le dipendenze di un modulo non richiesto (come l'audio locale in esecuzione visiva). Il progetto è stato distribuito pronto all'uso su qualsiasi VPS, senza fatiche di setup per l'utente finale.
+
+
+---
+
 ## 🚀 Roadmap e sviluppi futuri
 
 Alcune direzioni di sviluppo identificate durante l'uso:
