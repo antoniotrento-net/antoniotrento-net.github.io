@@ -20,7 +20,7 @@ Repository: **[github.com/antonio-backend-projects/ai-report-video-analizer](htt
 
 ---
 
-## 🎯 Il problema che risolve
+## 💡 Il problema che risolve
 
 Chiunque lavori con video operativi conosce il collo di bottiglia: c'è una registrazione di 10 minuti che mostra come un operatore lavora su un gestionale, oppure una riunione di un'ora in cui sono state prese decisioni importanti, oppure un tutorial che bisogna documentare per il manuale utente. Guardare quei video richiede tempo reale — non si può andare a 2x senza perdere dettagli. Prendere appunti mentre si guarda è inefficiente. Affidarsi alla memoria è inaffidabile.
 
@@ -490,7 +490,7 @@ La strategia di ottimizzazione costi più efficace è usare Sonnet invece di Opu
 
 ---
 
-## 🚀 Cosa dimostra questo progetto
+## 🎯 Cosa dimostra questo progetto
 
 Questo progetto non è solo uno script in Python, ma una dimostrazione concreta di **System Integration e Architettura Software** applicata all'AI generativa.
 
