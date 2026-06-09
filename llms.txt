@@ -1,0 +1,44 @@
+# Antonio Trento
+
+> System Architect & AI Integrator specializzato in integrazione di sistemi, automazione workflow e applicazioni AI agentiche. Oltre 10 anni di esperienza, 50+ progetti consegnati.
+
+Antonio Trento progetta ecosistemi digitali scalabili e sovrani potenziati dall'intelligenza artificiale. La sua filosofia si basa su tre pilastri: sovranità dei dati (architetture self-hosted senza vendor lock-in), automazione cognitiva (AI agents che decidono e agiscono autonomamente) e architetture modulari (componenti intercambiabili e scalabili).
+
+## Pagine principali
+
+- [Homepage](https://antoniotrento.net/): Sistema Architect & AI Integrator — panoramica servizi, portfolio e filosofia
+- [Biografia](https://antoniotrento.net/biografia): Background professionale, timeline evolutiva da Linux/Docker a LLM e AI agents
+- [Blog](https://antoniotrento.net/blog): Articoli tecnici su AI, automazione, integrazione di sistemi e DevOps
+- [Portfolio](https://antoniotrento.net/portfolio): Progetti realizzati — AI agents, strumenti open source, appliance enterprise
+- [Contatti](https://antoniotrento.net/contatti): Form di contatto e link LinkedIn
+
+## Servizi offerti
+
+- [DevOps & Cloud](https://antoniotrento.net/): Docker, Kubernetes, CI/CD pipelines, infrastrutture self-hosted
+- [AI Agents](https://antoniotrento.net/): Agenti autonomi con LangChain, LangGraph, MCP — integrazione LLM (GPT, Claude, Llama)
+- [Full Stack Development](https://antoniotrento.net/): Python, Node.js, React — applicazioni web e API REST scalabili
+- [System Integration](https://antoniotrento.net/): Connessione sistemi eterogenei (ERP, CRM, database, API) tramite n8n e Python
+
+## Portfolio — Progetti principali
+
+- [KineticMCP](https://antoniotrento.net/portfolio/kineticmcp): Il primo AI Operating System per Salesforce basato su Model Context Protocol — architettura agentica self-hosted
+- [DataUnchain](https://antoniotrento.net/portfolio/dataunchain): AI Appliance per estrazione dati da documenti aziendali (fatture, DDT, contratti) con 95.5% di accuratezza, 100% offline
+- [Zirelia](https://antoniotrento.net/portfolio/zirelia): Motore AI open source per virtual influencer autonomi — genera pensieri, immagini fotorealistiche e posta su Twitter/X 24/7
+- [Broker Flow AI](https://antoniotrento.net/portfolio/broker-flow-ai): Automazione intelligente dei flussi operativi per broker
+- [Inbox Brain](https://antoniotrento.net/portfolio/inbox-brain): Gestione intelligente della posta in arrivo con AI
+- [Audely](https://antoniotrento.net/portfolio/audely): Trascrizione e analisi audio con AI
+- [Cloudetta](https://antoniotrento.net/portfolio/cloudetta): Infrastruttura cloud personale self-hosted
+- [Oracle Shell](https://antoniotrento.net/portfolio/oracle-shell): Shell AI per interrogazione di database in linguaggio naturale
+
+## Blog — Argomenti principali
+
+- [AI & Agentic App](https://antoniotrento.net/blog): LangChain, LangGraph, agenti autonomi, prompt engineering, explainability
+- [Automazione Workflow](https://antoniotrento.net/blog): n8n, Python, pipeline dati, report automatici
+- [System Integration](https://antoniotrento.net/blog): Integrazione sistemi legacy, API REST, microservizi
+- [DevOps & Cloud](https://antoniotrento.net/blog): Docker, architetture serverless, ottimizzazione cloud, backup
+- [Machine Learning](https://antoniotrento.net/blog): Modelli transformer, NLP, embedding semantici, reinforcement learning
+- [Settori verticali](https://antoniotrento.net/blog): AI per healthcare, finanza, retail, manifattura, energia, trasporti, agricoltura
+
+## Stack tecnologico
+
+Python · Node.js · React · LangChain · LangGraph · n8n · Docker · Kubernetes · PostgreSQL · MongoDB · REST API · MCP (Model Context Protocol) · FLUX · LoRA · GPT · Claude · Llama · Salesforce · GitHub Actions

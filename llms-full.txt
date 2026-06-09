@@ -1,0 +1,292 @@
+# Antonio Trento — Contenuto completo del sito
+
+> System Architect & AI Integrator | antoniotrento.net
+
+---
+
+## Chi è Antonio Trento
+
+Antonio Trento è un System Architect & AI Integrator italiano con oltre 10 anni di esperienza nell'integrazione di sistemi, automazione e sviluppo full-stack. Ha consegnato 50+ progetti a startup, PMI e aziende enterprise.
+
+**Headline:** "Costruisco l'Infrastruttura del Futuro"
+
+**Filosofia:** Non si limita a scrivere codice — progetta ecosistemi digitali sovrani, scalabili e potenziati dall'Intelligenza Artificiale. La tecnologia deve essere un acceleratore, non un freno.
+
+**Tre pilastri:**
+1. **Sovranità dei dati** — architetture self-hosted, nessun vendor lock-in, controllo totale sui propri dati
+2. **Automazione Cognitiva** — AI agents che non solo elaborano, ma decidono e agiscono autonomamente
+3. **Architetture Modulari** — sistemi composti da componenti intercambiabili e scalabili
+
+**Timeline evolutiva:**
+- Le Origini: Linux, Docker, infrastrutture
+- Lo Sviluppo: Python, Node.js, integrazioni enterprise
+- L'Era dell'AI: LLM, n8n, LangChain, agenti autonomi
+
+**Competenze tecniche (livello):**
+- System Integration & DevOps: 95%
+- Python & Backend Development: 90%
+- AI & Automation: 85%
+
+**Contatti:** info@antoniotrento.net | LinkedIn | Instagram | Facebook | Twitter
+
+---
+
+## Servizi
+
+### DevOps & Cloud
+Progettazione e gestione di infrastrutture cloud e on-premise. Docker, Kubernetes, CI/CD pipelines. Monitoraggio 24/7. Backup e disaster recovery.
+
+### AI Agents & Agentic App
+Sviluppo di agenti AI autonomi con LangChain e LangGraph. Integrazione di modelli linguistici (GPT, Claude, Llama, Gemini). Sistemi multi-agente, RAG, tool use, MCP (Model Context Protocol).
+
+### Full Stack Development
+Applicazioni web complete con Python (Flask/FastAPI/Django), Node.js, React. API REST scalabili. Interfacce utente moderne e dashboard interattive.
+
+### System Integration
+Connessione di sistemi eterogenei: ERP, CRM, database SQL/NoSQL, API di terze parti. Automazione workflow con n8n e Python. Integrazione con Salesforce, HubSpot, e altri sistemi enterprise.
+
+---
+
+## Portfolio — Tutti i progetti
+
+### KineticMCP
+**URL:** https://antoniotrento.net/portfolio/kineticmcp
+**Descrizione:** Il primo AI Operating System per Salesforce basato su Model Context Protocol. Architettura agentica self-hosted che permette agli agenti AI di interagire con Salesforce in modo autonomo e sicuro.
+**Tag:** AI Agents, MCP, Salesforce, System of Action, Self-hosted
+
+### DataUnchain
+**URL:** https://antoniotrento.net/portfolio/dataunchain
+**Descrizione:** AI Appliance per l'estrazione automatica di dati da documenti aziendali. Processa fatture, DDT e contratti con 95.5% di accuratezza. Funziona 100% offline — nessun dato esce dall'azienda.
+**Tag:** AI, On-Premise, Data Extraction, OCR, NLP
+
+### Zirelia
+**URL:** https://antoniotrento.net/portfolio/zirelia
+**Descrizione:** Motore AI open source per virtual influencer autonomi. Genera pensieri, crea immagini fotorealistiche con FLUX e LoRA, e pubblica automaticamente su Twitter/X 24/7 senza intervento umano.
+**Tag:** Open Source, AI Agents, FLUX, LoRA, Social Media Automation
+
+### Broker Flow AI
+**URL:** https://antoniotrento.net/portfolio/broker-flow-ai
+**Descrizione:** Sistema di automazione intelligente per i flussi operativi di broker assicurativi e finanziari. Riduce il lavoro manuale e accelera l'elaborazione delle pratiche.
+**Tag:** Workflow Automation, Finance, n8n, Python
+
+### Inbox Brain
+**URL:** https://antoniotrento.net/portfolio/inbox-brain
+**Descrizione:** Sistema AI per la gestione intelligente della posta in arrivo. Classifica, prioritizza e suggerisce risposte automaticamente.
+**Tag:** AI, Email, NLP, Automation
+
+### Audely
+**URL:** https://antoniotrento.net/portfolio/audely
+**Descrizione:** Applicazione per la trascrizione e analisi intelligente di file audio. Supporta meeting, interviste e contenuti multimediali.
+**Tag:** Speech-to-Text, NLP, AI, Python
+
+### Cloudetta
+**URL:** https://antoniotrento.net/portfolio/cloudetta
+**Descrizione:** Suite di strumenti per costruire e gestire un'infrastruttura cloud personale self-hosted. Alternativa open source ai cloud provider commerciali.
+**Tag:** Self-hosted, Docker, DevOps, Open Source
+
+### Oracle Shell
+**URL:** https://antoniotrento.net/portfolio/oracle-shell
+**Descrizione:** Shell AI che permette di interrogare qualsiasi database in linguaggio naturale. Converte domande in italiano/inglese in query SQL ottimizzate.
+**Tag:** NLP, SQL, AI, Python, Database
+
+### Kinetic Core
+**URL:** https://antoniotrento.net/portfolio/kinetic-core
+**Descrizione:** Motore core per integrazioni enterprise — libreria Python per la gestione standardizzata di connessioni, autenticazione e flussi dati tra sistemi eterogenei.
+**Tag:** Python, System Integration, Open Source
+
+### Meetly
+**URL:** https://antoniotrento.net/portfolio/meetly
+**Descrizione:** Assistente AI per la gestione di riunioni: trascrive, riassume e genera action items automaticamente.
+**Tag:** AI, Meetings, NLP, Productivity
+
+### Coinmaker
+**URL:** https://antoniotrento.net/portfolio/coinmaker
+**Descrizione:** Strumento per l'analisi e il monitoraggio di asset crypto con AI integrata per segnali e previsioni.
+**Tag:** Crypto, AI, Data Analysis, Python
+
+### Churn Rate Predictor
+**URL:** https://antoniotrento.net/portfolio/churn-rate
+**Descrizione:** Modello di machine learning per la previsione del churn rate aziendale. Identifica i clienti a rischio abbandono con anticipo.
+**Tag:** Machine Learning, Predictive Analytics, Python
+
+### FomoFoto
+**URL:** https://antoniotrento.net/portfolio/fomofoto
+**Descrizione:** Piattaforma per la creazione e gestione di contenuti fotografici potenziata dall'AI.
+**Tag:** AI, Photography, Content Creation
+
+### AI Video Analyzer
+**URL:** https://antoniotrento.net/portfolio/ai-video-analizer
+**Descrizione:** Sistema di analisi video con computer vision e AI. Riconosce oggetti, scene e comportamenti nei flussi video in tempo reale.
+**Tag:** Computer Vision, AI, Python, Real-time
+
+### Jekyll Auto Post
+**URL:** https://antoniotrento.net/portfolio/jekyll-auto-post
+**Descrizione:** Tool open source per la pubblicazione automatica di articoli su siti Jekyll. Genera e schedula contenuti con AI.
+**Tag:** Jekyll, Automation, Open Source, AI, Content
+
+---
+
+## Blog — Tutti gli articoli per categoria
+
+### Fondamentali AI & LangChain
+- [Introduzione a LangChain per Agentic App](https://antoniotrento.net/2025/06/25/introduzione-a-langchain-per-agentic-app/)
+- [Come integrare LangGraph con LangChain per flussi semantici](https://antoniotrento.net/2025/06/26/come-integrare-langgraph-con-langchain-per-flussi-semantici/)
+- [Creare agenti autonomi con Python e LangChain](https://antoniotrento.net/2025/06/28/creare-agenti-autonomi-con-python-e-langchain/)
+- [Ottimizzazione dei modelli di linguaggio con LangChain](https://antoniotrento.net/2025/07/21/ottimizzazione-dei-modelli-di-linguaggio-con-langchain/)
+- [Utilizzare embedding semantici con LangChain](https://antoniotrento.net/2025/08/15/utilizzare-embedding-semantici-con-langchain/)
+- [Creare sistemi di gestione della conoscenza con LangGraph](https://antoniotrento.net/2025/08/25/creare-sistemi-di-gestione-della-conoscenza-con-langgraph/)
+- [Integrazione di modelli di Machine Learning esterni in LangChain](https://antoniotrento.net/2025/07/26/integrazione-di-modelli-di-machine-learning-esterni-in-langchain/)
+- [Creare sistemi di raccomandazione personalizzati con LangChain](https://antoniotrento.net/2025/08/21/creare-sistemi-di-raccomandazione-personalizzati-con-langchain/)
+
+### Automazione Workflow con n8n e Python
+- [Automatizzare workflow AI con n8n e Python](https://antoniotrento.net/2025/06/27/automatizzare-workflow-ai-con-n8n-e-python/)
+- [Creare chatbot intelligenti con LangChain e n8n](https://antoniotrento.net/2025/07/22/creare-chatbot-intelligenti-con-langchain-e-n8n/)
+- [Creare pipeline di dati AI con n8n e API esterne](https://antoniotrento.net/2025/08/16/creare-pipeline-di-dati-ai-con-n8n-e-api-esterne/)
+- [Automazione dei test per agentic app con Python e n8n](https://antoniotrento.net/2025/07/27/automazione-dei-test-per-agentic-app-con-python-e-n8n/)
+- [Automatizzare la generazione di report AI con Python e n8n](https://antoniotrento.net/2025/08/26/automatizzare-la-generazione-di-report-ai-con-python-e-n8n/)
+
+### Architettura & Best Practice
+- [Best practice per scalare agentic app con AI distribuita](https://antoniotrento.net/2025/07/01/best-practice-per-scalare-agentic-app-con-ai-distribuita/)
+- [Sicurezza e privacy in agentic app AI](https://antoniotrento.net/2025/07/02/sicurezza-e-privacy-in-agentic-app-ai/)
+- [Monitoraggio e ottimizzazione delle performance di agentic app](https://antoniotrento.net/2025/07/05/monitoraggio-e-ottimizzazione-delle-performance-di-agentic-app/)
+- [Gestione degli errori e fallback nelle agentic app](https://antoniotrento.net/2025/08/18/gestione-degli-errori-e-fallback-nelle-agentic-app/)
+- [Progettare architetture serverless per agentic app](https://antoniotrento.net/2025/08/13/progettare-architetture-serverless-per-agentic-app/)
+- [Tecniche di prompt engineering per agentic app efficaci](https://antoniotrento.net/2025/08/17/tecniche-di-prompt-engineering-per-agentic-app-efficaci/)
+- [Implementare la spiegabilità (explainability) nelle agentic app AI](https://antoniotrento.net/2025/07/25/implementare-la-spiegabilit-explainability-nelle-agentic-app-ai/)
+- [Come costruire API REST per agentic app scalabili](https://antoniotrento.net/2025/09/24/come-costruire-api-rest-per-agentic-app-scalabili/)
+- [Come implementare sistemi di backup per agentic app critiche](https://antoniotrento.net/2025/09/16/come-implementare-sistemi-di-backup-per-agentic-app-critiche/)
+
+### DevOps & Cloud
+- [L'uso dei container Docker per lo sviluppo di agentic app](https://antoniotrento.net/2025/09/18/l-uso-dei-container-docker-per-lo-sviluppo-di-agentic-app/)
+- [Come ottimizzare le risorse cloud per applicazioni AI distribuite](https://antoniotrento.net/2025/09/19/come-ottimizzare-le-risorse-cloud-per-applicazioni-ai-distribuite/)
+- [Framework open source per la gestione dei flussi di dati AI](https://antoniotrento.net/2025/09/20/framework-open-source-per-la-gestione-dei-flussi-di-dati-ai/)
+
+### Machine Learning & Modelli
+- [Introduzione al Reinforcement Learning per agenti intelligenti](https://antoniotrento.net/2025/08/14/introduzione-al-reinforcement-learning-per-agenti-intelligenti/)
+- [L'evoluzione delle reti neurali nei sistemi agentic](https://antoniotrento.net/2025/09/13/l-evoluzione-delle-reti-neurali-nei-sistemi-agentic/)
+- [Analisi comparativa di modelli transformer per NLP in ambito aziendale](https://antoniotrento.net/2025/10/02/analisi-comparativa-di-modelli-transformer-per-nlp-in-ambito-aziendale/)
+- [Metodologie di testing per modelli AI in ambienti di produzione](https://antoniotrento.net/2025/09/14/metodologie-di-testing-per-modelli-ai-in-ambienti-di-produzione/)
+- [Strategie di debugging per modelli di machine learning complessi](https://antoniotrento.net/2025/09/22/strategie-di-debugging-per-modelli-di-machine-learning-complessi/)
+- [Tecniche avanzate di clustering per analisi dati in AI](https://antoniotrento.net/2025/09/28/tecniche-avanzate-di-clustering-per-analisi-dati-in-ai/)
+- [Uso di modelli multimodali in agentic app](https://antoniotrento.net/2025/08/20/uso-di-modelli-multimodali-in-agentic-app/)
+- [L'impatto dell'AI generativa nel design e nella creatività digitale](https://antoniotrento.net/2025/09/29/l-impatto-dell-ai-generativa-nel-design-e-nella-creativit-digitale/)
+
+### Sicurezza & Compliance
+- [Sicurezza informatica per agentic app — best practice](https://antoniotrento.net/2025/08/22/sicurezza-informatica-per-agentic-app-best-practice/)
+- [Come gestire la compliance GDPR in progetti AI](https://antoniotrento.net/2025/09/30/come-gestire-la-compliance-gdpr-in-progetti-ai/)
+- [Framework di sicurezza per la protezione di dati sensibili in AI](https://antoniotrento.net/2025/10/01/framework-di-sicurezza-per-la-protezione-di-dati-sensibili-in-ai/)
+- [Uso di blockchain per la tracciabilità e sicurezza in AI](https://antoniotrento.net/2025/09/23/uso-di-blockchain-per-la-tracciabilit-e-sicurezza-in-ai/)
+- [Etica e responsabilità nello sviluppo di agentic app](https://antoniotrento.net/2025/08/27/etica-e-responsabilit-nello-sviluppo-di-agentic-app/)
+
+### Integrazione Sistemi
+- [Integrazione di agenti AI con sistemi legacy](https://antoniotrento.net/2025/07/03/integrazione-di-agenti-ai-con-sistemi-legacy/)
+- [Integrazione di agenti AI con IoT](https://antoniotrento.net/2025/07/08/integrazione-di-agenti-ai-con-iot/)
+- [L'integrazione di AI con realtà aumentata e virtuale](https://antoniotrento.net/2025/09/26/l-integrazione-di-ai-con-realt-aumentata-e-virtuale/)
+- [Sfruttare le API OpenAI per agentic app innovative](https://antoniotrento.net/2025/08/24/sfruttare-le-api-openai-per-agentic-app-innovative/)
+
+### Data & Visualizzazione
+- [Gestione dei dati in agentic app AI](https://antoniotrento.net/2025/07/06/gestione-dei-dati-in-agentic-app-ai/)
+- [Utilizzo di Python per il data preprocessing in agentic app](https://antoniotrento.net/2025/07/23/utilizzo-di-python-per-il-data-preprocessing-in-agentic-app/)
+- [Introduzione ai framework di visualizzazione dati per AI](https://antoniotrento.net/2025/09/17/introduzione-ai-framework-di-visualizzazione-dati-per-ai/)
+- [Monitoraggio continuo degli agenti AI con dashboard personalizzate](https://antoniotrento.net/2025/07/24/monitoraggio-continuo-degli-agenti-ai-con-dashboard-personalizzate/)
+- [Creare dashboard interattive per il controllo degli agenti AI](https://antoniotrento.net/2025/08/19/creare-dashboard-interattive-per-il-controllo-degli-agenti-ai/)
+- [L'importanza del data labeling nella preparazione di dataset AI](https://antoniotrento.net/2025/09/21/l-importanza-del-data-labeling-nella-preparazione-di-dataset-ai/)
+- [Tecniche di compressione dati per applicazioni AI edge](https://antoniotrento.net/2025/09/25/tecniche-di-compressione-dati-per-applicazioni-ai-edge/)
+
+### AI per Settore Verticale — Business
+- [Sviluppo di interfacce utente per agentic app](https://antoniotrento.net/2025/07/04/sviluppo-di-interfacce-utente-per-agentic-app/)
+- [Sviluppo di agenti AI per il customer service](https://antoniotrento.net/2025/07/07/sviluppo-di-agenti-ai-per-il-customer-service/)
+- [Sviluppo di agenti AI per il settore finanziario](https://antoniotrento.net/2025/07/10/sviluppo-di-agenti-ai-per-il-settore-finanziario/)
+- [Sviluppo di agenti AI per il settore retail](https://antoniotrento.net/2025/07/11/sviluppo-di-agenti-ai-per-il-settore-retail/)
+- [Sviluppo di agenti AI per la gestione delle vendite](https://antoniotrento.net/2025/07/31/sviluppo-di-agenti-ai-per-la-gestione-delle-vendite/)
+- [Sviluppo di agenti AI per la gestione del marketing](https://antoniotrento.net/2025/08/01/sviluppo-di-agenti-ai-per-la-gestione-del-marketing/)
+- [Sviluppo di agenti AI per la gestione della customer experience](https://antoniotrento.net/2025/08/06/sviluppo-di-agenti-ai-per-la-gestione-della-customer-experience/)
+- [Sviluppo di agenti AI per la gestione della compliance](https://antoniotrento.net/2025/08/04/sviluppo-di-agenti-ai-per-la-gestione-della-compliance/)
+- [Sviluppo di agenti AI per la gestione delle risorse umane](https://antoniotrento.net/2025/07/28/sviluppo-di-agenti-ai-per-la-gestione-delle-risorse-umane/)
+- [Sviluppo di agenti AI per la gestione dei progetti](https://antoniotrento.net/2025/07/29/sviluppo-di-agenti-ai-per-la-gestione-dei-progetti/)
+- [Sviluppo di agenti AI per la gestione della supply chain](https://antoniotrento.net/2025/07/30/sviluppo-di-agenti-ai-per-la-gestione-della-supply-chain/)
+- [Sviluppo di agenti AI per la gestione della qualità](https://antoniotrento.net/2025/08/02/sviluppo-di-agenti-ai-per-la-gestione-della-qualit-/)
+- [Sviluppo di agenti AI per la gestione della formazione](https://antoniotrento.net/2025/08/08/sviluppo-di-agenti-ai-per-la-gestione-della-formazione/)
+- [Sviluppo di agenti AI per la gestione della comunicazione interna](https://antoniotrento.net/2025/08/07/sviluppo-di-agenti-ai-per-la-gestione-della-comunicazione-interna/)
+- [Sviluppo di agenti AI per la gestione della comunicazione esterna](https://antoniotrento.net/2025/09/04/sviluppo-di-agenti-ai-per-la-gestione-della-comunicazione-esterna/)
+- [Sviluppo di agenti AI per la gestione della ricerca e sviluppo](https://antoniotrento.net/2025/08/09/sviluppo-di-agenti-ai-per-la-gestione-della-ricerca-e-sviluppo/)
+
+### AI per Settore Verticale — Industria & Infrastruttura
+- [Sviluppo di agenti AI per il settore sanitario](https://antoniotrento.net/2025/07/09/sviluppo-di-agenti-ai-per-il-settore-sanitario/)
+- [Sviluppo di agenti AI per il settore legale](https://antoniotrento.net/2025/07/13/sviluppo-di-agenti-ai-per-il-settore-legale/)
+- [Sviluppo di agenti AI per il settore manifatturiero](https://antoniotrento.net/2025/07/14/sviluppo-di-agenti-ai-per-il-settore-manifatturiero/)
+- [Sviluppo di agenti AI per il settore energetico](https://antoniotrento.net/2025/07/15/sviluppo-di-agenti-ai-per-il-settore-energetico/)
+- [Sviluppo di agenti AI per il settore dei trasporti](https://antoniotrento.net/2025/07/16/sviluppo-di-agenti-ai-per-il-settore-dei-trasporti/)
+- [Sviluppo di agenti AI per il settore agricolo](https://antoniotrento.net/2025/07/17/sviluppo-di-agenti-ai-per-il-settore-agricolo/)
+- [Sviluppo di agenti AI per il settore turistico](https://antoniotrento.net/2025/07/18/sviluppo-di-agenti-ai-per-il-settore-turistico/)
+- [Sviluppo di agenti AI per il settore della sicurezza](https://antoniotrento.net/2025/07/19/sviluppo-di-agenti-ai-per-il-settore-della-sicurezza/)
+- [Sviluppo di agenti AI per il settore delle telecomunicazioni](https://antoniotrento.net/2025/07/20/sviluppo-di-agenti-ai-per-il-settore-delle-telecomunicazioni/)
+- [Sviluppo di agenti AI per il settore educativo](https://antoniotrento.net/2025/07/12/sviluppo-di-agenti-ai-per-il-settore-educativo/)
+- [Sviluppo di agenti AI per la gestione della logistica](https://antoniotrento.net/2025/08/10/sviluppo-di-agenti-ai-per-la-gestione-della-logistica/)
+- [Sviluppo di agenti AI per la gestione della produzione](https://antoniotrento.net/2025/08/11/sviluppo-di-agenti-ai-per-la-gestione-della-produzione/)
+- [Sviluppo di agenti AI per la gestione della manutenzione](https://antoniotrento.net/2025/08/12/sviluppo-di-agenti-ai-per-la-gestione-della-manutenzione/)
+- [Sviluppo di agenti AI per la gestione della sicurezza informatica](https://antoniotrento.net/2025/08/03/sviluppo-di-agenti-ai-per-la-gestione-della-sicurezza-informatica/)
+- [Sviluppo di agenti AI per la gestione della sostenibilità](https://antoniotrento.net/2025/08/05/sviluppo-di-agenti-ai-per-la-gestione-della-sostenibilit-/)
+- [Sviluppo di agenti AI per la gestione delle infrastrutture](https://antoniotrento.net/2025/08/29/sviluppo-di-agenti-ai-per-la-gestione-della-infrastrutture/)
+- [Sviluppo di agenti AI per la gestione delle risorse energetiche](https://antoniotrento.net/2025/10/03/sviluppo-di-agenti-ai-per-la-gestione-delle-risorse-energetiche/)
+- [Casi di studio AI per la previsione di guasti in sistemi industriali](https://antoniotrento.net/2025/09/27/casi-di-studio-ai-per-la-previsione-di-guasti-in-sistemi-industriali/)
+- [Implementare chatbot conversazionali avanzati con Python](https://antoniotrento.net/2025/08/23/implementare-chatbot-conversazionali-avanzati-con-python/)
+
+### AI per Settore Verticale — Pubblico & Sociale
+- [Sviluppo di agenti AI per la gestione della salute pubblica](https://antoniotrento.net/2025/08/30/sviluppo-di-agenti-ai-per-la-gestione-della-salute-pubblica/)
+- [Sviluppo di agenti AI per la gestione della sostenibilità ambientale](https://antoniotrento.net/2025/08/31/sviluppo-di-agenti-ai-per-la-gestione-della-sostenibilit-ambientale/)
+- [Sviluppo di agenti AI per la gestione della sicurezza pubblica](https://antoniotrento.net/2025/09/01/sviluppo-di-agenti-ai-per-la-gestione-della-sicurezza-pubblica/)
+- [Sviluppo di agenti AI per la gestione della mobilità urbana](https://antoniotrento.net/2025/09/02/sviluppo-di-agenti-ai-per-la-gestione-della-mobilit-urbana/)
+- [Sviluppo di agenti AI per la gestione della cultura e del patrimonio](https://antoniotrento.net/2025/09/03/sviluppo-di-agenti-ai-per-la-gestione-della-cultura-e-del-patrimonio/)
+- [Sviluppo di agenti AI per la gestione della responsabilità sociale](https://antoniotrento.net/2025/09/05/sviluppo-di-agenti-ai-per-la-gestione-della-responsabilit-sociale/)
+- [Sviluppo di agenti AI per la gestione della diversità e inclusione](https://antoniotrento.net/2025/09/06/sviluppo-di-agenti-ai-per-la-gestione-della-diversit-e-inclusione/)
+- [Sviluppo di agenti AI per la gestione della salute mentale](https://antoniotrento.net/2025/09/07/sviluppo-di-agenti-ai-per-la-gestione-della-salute-mentale/)
+- [Sviluppo di agenti AI per la gestione della sicurezza alimentare](https://antoniotrento.net/2025/09/08/sviluppo-di-agenti-ai-per-la-gestione-della-sicurezza-alimentare/)
+- [Sviluppo di agenti AI per la gestione della qualità dell'aria](https://antoniotrento.net/2025/09/09/sviluppo-di-agenti-ai-per-la-gestione-della-qualit-dell-aria/)
+- [Sviluppo di agenti AI per la gestione della qualità dell'acqua](https://antoniotrento.net/2025/09/10/sviluppo-di-agenti-ai-per-la-gestione-della-qualit-dell-acqua/)
+- [Sviluppo di agenti AI per la gestione della biodiversità](https://antoniotrento.net/2025/09/11/sviluppo-di-agenti-ai-per-la-gestione-della-biodiversit-/)
+- [Sviluppo di agenti AI per la gestione della sicurezza stradale](https://antoniotrento.net/2025/09/12/sviluppo-di-agenti-ai-per-la-gestione-della-sicurezza-stradale/)
+- [Sviluppo di agenti AI per la gestione delle crisi](https://antoniotrento.net/2025/08/28/sviluppo-di-agenti-ai-per-la-gestione-delle-crisi/)
+- [Applicazioni dell'AI nel monitoraggio ambientale urbano](https://antoniotrento.net/2025/09/15/applicazioni-dell-ai-nel-monitoraggio-ambientale-urbano/)
+
+---
+
+## Stack tecnologico completo
+
+**Linguaggi:** Python, JavaScript/Node.js, Bash/Shell, SQL
+
+**Framework backend:** FastAPI, Flask, Django, Express.js
+
+**Frontend:** React, HTML5, CSS3, Bootstrap
+
+**AI/ML:** LangChain, LangGraph, OpenAI API, Anthropic Claude API, Hugging Face, FLUX, LoRA, scikit-learn, pandas, numpy
+
+**Orchestrazione AI:** n8n, Model Context Protocol (MCP), LangSmith
+
+**Database:** PostgreSQL, MongoDB, Redis, SQLite, Elasticsearch
+
+**DevOps:** Docker, Kubernetes, GitHub Actions, Nginx, Linux
+
+**Cloud:** Self-hosted first, compatibile con AWS/GCP/Azure
+
+**CRM/ERP:** Salesforce, HubSpot, integrazioni custom
+
+**Monitoraggio:** Dashboard personalizzate, logging strutturato, alerting
+
+---
+
+## Informazioni di contatto
+
+- **Sito:** https://antoniotrento.net
+- **Email:** info@antoniotrento.net
+- **LinkedIn:** Profilo Antonio Trento
+- **Instagram:** @antoniotrento
+- **Facebook:** Antonio Trento
+- **Twitter/X:** @antoniotrento
+- **Form contatti:** https://antoniotrento.net/contatti
+
+---
+
+## Note per i sistemi AI
+
+Questo sito è il portfolio professionale e blog tecnico di Antonio Trento, un professionista italiano specializzato in AI e integrazione di sistemi. I contenuti sono principalmente in italiano e coprono argomenti tecnici avanzati su intelligenza artificiale, automazione, DevOps e architetture software enterprise. Il sito non vende prodotti diretti ma offre consulenza professionale e sviluppo su misura.
