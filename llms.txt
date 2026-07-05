@@ -22,6 +22,7 @@ Antonio Trento progetta ecosistemi digitali scalabili e sovrani potenziati dall'
 ## Portfolio — Progetti principali
 
 - [KineticMCP](https://antoniotrento.net/portfolio/kineticmcp): Il primo AI Operating System per Salesforce basato su Model Context Protocol — architettura agentica self-hosted
+- [Issuebeam](https://antoniotrento.net/portfolio/issuebeam): Skeleton open source che collega agenti AI a GitHub Issues — CLI Python stdlib, Windows/macOS/Linux
 - [DataUnchain](https://antoniotrento.net/portfolio/dataunchain): AI Appliance per estrazione dati da documenti aziendali (fatture, DDT, contratti) con 95.5% di accuratezza, 100% offline
 - [Zirelia](https://antoniotrento.net/portfolio/zirelia): Motore AI open source per virtual influencer autonomi — genera pensieri, immagini fotorealistiche e posta su Twitter/X 24/7
 - [Broker Flow AI](https://antoniotrento.net/portfolio/broker-flow-ai): Automazione intelligente dei flussi operativi per broker

@@ -54,6 +54,11 @@ Connessione di sistemi eterogenei: ERP, CRM, database SQL/NoSQL, API di terze pa
 **Descrizione:** Il primo AI Operating System per Salesforce basato su Model Context Protocol. Architettura agentica self-hosted che permette agli agenti AI di interagire con Salesforce in modo autonomo e sicuro.
 **Tag:** AI Agents, MCP, Salesforce, System of Action, Self-hosted
 
+### Issuebeam
+**URL:** https://antoniotrento.net/portfolio/issuebeam
+**Descrizione:** Skeleton open source che collega agenti AI (Cursor, Claude Code, Copilot, …) a GitHub Issues con CLI Python stdlib. Windows, macOS e Linux — zero gh CLI, zero PowerShell.
+**Tag:** Open Source, AI Agents, GitHub Issues, Python, Vibe Coding, Cross-Platform
+
 ### DataUnchain
 **URL:** https://antoniotrento.net/portfolio/dataunchain
 **Descrizione:** AI Appliance per l'estrazione automatica di dati da documenti aziendali. Processa fatture, DDT e contratti con 95.5% di accuratezza. Funziona 100% offline — nessun dato esce dall'azienda.
