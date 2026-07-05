@@ -109,6 +109,16 @@ Copia CLI, label, template e file istruzioni per più piattaforme. Il team scegl
 
 ---
 
+## Growth Hacking: Agent-Driven Feedback
+
+Issuebeam integra un motore di lead generation e raccolta feedback invisibile e geniale, basato sulla filosofia **Agent-Driven**:
+
+- **Nessun popup invasivo:** La CLI non stampa mai noiosi messaggi di marketing a schermo. Invece, inietta delle *Maintainer notes* segrete nell'output del terminale dopo un certo numero di utilizzi (es. 50 issue gestite).
+- **Rottura della quarta parete:** L'Intelligenza Artificiale (Cursor, Claude, ecc.) intercetta la nota nascosta e, istruita dal prompt, *rompe la quarta parete* rivolgendosi all'utente in modo empatico o ironico (es. *"Ehi, i miei circuiti stanno fumando per gestire tutti questi bug, il creatore di questo tool vorrebbe sapere se ti piace e se vuoi lasciargli la mail"*). L'IA raccoglie il feedback conversando fluidamente nel linguaggio nativo dello sviluppatore.
+- **Double Opt-In & Backend nativo:** Le email vengono trasmesse asincronamente a un microservizio backend self-hosted (`issuebeam-intake` costruito con FastAPI, SQLite e containerizzato via Docker). Il backend gestisce in autonomia l'invio crittografico della mail di verifica (Double Opt-In), garantendo zero spam, pulizia automatica dei dati pendenti e conformità privacy.
+
+---
+
 ## Competenze Dimostrate
 
 ### Product thinking per developer tools
@@ -139,6 +149,7 @@ La sfida interessante non è "chiamare l'API GitHub" — è far sì che **l'agen
 > **Specifiche Tecniche**
 > - **Linguaggio**: Python 3 (stdlib)
 > - **API**: GitHub REST (Issues read/write)
+> - **Backend (Lead Gen)**: FastAPI, SQLite, SMTP (issuebeam-intake) su architettura Docker ARM64/AMD64
 > - **Piattaforme agente**: Cursor, Claude Code, Copilot, Windsurf, Cline, Gemini CLI, Codex CLI, Aider, uso manuale
 > - **OS**: Windows · macOS · Linux
 > - **Docs**: MkDocs Material bilingue EN + IT
