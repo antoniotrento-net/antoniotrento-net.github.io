@@ -3,7 +3,7 @@ layout: portfolio
 title: "Qwibo – Trascrizione Audio e Video Offline per Windows"
 date: 2026-07-04
 description: "App desktop Windows per trascrivere riunioni, podcast, interviste e lezioni in testo e sottotitoli SRT sul proprio PC. Installer Electron retail, ASR NeMo Parakeet, riassunti LLM opzionali. Privato, gratuito per uso personale."
-image: "/assets/images/portfolio/qwibo/qwibo-index.jpg"
+image: "/assets/images/portfolio/qwibo/qwibo-cover.jpg"
 image-header: "/assets/images/portfolio/qwibo/qwibo-cover.jpg"
 image-paint: "/assets/images/portfolio/qwibo/qwibo-cover.jpg"
 tags: [AI, Python, Electron, NeMo, ASR, Speech-to-Text, Desktop, LLM, On-Premise, Windows, FastAPI]

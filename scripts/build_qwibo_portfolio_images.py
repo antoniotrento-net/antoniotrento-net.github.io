@@ -84,9 +84,6 @@ def compose_card(width: int, height: int, *, subtitle: str | None = None) -> Ima
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
 
-    compose_card(1280, 720, subtitle="Trascrizione offline · Windows").save(
-        OUT / "qwibo-index.jpg", quality=92
-    )
     compose_card(1600, 600, subtitle="App desktop · Electron + Python embedded").save(
         OUT / "qwibo-cover.jpg", quality=92
     )
