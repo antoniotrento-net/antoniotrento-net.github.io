@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Portfolio JPG/PNG da SVG ufficiali Issuebeam."""
+"""Portfolio JPG/PNG da SVG ufficiali Vibeissue."""
 
 from __future__ import annotations
 
@@ -10,14 +10,14 @@ from PIL import Image
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-ISSUEBEAM_LOGO = (
+VIBEISSUE_LOGO = (
     Path(__file__).resolve().parents[2]
-    / "issuebeam.github.io"
+    / "vibeissue.github.io"
     / "assets"
     / "images"
     / "logo"
 )
-OUT = ROOT / "assets" / "images" / "portfolio" / "issuebeam"
+OUT = ROOT / "assets" / "images" / "portfolio" / "vibeissue"
 
 BG = "#0a0a0a"
 TEXT = "#94a3b8"
@@ -31,7 +31,7 @@ TAGLINE_IT = "GitHub Issues dagli agenti AI · CLI Python · vibe coding"
 
 
 def load_svg(name: str, *, replace_current_color: str | None = None) -> str:
-    text = (ISSUEBEAM_LOGO / name).read_text(encoding="utf-8")
+    text = (VIBEISSUE_LOGO / name).read_text(encoding="utf-8")
     if replace_current_color:
         text = text.replace("currentColor", replace_current_color)
     return text
@@ -77,7 +77,7 @@ def build_index() -> None:
 </body></html>"""
     png = OUT / "_index.png"
     render_html(html, w, h, png)
-    png_to_jpg(png, OUT / "issuebeam-index.jpg")
+    png_to_jpg(png, OUT / "vibeissue-index.jpg")
     png.unlink(missing_ok=True)
 
 
@@ -114,7 +114,7 @@ def build_cover() -> None:
 </body></html>"""
     png = OUT / "_cover.png"
     render_html(html, w, h, png)
-    png_to_jpg(png, OUT / "issuebeam-cover.jpg")
+    png_to_jpg(png, OUT / "vibeissue-cover.jpg")
     png.unlink(missing_ok=True)
 
 
@@ -134,13 +134,13 @@ def build_icon() -> None:
 </style></head><body>
   <div class="mark">{mark}</div>
 </body></html>"""
-    out = OUT / "issuebeam-logo-1024x1024.png"
+    out = OUT / "vibeissue-logo-1024x1024.png"
     render_html(html, size, size, out)
 
 
 def main() -> int:
-    if not ISSUEBEAM_LOGO.is_dir():
-        raise SystemExit(f"SVG Issuebeam non trovati: {ISSUEBEAM_LOGO}")
+    if not VIBEISSUE_LOGO.is_dir():
+        raise SystemExit(f"SVG Vibeissue non trovati: {VIBEISSUE_LOGO}")
     OUT.mkdir(parents=True, exist_ok=True)
     build_index()
     build_cover()
