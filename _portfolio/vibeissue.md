@@ -2,16 +2,16 @@
 layout: portfolio
 title: "Vibeissue – GitHub Issues dagli Agenti AI"
 date: 2026-07-05
-description: "Skeleton open source che collega agenti AI (Cursor, Claude Code, Copilot, …) a GitHub Issues con una CLI Python stdlib. Windows, macOS e Linux. Zero gh CLI, zero PowerShell — il backlog vive sul tracker ufficiale, non sepolto in chat."
+description: "Open source su PyPI (pip install vibeissue): collega agenti AI a GitHub Issues. Windows, macOS e Linux. Zero gh CLI, zero PowerShell — il backlog vive sul tracker ufficiale, non sepolto in chat."
 image: "/assets/images/portfolio/vibeissue/vibeissue-cover.jpg"
 image-header: "/assets/images/portfolio/vibeissue/vibeissue-cover.jpg"
 image-paint: "/assets/images/portfolio/vibeissue/vibeissue-cover.jpg"
-tags: [Open Source, AI Agents, GitHub Issues, Python, Cursor, Claude Code, Copilot, Developer Tools, CLI, Vibe Coding, Cross-Platform, MkDocs]
+tags: [Open Source, AI Agents, GitHub Issues, Python, PyPI, Cursor, Claude Code, Copilot, Developer Tools, CLI, Vibe Coding, Cross-Platform, MkDocs]
 ---
 
 > *"Bug in chat. Issue su GitHub. Vibeissue è il ponte tra conversazione con l'agente AI e backlog visibile al team — senza dipendere da un solo IDE né da strumenti cloud aggiuntivi."*
 
-**Vibeissue** è uno **skeleton open source** che collega **qualsiasi agente AI di coding** a **GitHub Issues**: l'agente esegue `python scripts/github_issue.py` e crea, commenta e chiude issue reali. Funziona su **Windows, macOS e Linux** con Cursor, Claude Code, GitHub Copilot, Windsurf, Cline e altri tool che leggono istruzioni nel repository ed eseguono comandi shell.
+**Vibeissue** è uno **skeleton open source** (anche su [PyPI](https://pypi.org/project/vibeissue/){: rel="nofollow" target="_blank"}: `pip install vibeissue`) che collega **qualsiasi agente AI di coding** a **GitHub Issues**: l'agente esegue `vibeissue create …` e crea, commenta e chiude issue reali. Funziona su **Windows, macOS e Linux** con Cursor, Claude Code, GitHub Copilot, Windsurf, Cline e altri tool che leggono istruzioni nel repository ed eseguono comandi shell.
 
 Il progetto nasce da un'esigenza quotidiana nel **vibe coding**: con LLM e iterazione rapida perdi il filo di bug, task e idee sparse in conversazione. Le chat dell'agente non sono un issue tracker — non hanno label, stati, assegnazioni né visibilità per il resto del team. GitHub Issues sì. Vibeissue rende l'agente **operatore del tracker ufficiale**, non archivista di note in chat.
 
@@ -42,7 +42,7 @@ Vibeissue non sostituisce GitHub Issues: lo **alimenta** da chat e terminale.
 ### Flusso tipico
 
 1. L'utente dice in chat: *«Apri issue per il redirect loop su Safari»*
-2. L'agente esegue: `python scripts/github_issue.py create "[Bug] Login Safari redirect loop" --labels bug,priority-high`
+2. L'agente esegue: `vibeissue create "[Bug] Login Safari redirect loop" --labels bug,priority-high`
 3. L'issue compare su GitHub con label, template e visibilità team
 4. Nei commit: `Fixes #12` — tracciabilità end-to-end
 
@@ -50,8 +50,8 @@ Vibeissue non sostituisce GitHub Issues: lo **alimenta** da chat e terminale.
 
 | Componente | Ruolo |
 |---|---|
-| `scripts/github_issue.py` | CLI stdlib (`urllib`) — list, create, comment, close, labels, import |
-| `scripts/adopt.py` | Copia tutto in un progetto esistente con un comando |
+| `vibeissue` (PyPI) / `scripts/github_issue.py` | CLI stdlib (`urllib`) — list, create, comment, close, labels, import |
+| `vibeissue-adopt` / `scripts/adopt.py` | Copia tutto in un progetto esistente con un comando |
 | `AGENTS.md` | Istruzioni universali per qualsiasi agente |
 | `.cursor/rules/github-issues.mdc` | Regola Cursor (`alwaysApply`) |
 | `CLAUDE.md` | Puntatore per Claude Code |
@@ -63,7 +63,8 @@ Vibeissue non sostituisce GitHub Issues: lo **alimenta** da chat e terminale.
 ### Adopt in un colpo solo
 
 ```bash
-python scripts/adopt.py --target ../my-repo --repo myorg/my-app
+pip install vibeissue
+vibeissue-adopt --target ../my-repo --repo myorg/my-app
 ```
 
 Copia CLI, label, template e file istruzioni per più piattaforme. Il team sceglie l'agente; il workflow resta identico.
@@ -74,7 +75,7 @@ Copia CLI, label, template e file istruzioni per più piattaforme. Il team scegl
 
 | Componente | Tecnologia | Ruolo |
 |---|---|---|
-| **CLI** | Python 3 stdlib (`urllib`, `argparse`) | Nessuna dipendenza `gh`, nessun pip obbligatorio |
+| **CLI** | Python 3 stdlib + [PyPI](https://pypi.org/project/vibeissue/){: rel="nofollow" target="_blank"} (`pip install vibeissue`) | Nessuna dipendenza `gh`; install globale o skeleton nel repo |
 | **Token** | env · `.env` · `.secrets/` · registry Windows (opz.) | Risoluzione automatica, IDE-friendly |
 | **Agent rules** | Markdown + Cursor MDC | Istruzioni per Cursor, Claude, Copilot, altri |
 | **Docs** | MkDocs Material + mkdocs-static-i18n | Guida EN/IT con tab per OS |
@@ -91,7 +92,7 @@ Copia CLI, label, template e file istruzioni per più piattaforme. Il team scegl
 │  AGENTS.md + regola piattaforma                              │
 │       │                                                      │
 │       ▼                                                      │
-│  python scripts/github_issue.py create|list|comment|close    │
+│  vibeissue create|list|comment|close                         │
 │       │                                                      │
 │       ▼                                                      │
 │  GitHub REST API  ──►  Issues (fonte di verità)              │
@@ -128,13 +129,13 @@ Tradurre un workflow interno (Qwibo tracker) in uno **skeleton riusabile** per c
 API GitHub via stdlib, messaggi d'errore actionable, token resolution a cascata. Funziona nel terminale integrato dell'IDE senza chiedere all'utente comandi manuali.
 
 ### Multi-platform agent orchestration
-Un solo workflow operativo (`python scripts/github_issue.py`) con istruzioni adattate per Cursor, Claude Code, Copilot e altri — non lock-in su un vendor.
+Un solo workflow operativo (`vibeissue` / `pip install vibeissue`) con istruzioni adattate per Cursor, Claude Code, Copilot e altri — non lock-in su un vendor.
 
 ### Documentazione e sito
 MkDocs bilingue (EN/IT), sito marketing Jekyll, publish script Python. Coerenza tra README, docs, regole agente e landing.
 
 ### Open source e adozione
-`adopt.py` per copiare lo skeleton in repo esistenti; MIT license; estratto da progetto in produzione, non demo toy.
+`vibeissue-adopt` (o `adopt.py`) per copiare lo skeleton in repo esistenti; MIT license; estratto da progetto in produzione, non demo toy.
 
 ---
 
@@ -147,6 +148,7 @@ La sfida interessante non è "chiamare l'API GitHub" — è far sì che **l'agen
 ---
 
 > **Specifiche Tecniche**
+> - **Install**: `pip install vibeissue` ([PyPI](https://pypi.org/project/vibeissue/))
 > - **Linguaggio**: Python 3 (stdlib)
 > - **API**: GitHub REST (Issues read/write)
 > - **Backend (Lead Gen)**: FastAPI, SQLite, SMTP (issuebeam-intake) su architettura Docker ARM64/AMD64
@@ -160,6 +162,8 @@ La sfida interessante non è "chiamare l'API GitHub" — è far sì che **l'agen
 ---
 
 🌐 **Sito ufficiale:** [vibeissue.github.io](https://vibeissue.github.io){: rel="nofollow" target="_blank"}
+
+📦 **PyPI:** [pypi.org/project/vibeissue](https://pypi.org/project/vibeissue/){: rel="nofollow" target="_blank"} — `pip install vibeissue`
 
 📚 **Documentazione:** [vibeissue.github.io/docs](https://vibeissue.github.io/docs/){: rel="nofollow" target="_blank"}
 
