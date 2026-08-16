@@ -15,7 +15,7 @@ tags: [Markets, S&P 500, AI Bubble, Python, FRED, Dashboard, Data Engineering, R
 
 Il prodotto non è un predittore. È uno strumento per non confondere *valutazioni estreme* con *crollo imminente*, e per non leggere un aggregato fuorviante come segnale di calma.
 
-Codice: **[github.com/antoniotrento/SP500-ai-bubble-monitor](https://github.com/antoniotrento/SP500-ai-bubble-monitor)**{: rel="nofollow" target="_blank"}
+Codice: **[github.com/antonio-backend-projects/SP500-ai-bubble-monitor](https://github.com/antonio-backend-projects/SP500-ai-bubble-monitor)**{: rel="nofollow" target="_blank"}
 
 ---
 
@@ -103,10 +103,11 @@ La domanda utile non è "quando scoppia". È: *la molla è già al livello 2000/
 > - **UI**: HTML/CSS/JS + Chart.js, server read-only
 > - **Fonti**: FRED, Shiller/multpl, FINRA mirror, NASDAQ, SEC, NY Fed, RSS
 > - **Output**: `bubble_state.json` → http://localhost:8891
-> - **Licenza / repo**: GitHub `SP500-ai-bubble-monitor`
+> - **Licenza**: MIT
+> - **Repo**: [github.com/antonio-backend-projects/SP500-ai-bubble-monitor](https://github.com/antonio-backend-projects/SP500-ai-bubble-monitor)
 
 ---
 
-💻 **Codice:** [github.com/antoniotrento/SP500-ai-bubble-monitor](https://github.com/antoniotrento/SP500-ai-bubble-monitor){: rel="nofollow" target="_blank"}
+💻 **Codice:** [github.com/antonio-backend-projects/SP500-ai-bubble-monitor](https://github.com/antonio-backend-projects/SP500-ai-bubble-monitor){: rel="nofollow" target="_blank"}
 
 📩 **Monitor analoghi o dashboard di rischio su misura?** [Contattami](mailto:info@antoniotrento.net)
