@@ -128,3 +128,4 @@ keywords:
 #   - vendor/ruby/
 exclude:
   - README.md
+  - _piano_editoriale
