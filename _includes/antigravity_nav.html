@@ -13,7 +13,8 @@
     <!-- Desktop Menu -->
     <div class="hidden md:flex items-center gap-8">
       {% for item in site.navigation %}
-      <a href="{{ item.url | relative_url }}"
+      {% if item.url contains '://' %}{% assign item_href = item.url %}{% else %}{% assign item_href = item.url | relative_url %}{% endif %}
+      <a href="{{ item_href }}"
         class="text-sm font-bold uppercase tracking-wide hover:text-brand-blue transition-colors relative group">
         {{ item.title }}
         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all group-hover:w-full"></span>
@@ -44,7 +45,8 @@
   </button>
 
   {% for item in site.navigation %}
-  <a href="{{ item.url | relative_url }}" class="text-3xl font-black hover:text-brand-blue transition-colors"
+  {% if item.url contains '://' %}{% assign item_href = item.url %}{% else %}{% assign item_href = item.url | relative_url %}{% endif %}
+  <a href="{{ item_href }}" class="text-3xl font-black hover:text-brand-blue transition-colors"
     onclick="toggleMobileMenu()">{{ item.title }}</a>
   {% endfor %}
 

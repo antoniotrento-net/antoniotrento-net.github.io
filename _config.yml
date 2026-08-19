@@ -53,7 +53,7 @@ navigation:
   - title: "Home"
     url: "/"
   - title: "Blog"
-    url: "/blog/"
+    url: "https://blog.antoniotrento.net/it/"
   - title: "Portfolio"
     url: "/portfolio/"
 #  - title: "Mostre"
