@@ -1,7 +1,19 @@
-<!-- _includes/seo_settings.html -->
+{%- comment -%}
+  Archivio blog 2025–2026: noindex, follow. I post restano online, escono dai risultati.
+  Non Disallow in robots.txt: Google deve poter rileggere il noindex.
+{%- endcomment -%}
+{%- assign seo_noindex = false -%}
+{%- if page.layout == 'post' -%}{%- assign seo_noindex = true -%}{%- endif -%}
+{%- if page.url == '/blog/' or page.url == '/blog' or page.url contains '/blog/page' -%}
+  {%- assign seo_noindex = true -%}
+{%- endif -%}
 <meta name="description" content="{{ page.description | default: site.description }}">
 <meta name="keywords" content="{{ page.keywords | default: site.keywords | join: ',' }}">
 <meta name="author" content="{{ page.author | default: site.author.name }}">
+{%- if seo_noindex %}
+<meta name="robots" content="noindex, follow">
+{%- endif %}
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{{ page.title | default: site.title }}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">

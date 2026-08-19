@@ -95,6 +95,18 @@ permalink: "/:categories/:title/"
 markdown: kramdown
 highlighter: rouge
 
+# Archivio blog: resta online, fuori da indice e sitemap.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      sitemap: false
+  - scope:
+      path: "blog"
+    values:
+      sitemap: false
+
 include:
   - assets
   - robots.txt

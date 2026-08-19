@@ -8,7 +8,7 @@ Antonio Trento progetta ecosistemi digitali scalabili e sovrani potenziati dall'
 
 - [Homepage](https://antoniotrento.net/): Sistema Architect & AI Integrator — panoramica servizi, portfolio e filosofia
 - [Biografia](https://antoniotrento.net/biografia): Background professionale, timeline evolutiva da Linux/Docker a LLM e AI agents
-- [Blog](https://antoniotrento.net/blog): Articoli tecnici su AI, automazione, integrazione di sistemi e DevOps
+- [Blog](https://blog.antoniotrento.net/it/): Articoli su integrazione sistemi, AI e automazione per PMI
 - [Portfolio](https://antoniotrento.net/portfolio): Progetti realizzati — AI agents, strumenti open source, appliance enterprise
 - [Contatti](https://antoniotrento.net/contatti): Form di contatto e link LinkedIn
 
@@ -31,14 +31,9 @@ Antonio Trento progetta ecosistemi digitali scalabili e sovrani potenziati dall'
 - [Cloudetta](https://antoniotrento.net/portfolio/cloudetta): Infrastruttura cloud personale self-hosted
 - [Oracle Shell](https://antoniotrento.net/portfolio/oracle-shell): Shell AI per interrogazione di database in linguaggio naturale
 
-## Blog — Argomenti principali
+## Blog
 
-- [AI & Agentic App](https://antoniotrento.net/blog): LangChain, LangGraph, agenti autonomi, prompt engineering, explainability
-- [Automazione Workflow](https://antoniotrento.net/blog): n8n, Python, pipeline dati, report automatici
-- [System Integration](https://antoniotrento.net/blog): Integrazione sistemi legacy, API REST, microservizi
-- [DevOps & Cloud](https://antoniotrento.net/blog): Docker, architetture serverless, ottimizzazione cloud, backup
-- [Machine Learning](https://antoniotrento.net/blog): Modelli transformer, NLP, embedding semantici, reinforcement learning
-- [Settori verticali](https://antoniotrento.net/blog): AI per healthcare, finanza, retail, manifattura, energia, trasporti, agricoltura
+- [Blog](https://blog.antoniotrento.net/it/): articoli su prodotti dati, app interne, portali B2B, stack self-hosted. L’archivio 2025–2026 su antoniotrento.net/blog non è più il canale editoriale.
 
 ## Stack tecnologico
 

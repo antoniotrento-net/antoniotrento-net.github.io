@@ -515,28 +515,45 @@ automatizzati per il business del futuro."
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-            {% for post in site.posts limit:3 %}
-            <article class="group cursor-pointer reveal delay-100">
-                <div
-                    class="h-60 bg-gray-100 dark:bg-neutral-900 rounded-[2rem] mb-6 overflow-hidden relative border border-gray-100 dark:border-white/5">
-                    {% if post.image %}
-                    <img src="{{ post.image | relative_url }}"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        alt="{{ post.title }}">
-                    {% endif %}
+            <article class="group reveal delay-100">
+                <a href="https://blog.antoniotrento.net/it/blog/dashboard-che-non-si-usano/" class="block">
                     <div
-                        class="absolute inset-0 bg-black/0 group-hover:bg-black/5 dark:group-hover:bg-white/5 transition-colors">
+                        class="h-60 bg-gray-100 dark:bg-neutral-900 rounded-[2rem] mb-6 overflow-hidden relative border border-gray-100 dark:border-white/5">
+                        <img src="https://blog.antoniotrento.net/assets/images/posts/dashboard-che-non-si-usano.jpg"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            alt="Dashboard che non si usano">
                     </div>
-                </div>
-                <h3 class="text-2xl font-bold mb-2 group-hover:text-brand-blue transition-colors">{{ post.title }}</h3>
-                <p class="text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">{{ post.excerpt | strip_html }}</p>
-                <div class="flex items-center gap-2 text-sm text-gray-400">
-                    <span>{{ post.date | date: "%d %b %Y" }}</span>
-                    <a href="{{ post.url | relative_url }}"
-                        class="text-brand-blue font-bold hover:underline ml-2">Leggi</a>
-                </div>
+                    <h3 class="text-2xl font-bold mb-2 group-hover:text-brand-blue transition-colors">Hai i dati. Non hai le domande.</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Perché le dashboard non fanno fatturare, e come trasformare i numeri in un prodotto che si usa.</p>
+                    <span class="text-brand-blue font-bold hover:underline">Leggi</span>
+                </a>
             </article>
-            {% endfor %}
+            <article class="group reveal delay-100">
+                <a href="https://blog.antoniotrento.net/it/blog/gestione-soci-associazione-software/" class="block">
+                    <div
+                        class="h-60 bg-gray-100 dark:bg-neutral-900 rounded-[2rem] mb-6 overflow-hidden relative border border-gray-100 dark:border-white/5">
+                        <img src="https://blog.antoniotrento.net/assets/images/posts/gestione-soci-associazione-software.jpg"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            alt="Gestione soci associazione">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 group-hover:text-brand-blue transition-colors">Soci, rinnovi, comunicazioni: l’associazione su Excel</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Quote perse, tesoriere col foglio, comunicazioni che tornano indietro. Quando basta un tool e quando serve il su misura.</p>
+                    <span class="text-brand-blue font-bold hover:underline">Leggi</span>
+                </a>
+            </article>
+            <article class="group reveal delay-100">
+                <a href="https://blog.antoniotrento.net/it/blog/software-locale-ristorazione-magazzino/" class="block">
+                    <div
+                        class="h-60 bg-gray-100 dark:bg-neutral-900 rounded-[2rem] mb-6 overflow-hidden relative border border-gray-100 dark:border-white/5">
+                        <img src="https://blog.antoniotrento.net/assets/images/posts/software-locale-ristorazione-magazzino.jpg"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            alt="Software locale ristorazione magazzino">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 group-hover:text-brand-blue transition-colors">Lo scontrino c’è, il food cost no</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-4 line-clamp-2">Tra sala, cucina, magazzino e fatture il margine del locale sparisce. Il filo ricetta–scarico–fattura.</p>
+                    <span class="text-brand-blue font-bold hover:underline">Leggi</span>
+                </a>
+            </article>
         </div>
     </div>
 </section>
