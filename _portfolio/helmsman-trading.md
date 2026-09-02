@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: "Ecosistema HelmsmanTrading – Motore MCP, Backend SaaS, App Desktop e Sito"
+title: "Helmsman Trading"
 date: 2026-09-02
 description: "Un ecosistema completo per il trading assistito da LLM, progettato e sviluppato end-to-end: il motore MCP a 5 livelli (HelmsmanTrading), il backend SaaS License/Data API con Stripe e PostgreSQL (Helmsman-saas), il Control Panel Electron zero-knowledge (Helmsman-desktop), il sito di branding bilingue (HelmsmanTrading.github.io) e la versione open-core pianificata (helmsman-lite). Un caso di studio sulle scelte tecniche e architetturali, non un pitch di vendita."
 image: "/assets/images/portfolio/helmsman-trading/helmsman-trading.jpg"
