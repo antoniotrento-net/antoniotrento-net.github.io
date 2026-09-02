@@ -9,7 +9,7 @@ image-paint: "/assets/images/portfolio/helmsman-trading/helmsman-trading.jpg"
 tags: [MCP, Trading Assistant, LLM, Python, FastAPI, PostgreSQL, Redis, Stripe, Electron, React, TypeScript, Risk Management, Multi-Broker, Backtesting, Data Engineering, Docker, Jekyll]
 ---
 
-🌐 **Sito ufficiale:** [helmsmantrading.github.io](https://helmsmantrading.github.io){: target="_blank"}
+🌐 **Sito ufficiale:** [helmsmantrading.github.io](https://helmsmantrading.github.io){: rel="nofollow" target="_blank"}
 
 > *"Un modello linguistico è un consulente brillante e un esecutore pessimo. Sa argomentare una tesi di mercato meglio di molti analisti, ma se gli lasci in mano la size, lo stop e il bottone 'invia ordine' prima o poi ti fa saltare il conto — non per malizia, ma perché allucina un numero con la stessa sicurezza con cui ne azzecca dieci. HelmsmanTrading nasce da questa consapevolezza: separare in modo chirurgico il **giudizio** (l'LLM) dall'**esecuzione** (un motore deterministico che non improvvisa mai)."*
 
