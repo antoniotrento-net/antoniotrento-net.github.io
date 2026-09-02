@@ -1,17 +1,17 @@
 ---
 layout: portfolio
-title: "Zirelia: Motore AI per Virtual Influencer Autonomi su Twitter/X"
+title: "Zirelia: Motore AI per Virtual Influencer Autonomi"
 date: 2026-01-15
-description: "Un agente AI open source che trasforma un file YAML in un virtual influencer completo: genera pensieri originali, produce immagini fotorealistiche coerenti e posta autonomamente su Twitter/X, 24 ore su 24."
+description: "Un agente AI open source che trasforma un file YAML in un virtual influencer completo: genera pensieri originali, produce immagini fotorealistiche coerenti e posta autonomamente su Instagram, facebook e threads, 24 ore su 24."
 image: "/assets/images/portfolio/zirelia/zirelia.jpg"
 image-header: "/assets/images/portfolio/zirelia/zirelia.jpg"
 image-paint: "/assets/images/portfolio/zirelia/zirelia.jpg"
-tags: [AI Agents, LangGraph, GPT-4, FLUX, LoRA, Twitter Automation, Python, Docker, Open Source, Virtual Influencer]
+tags: [AI Agents, LangGraph, GPT-4, FLUX, LoRA, Instagram, Facebook, Threads, Python, Docker, Open Source, Virtual Influencer]
 ---
 
 > *Il settore degli influencer si basa su un'illusione: che la "persona" sia il contenuto. Con Zirelia ho voluto dimostrare che l'architettura sottostante — memoria, coerenza narrativa, identità visiva stabile — può essere completamente automatizzata. L'obiettivo non era creare un bot, ma costruire un agente con una prospettiva propria.*
 
-**Zirelia** è un motore AI open source per la creazione e gestione autonoma di virtual influencer su Twitter/X. Non è uno scheduler di post né un semplice wrapper attorno a ChatGPT. È un **sistema agente multi-step** che, a partire da un file di configurazione YAML, costruisce un'identità digitale completa: genera "pensieri" originali filtrati per coerenza con la persona, produce immagini fotorealistiche dello stesso soggetto tramite FLUX.1 su Replicate, e gestisce in autonomia timing, warm-up dell'account e anti-detection — senza intervento umano.
+**Zirelia** è un motore AI open source per la creazione e gestione autonoma di virtual influencer su Instagram, Facebook e Threads. Non è uno scheduler di post né un semplice wrapper attorno a ChatGPT. È un **sistema agente multi-step** che, a partire da un file di configurazione YAML, costruisce un'identità digitale completa: genera "pensieri" originali filtrati per coerenza con la persona, produce immagini fotorealistiche dello stesso soggetto tramite FLUX.1 su Replicate, e gestisce in autonomia timing, warm-up dell'account e anti-detection — senza intervento umano.
 
 Sito Ufficiale: **[zirelia.github.io](https://zirelia.github.io){: rel="nofollow" target="_blank"}**
 Repository: **[github.com/zirelia/zirelia](https://github.com/zirelia/zirelia){: rel="nofollow" target="_blank"}**
@@ -60,7 +60,7 @@ GPT-4 (o GPT-4o-mini per ridurre i costi) riceve persona, contesto temporale e m
 Se il post prevede un'immagine, l'agente costruisce un prompt visivo che fonde la descrizione del soggetto fisso (derivata dal file persona) con il tema del post, e lo invia a **FLUX.1 via Replicate**. Il prompt include il trigger word del LoRA addestrato — garantendo che il soggetto generato sia sempre visivamente lo stesso.
 
 ### 5. Pubblicazione e Logging
-Twitter/X API pubblica il tweet. Ogni operazione — testo, immagine, decisioni dell'agente, metadati di engagement — viene loggata in **PostgreSQL**, creando un audit trail completo e un dataset per analisi future.
+Instagram, Facebook e Threads API pubblicano i post. Ogni operazione — testo, immagine, decisioni dell'agente, metadati di engagement — viene loggata in **PostgreSQL**, creando un audit trail completo e un dataset per analisi future.
 
 ---
 
@@ -95,7 +95,7 @@ Guida completa: [Coerenza Visiva su Scala: Addestrare un LoRA per il Tuo AI Infl
 
 ## 📊 Il Caso di Studio: Un Virtual Influencer Costruito da Zero
 
-Il modo migliore per validare un sistema del genere è costruire qualcosa di reale. Ho creato un virtual influencer di riferimento — un personaggio pubblico su Twitter/X con identità visiva propria — e l'ho lasciato girare in autonomia per settimane su hardware domestico minimo (un Raspberry Pi).
+Il modo migliore per validare un sistema del genere è costruire qualcosa di reale. Ho creato un virtual influencer di riferimento — un personaggio pubblico su Instagram, Facebook e Threads con identità visiva propria — e l'ho lasciato girare in autonomia per settimane su hardware domestico minimo (un Raspberry Pi).
 
 Il risultato: crescita organica dei follower, engagement reale, nessun ban. La cosa più interessante non sono i numeri — è che i follower interagiscono con la persona come se fosse reale, rispondono ai post, citano concetti che la persona ha espresso settimane prima. La coerenza narrativa costruita dalla memoria RAG funziona.
 
@@ -130,7 +130,7 @@ Zirelia è progettato per girare su hardware minimale. Il setup di riferimento �
 - **Memoria vettoriale**: ChromaDB
 - **Database log**: PostgreSQL
 - **Infrastruttura**: Docker, Docker Compose
-- **API social**: Twitter/X Developer API v2
+- **API social**: Instagram, Facebook e Threads Developer API v2
 - **Scheduling**: APScheduler integrato nel container
 
 **Deploy in 3 comandi:**
@@ -169,7 +169,7 @@ Le soluzioni adottate — RAG su ChromaDB per la memoria semantica, LoRA per l'i
 > - **Vector DB**: ChromaDB
 > - **Database**: PostgreSQL
 > - **Infrastruttura**: Docker, Docker Compose
-> - **API**: Twitter/X Developer v2
+> - **API**: Instagram, Facebook e Threads Developer API v2
 > - **Licenza**: Elastic License 2.0 (ELv2)
 > - **Hardware minimo**: Raspberry Pi 4 / VPS 1GB RAM
 > - **Costo operativo**: ~$8–21/mese (solo API di terze parti)
