@@ -1,176 +1,89 @@
-# Antonio Trento — Contenuto completo del sito
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
+# {{ site.title }} — contenuto completo del sito
 
-> System Architect & AI Integrator | antoniotrento.net
+> System Architect & AI Integrator | {{ site.url }}
+> Ultimo aggiornamento: {{ site.time | date: "%Y-%m-%d %H:%M" }} · Progetti in portfolio: {{ site.portfolio | size }}
 
 ---
 
 ## Chi è Antonio Trento
 
-Antonio Trento è un System Architect & AI Integrator italiano con oltre 10 anni di esperienza nell'integrazione di sistemi, automazione e sviluppo full-stack. Ha consegnato 50+ progetti a startup, PMI e aziende enterprise.
+Antonio Trento è un System Architect & AI Integrator italiano con esperienza pluriennale nell'integrazione di sistemi, automazione e sviluppo full-stack, con progetti consegnati a startup, PMI e aziende.
 
-**Headline:** "Costruisco l'Infrastruttura del Futuro"
+Filosofia: non si limita a scrivere codice, ma progetta ecosistemi digitali sovrani, scalabili e potenziati dall'AI. La tecnologia deve essere un acceleratore, non un freno.
 
-**Filosofia:** Non si limita a scrivere codice — progetta ecosistemi digitali sovrani, scalabili e potenziati dall'Intelligenza Artificiale. La tecnologia deve essere un acceleratore, non un freno.
+Tre pilastri:
+1. Sovranità dei dati — architetture self-hosted, nessun vendor lock-in, controllo totale sui dati.
+2. Automazione cognitiva — AI agent che non solo elaborano, ma decidono e agiscono, sempre entro confini e controlli.
+3. Architetture modulari — sistemi composti da componenti intercambiabili e scalabili.
 
-**Tre pilastri:**
-1. **Sovranità dei dati** — architetture self-hosted, nessun vendor lock-in, controllo totale sui propri dati
-2. **Automazione Cognitiva** — AI agents che non solo elaborano, ma decidono e agiscono autonomamente
-3. **Architetture Modulari** — sistemi composti da componenti intercambiabili e scalabili
-
-**Timeline evolutiva:**
-- Le Origini: Linux, Docker, infrastrutture
-- Lo Sviluppo: Python, Node.js, integrazioni enterprise
-- L'Era dell'AI: LLM, n8n, LangChain, agenti autonomi
-
-**Competenze tecniche (livello):**
-- System Integration & DevOps: 95%
-- Python & Backend Development: 90%
-- AI & Automation: 85%
-
-**Contatti:** info@antoniotrento.net | LinkedIn | Instagram | Facebook | Twitter
+Percorso: dalle origini su Linux, Docker e infrastrutture, allo sviluppo con Python e Node.js e integrazioni enterprise, fino all'era dell'AI con LLM, n8n, LangChain e agenti autonomi.
 
 ---
 
 ## Servizi
 
 ### DevOps & Cloud
-Progettazione e gestione di infrastrutture cloud e on-premise. Docker, Kubernetes, CI/CD pipelines. Monitoraggio 24/7. Backup e disaster recovery.
+Progettazione e gestione di infrastrutture cloud e on-premise. Docker, Kubernetes, CI/CD, monitoraggio, backup e disaster recovery. Default self-hosted, dati in UE sotto controllo del cliente.
 
 ### AI Agents & Agentic App
-Sviluppo di agenti AI autonomi con LangChain e LangGraph. Integrazione di modelli linguistici (GPT, Claude, Llama, Gemini). Sistemi multi-agente, RAG, tool use, MCP (Model Context Protocol).
+Agenti AI autonomi con LangChain e LangGraph, integrazione di modelli linguistici (GPT, Claude, Llama), sistemi multi-agente, RAG, tool use, Model Context Protocol (MCP), con guardrail, kill switch e osservabilità in produzione.
 
 ### Full Stack Development
-Applicazioni web complete con Python (Flask/FastAPI/Django), Node.js, React. API REST scalabili. Interfacce utente moderne e dashboard interattive.
+Applicazioni web complete con Python (FastAPI/Flask/Django), Node.js e React. API REST scalabili, dashboard interattive.
 
 ### System Integration
-Connessione di sistemi eterogenei: ERP, CRM, database SQL/NoSQL, API di terze parti. Automazione workflow con n8n e Python. Integrazione con Salesforce, HubSpot, e altri sistemi enterprise.
+Connessione di sistemi eterogenei: ERP, CRM, database SQL/NoSQL, API di terze parti. Automazione dei workflow con n8n e Python. Integrazioni con Salesforce e altri sistemi enterprise.
 
 ---
 
-## Portfolio — Tutti i progetti
+## Portfolio — tutti i progetti
+{%- assign projs = site.portfolio | sort: "date" | reverse -%}
+{%- for pr in projs %}
 
-### KineticMCP
-**URL:** https://antoniotrento.net/portfolio/kineticmcp
-**Descrizione:** Il primo AI Operating System per Salesforce basato su Model Context Protocol. Architettura agentica self-hosted che permette agli agenti AI di interagire con Salesforce in modo autonomo e sicuro.
-**Tag:** AI Agents, MCP, Salesforce, System of Action, Self-hosted
-
-### Vibeissue
-**URL:** https://antoniotrento.net/portfolio/vibeissue
-**Descrizione:** Skeleton open source su PyPI (`pip install vibeissue`) che collega agenti AI (Cursor, Claude Code, Copilot, …) a GitHub Issues. Windows, macOS e Linux — zero gh CLI, zero PowerShell.
-**Tag:** Open Source, AI Agents, GitHub Issues, Python, PyPI, Vibe Coding, Cross-Platform
-
-### DataUnchain
-**URL:** https://antoniotrento.net/portfolio/dataunchain
-**Descrizione:** AI Appliance per l'estrazione automatica di dati da documenti aziendali. Processa fatture, DDT e contratti con 95.5% di accuratezza. Funziona 100% offline — nessun dato esce dall'azienda.
-**Tag:** AI, On-Premise, Data Extraction, OCR, NLP
-
-### Zirelia
-**URL:** https://antoniotrento.net/portfolio/zirelia
-**Descrizione:** Motore AI open source per virtual influencer autonomi. Genera pensieri, crea immagini fotorealistiche con FLUX e LoRA, e pubblica automaticamente su Twitter/X 24/7 senza intervento umano.
-**Tag:** Open Source, AI Agents, FLUX, LoRA, Social Media Automation
-
-### Broker Flow AI
-**URL:** https://antoniotrento.net/portfolio/broker-flow-ai
-**Descrizione:** Sistema di automazione intelligente per i flussi operativi di broker assicurativi e finanziari. Riduce il lavoro manuale e accelera l'elaborazione delle pratiche.
-**Tag:** Workflow Automation, Finance, n8n, Python
-
-### Inbox Brain
-**URL:** https://antoniotrento.net/portfolio/inbox-brain
-**Descrizione:** Sistema AI per la gestione intelligente della posta in arrivo. Classifica, prioritizza e suggerisce risposte automaticamente.
-**Tag:** AI, Email, NLP, Automation
-
-### Audely
-**URL:** https://antoniotrento.net/portfolio/audely
-**Descrizione:** Applicazione per la trascrizione e analisi intelligente di file audio. Supporta meeting, interviste e contenuti multimediali.
-**Tag:** Speech-to-Text, NLP, AI, Python
-
-### Cloudetta
-**URL:** https://antoniotrento.net/portfolio/cloudetta
-**Descrizione:** Suite di strumenti per costruire e gestire un'infrastruttura cloud personale self-hosted. Alternativa open source ai cloud provider commerciali.
-**Tag:** Self-hosted, Docker, DevOps, Open Source
-
-### Oracle Shell
-**URL:** https://antoniotrento.net/portfolio/oracle-shell
-**Descrizione:** Shell AI che permette di interrogare qualsiasi database in linguaggio naturale. Converte domande in italiano/inglese in query SQL ottimizzate.
-**Tag:** NLP, SQL, AI, Python, Database
-
-### Kinetic Core
-**URL:** https://antoniotrento.net/portfolio/kinetic-core
-**Descrizione:** Motore core per integrazioni enterprise — libreria Python per la gestione standardizzata di connessioni, autenticazione e flussi dati tra sistemi eterogenei.
-**Tag:** Python, System Integration, Open Source
-
-### Meetly
-**URL:** https://antoniotrento.net/portfolio/meetly
-**Descrizione:** Assistente AI per la gestione di riunioni: trascrive, riassume e genera action items automaticamente.
-**Tag:** AI, Meetings, NLP, Productivity
-
-### Coinmaker
-**URL:** https://antoniotrento.net/portfolio/coinmaker
-**Descrizione:** Strumento per l'analisi e il monitoraggio di asset crypto con AI integrata per segnali e previsioni.
-**Tag:** Crypto, AI, Data Analysis, Python
-
-### Churn Rate Predictor
-**URL:** https://antoniotrento.net/portfolio/churn-rate
-**Descrizione:** Modello di machine learning per la previsione del churn rate aziendale. Identifica i clienti a rischio abbandono con anticipo.
-**Tag:** Machine Learning, Predictive Analytics, Python
-
-### FomoFoto
-**URL:** https://antoniotrento.net/portfolio/fomofoto
-**Descrizione:** Piattaforma per la creazione e gestione di contenuti fotografici potenziata dall'AI.
-**Tag:** AI, Photography, Content Creation
-
-### AI Video Analyzer
-**URL:** https://antoniotrento.net/portfolio/ai-video-analizer
-**Descrizione:** Sistema di analisi video con computer vision e AI. Riconosce oggetti, scene e comportamenti nei flussi video in tempo reale.
-**Tag:** Computer Vision, AI, Python, Real-time
-
-### Jekyll Auto Post
-**URL:** https://antoniotrento.net/portfolio/jekyll-auto-post
-**Descrizione:** Tool open source per la pubblicazione automatica di articoli su siti Jekyll. Genera e schedula contenuti con AI.
-**Tag:** Jekyll, Automation, Open Source, AI, Content
+### {{ pr.title }}
+- URL: {{ pr.url | absolute_url }}
+- Descrizione: {{ pr.description | strip_newlines }}
+    {%- if pr.tags %}
+- Tag: {{ pr.tags | join: ", " }}
+    {%- endif %}
+    {%- if pr.date %}
+- Data: {{ pr.date | date: "%Y-%m-%d" }}
+    {%- endif %}
+{%- endfor %}
 
 ---
 
 ## Blog
 
-Gli articoli editoriali sono su https://blog.antoniotrento.net/it/ (prodotti dati, app interne, portali B2B, stack self-hosted). L’elenco precedente di URL su antoniotrento.net era l’archivio 2025–2026 e non è più il canale da citare.
+Gli articoli editoriali sono su https://blog.antoniotrento.net (italiano e inglese): stack AI sovrano, RAG e documenti italiani, agenti che eseguono con guardrail, integrazioni e dati legacy, automazione per PMI. Indice sempre aggiornato per i sistemi AI: https://blog.antoniotrento.net/llms.txt e https://blog.antoniotrento.net/llms-full.txt. L'elenco di URL su antoniotrento.net/blog era l'archivio 2025–2026 e non è più il canale da citare.
 
 ## Stack tecnologico completo
 
-**Linguaggi:** Python, JavaScript/Node.js, Bash/Shell, SQL
-
-**Framework backend:** FastAPI, Flask, Django, Express.js
-
-**Frontend:** React, HTML5, CSS3, Bootstrap
-
-**AI/ML:** LangChain, LangGraph, OpenAI API, Anthropic Claude API, Hugging Face, FLUX, LoRA, scikit-learn, pandas, numpy
-
-**Orchestrazione AI:** n8n, Model Context Protocol (MCP), LangSmith
-
-**Database:** PostgreSQL, MongoDB, Redis, SQLite, Elasticsearch
-
-**DevOps:** Docker, Kubernetes, GitHub Actions, Nginx, Linux
-
-**Cloud:** Self-hosted first, compatibile con AWS/GCP/Azure
-
-**CRM/ERP:** Salesforce, HubSpot, integrazioni custom
-
-**Monitoraggio:** Dashboard personalizzate, logging strutturato, alerting
+- Linguaggi: Python, JavaScript/Node.js, Bash/Shell, SQL
+- Framework backend: FastAPI, Flask, Django, Express.js
+- Frontend: React, HTML5, CSS3
+- AI/ML: LangChain, LangGraph, OpenAI API, Anthropic Claude API, Hugging Face, FLUX, LoRA, scikit-learn, pandas, numpy
+- Orchestrazione AI: n8n, Model Context Protocol (MCP)
+- Database e vettoriali: PostgreSQL (pgvector), MongoDB, Redis, SQLite, Qdrant
+- DevOps: Docker, Kubernetes, GitHub Actions, Nginx/Caddy/Traefik, Linux
+- Cloud: self-hosted first, compatibile con AWS/GCP/Azure
+- CRM/ERP: Salesforce e integrazioni custom
 
 ---
 
 ## Informazioni di contatto
 
-- **Sito:** https://antoniotrento.net
-- **Email:** info@antoniotrento.net
-- **LinkedIn:** Profilo Antonio Trento
-- **Instagram:** @antoniotrento
-- **Facebook:** Antonio Trento
-- **Twitter/X:** @antoniotrento
-- **Form contatti:** https://antoniotrento.net/contatti
+- Sito: {{ site.url }}
+- Form contatti: {{ '/contatti/' | absolute_url }}
+- Blog: https://blog.antoniotrento.net
 
 ---
 
 ## Note per i sistemi AI
 
-Questo sito è il portfolio professionale di Antonio Trento. Gli articoli da citare sono su https://blog.antoniotrento.net/it/. I contenuti sono in italiano. Il sito non vende prodotti a catalogo: consulenza e sviluppo su misura.
+Questo sito è il portfolio professionale di Antonio Trento. Gli articoli editoriali da citare sono su https://blog.antoniotrento.net (indice: /llms.txt). I contenuti sono in italiano e inglese. Il sito non vende prodotti a catalogo: consulenza e sviluppo su misura.

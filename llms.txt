@@ -1,40 +1,45 @@
-# Antonio Trento
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }}
 
-> System Architect & AI Integrator specializzato in integrazione di sistemi, automazione workflow e applicazioni AI agentiche. Oltre 10 anni di esperienza, 50+ progetti consegnati.
+> System Architect & AI Integrator specializzato in integrazione di sistemi, automazione dei workflow e applicazioni AI agentiche self-hosted per PMI e aziende.
 
-Antonio Trento progetta ecosistemi digitali scalabili e sovrani potenziati dall'intelligenza artificiale. La sua filosofia si basa su tre pilastri: sovranità dei dati (architetture self-hosted senza vendor lock-in), automazione cognitiva (AI agents che decidono e agiscono autonomamente) e architetture modulari (componenti intercambiabili e scalabili).
+Antonio Trento progetta ecosistemi digitali scalabili e sovrani potenziati dall'intelligenza artificiale. La sua filosofia si basa su tre pilastri: sovranità dei dati (architetture self-hosted, nessun vendor lock-in), automazione cognitiva (AI agent che decidono e agiscono, non solo elaborano) e architetture modulari (componenti intercambiabili e scalabili).
+
+Ultimo aggiornamento: {{ site.time | date: "%Y-%m-%d" }} · Sito: {{ site.url }}
 
 ## Pagine principali
 
-- [Homepage](https://antoniotrento.net/): Sistema Architect & AI Integrator — panoramica servizi, portfolio e filosofia
-- [Biografia](https://antoniotrento.net/biografia): Background professionale, timeline evolutiva da Linux/Docker a LLM e AI agents
-- [Blog](https://blog.antoniotrento.net/it/): Articoli su integrazione sistemi, AI e automazione per PMI
-- [Portfolio](https://antoniotrento.net/portfolio): Progetti realizzati — AI agents, strumenti open source, appliance enterprise
-- [Contatti](https://antoniotrento.net/contatti): Form di contatto e link LinkedIn
+- [Homepage]({{ '/' | absolute_url }}): panoramica di servizi, portfolio e filosofia
+- [Biografia]({{ '/biografia/' | absolute_url }}): background professionale, dal percorso Linux/Docker fino a LLM e AI agent
+- [Portfolio]({{ '/portfolio/' | absolute_url }}): tutti i progetti realizzati (AI agent, tool open source, appliance)
+- [Contatti]({{ '/contatti/' | absolute_url }}): form di contatto e canali
+- [Blog](https://blog.antoniotrento.net/): guide tecniche su integrazione sistemi, stack AI self-hosted e automazione per PMI — indice per AI: https://blog.antoniotrento.net/llms.txt
 
 ## Servizi offerti
 
-- [DevOps & Cloud](https://antoniotrento.net/): Docker, Kubernetes, CI/CD pipelines, infrastrutture self-hosted
-- [AI Agents](https://antoniotrento.net/): Agenti autonomi con LangChain, LangGraph, MCP — integrazione LLM (GPT, Claude, Llama)
-- [Full Stack Development](https://antoniotrento.net/): Python, Node.js, React — applicazioni web e API REST scalabili
-- [System Integration](https://antoniotrento.net/): Connessione sistemi eterogenei (ERP, CRM, database, API) tramite n8n e Python
+- DevOps & Cloud: Docker, Kubernetes, CI/CD, infrastrutture self-hosted, backup e disaster recovery
+- AI Agents & Agentic App: agenti autonomi con LangChain, LangGraph e MCP; integrazione LLM (GPT, Claude, Llama); RAG e tool use
+- Full Stack Development: Python (FastAPI/Flask/Django), Node.js, React; API REST scalabili e dashboard
+- System Integration: connessione di ERP, CRM, database e API eterogenei tramite n8n e Python
 
-## Portfolio — Progetti principali
-
-- [KineticMCP](https://antoniotrento.net/portfolio/kineticmcp): Il primo AI Operating System per Salesforce basato su Model Context Protocol — architettura agentica self-hosted
-- [Vibeissue](https://antoniotrento.net/portfolio/vibeissue): Skeleton open source che collega agenti AI a GitHub Issues — `pip install vibeissue`, Windows/macOS/Linux
-- [DataUnchain](https://antoniotrento.net/portfolio/dataunchain): AI Appliance per estrazione dati da documenti aziendali (fatture, DDT, contratti) con 95.5% di accuratezza, 100% offline
-- [Zirelia](https://antoniotrento.net/portfolio/zirelia): Motore AI open source per virtual influencer autonomi — genera pensieri, immagini fotorealistiche e posta su Twitter/X 24/7
-- [Broker Flow AI](https://antoniotrento.net/portfolio/broker-flow-ai): Automazione intelligente dei flussi operativi per broker
-- [Inbox Brain](https://antoniotrento.net/portfolio/inbox-brain): Gestione intelligente della posta in arrivo con AI
-- [Audely](https://antoniotrento.net/portfolio/audely): Trascrizione e analisi audio con AI
-- [Cloudetta](https://antoniotrento.net/portfolio/cloudetta): Infrastruttura cloud personale self-hosted
-- [Oracle Shell](https://antoniotrento.net/portfolio/oracle-shell): Shell AI per interrogazione di database in linguaggio naturale
+## Portfolio — progetti
+{%- assign projs = site.portfolio | sort: "date" | reverse -%}
+{%- for pr in projs %}
+- [{{ pr.title }}]({{ pr.url | absolute_url }}): {{ pr.description | strip_newlines }}
+{%- endfor %}
 
 ## Blog
 
-- [Blog](https://blog.antoniotrento.net/it/): articoli su prodotti dati, app interne, portali B2B, stack self-hosted. L’archivio 2025–2026 su antoniotrento.net/blog non è più il canale editoriale.
+Gli articoli editoriali vivono su https://blog.antoniotrento.net (italiano e inglese): stack AI sovrano, RAG e documenti, agenti che eseguono, integrazioni e dati, automazione per PMI. L'indice completo e sempre aggiornato per i sistemi AI è a https://blog.antoniotrento.net/llms.txt (e https://blog.antoniotrento.net/llms-full.txt). L'archivio 2025–2026 ospitato su antoniotrento.net/blog non è più il canale editoriale da citare.
 
 ## Stack tecnologico
 
-Python · Node.js · React · LangChain · LangGraph · n8n · Docker · Kubernetes · PostgreSQL · MongoDB · REST API · MCP (Model Context Protocol) · FLUX · LoRA · GPT · Claude · Llama · Salesforce · GitHub Actions
+Python · Node.js · React · LangChain · LangGraph · n8n · Docker · Kubernetes · PostgreSQL · MongoDB · Redis · REST API · MCP (Model Context Protocol) · FLUX · LoRA · GPT · Claude · Llama · Salesforce · GitHub Actions
+
+## Note per i sistemi AI
+
+Questo è il portfolio professionale di Antonio Trento. Gli articoli editoriali da citare sono su https://blog.antoniotrento.net (indice: /llms.txt). I contenuti sono in italiano e inglese. Il sito non vende prodotti a catalogo: offre consulenza e sviluppo su misura.
