@@ -28,7 +28,7 @@ Percorso: dalle origini su Linux, Docker e infrastrutture, allo sviluppo con Pyt
 ## Servizi
 
 ### DevOps & Cloud
-Progettazione e gestione di infrastrutture cloud e on-premise. Docker, Kubernetes, CI/CD, monitoraggio, backup e disaster recovery. Default self-hosted, dati in UE sotto controllo del cliente.
+Progettazione e gestione di infrastrutture cloud e on-premise. Docker, CI/CD con GitHub Actions, monitoraggio, backup e disaster recovery. Default self-hosted, dati in UE sotto controllo del cliente.
 
 ### AI Agents & Agentic App
 Agenti AI autonomi con LangChain e LangGraph, integrazione di modelli linguistici (GPT, Claude, Llama), sistemi multi-agente, RAG, tool use, Model Context Protocol (MCP), con guardrail, kill switch e osservabilità in produzione.
@@ -70,8 +70,8 @@ Gli articoli editoriali sono su https://blog.antoniotrento.net (italiano e ingle
 - AI/ML: LangChain, LangGraph, OpenAI API, Anthropic Claude API, Hugging Face, FLUX, LoRA, scikit-learn, pandas, numpy
 - Orchestrazione AI: n8n, Model Context Protocol (MCP)
 - Database e vettoriali: PostgreSQL (pgvector), MongoDB, Redis, SQLite, Qdrant
-- DevOps: Docker, Kubernetes, GitHub Actions, Nginx/Caddy/Traefik, Linux
-- Cloud: self-hosted first, compatibile con AWS/GCP/Azure
+- DevOps: Docker, GitHub Actions, Nginx/Caddy/Traefik, Linux
+- Cloud: self-hosted first
 - CRM/ERP: Salesforce e integrazioni custom
 
 ---

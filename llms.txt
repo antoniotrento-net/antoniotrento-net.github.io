@@ -21,7 +21,7 @@ Ultimo aggiornamento: {{ site.time | date: "%Y-%m-%d" }} · Sito: {{ site.url }}
 
 ## Servizi offerti
 
-- DevOps & Cloud: Docker, Kubernetes, CI/CD, infrastrutture self-hosted, backup e disaster recovery
+- DevOps & Cloud: Docker, CI/CD con GitHub Actions, infrastrutture self-hosted, backup e disaster recovery
 - AI Agents & Agentic App: agenti autonomi con LangChain, LangGraph e MCP; integrazione LLM (GPT, Claude, Llama); RAG e tool use
 - Full Stack Development: Python (FastAPI/Flask/Django), Node.js, React; API REST scalabili e dashboard
 - System Integration: connessione di ERP, CRM, database e API eterogenei tramite n8n e Python
@@ -38,7 +38,7 @@ Gli articoli editoriali vivono su https://blog.antoniotrento.net (italiano e ing
 
 ## Stack tecnologico
 
-Python · Node.js · React · LangChain · LangGraph · n8n · Docker · Kubernetes · PostgreSQL · MongoDB · Redis · REST API · MCP (Model Context Protocol) · FLUX · LoRA · GPT · Claude · Llama · Salesforce · GitHub Actions
+Python · Node.js · React · LangChain · LangGraph · n8n · Docker · PostgreSQL · MongoDB · Redis · REST API · MCP (Model Context Protocol) · FLUX · LoRA · GPT · Claude · Llama · Salesforce · GitHub Actions
 
 ## Note per i sistemi AI
 
