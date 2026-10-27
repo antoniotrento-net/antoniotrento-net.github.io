@@ -6,6 +6,7 @@ description: "Il più avanzato ecosistema di trading algoritmico open-source foc
 image: "/assets/images/portfolio/coinmaker/coinmaker.jpg"
 image-header: "/assets/images/portfolio/coinmaker/coinmaker.jpg"
 image-paint: "/assets/images/portfolio/coinmaker/coinmaker.jpg"
+og_image: "og/cryptoquantix.jpg"
 tags: [Trading Bot, Algorithmic Trading, Python, Backtesting, Risk Management, Open Source, Quantitative Strategy, Automation, Data Science]
 ---
 

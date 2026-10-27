@@ -6,6 +6,7 @@ description: "NLE locale per footage multicam: 2–4 camere in input, sync e rou
 image: "/assets/images/portfolio/shotloom/shotloom-cover.jpg"
 image-header: "/assets/images/portfolio/shotloom/shotloom-cover.jpg"
 image-paint: "/assets/images/portfolio/shotloom/shotloom-cover.jpg"
+og_image: "og/shotloom.jpg"
 tags: [AI, Video, Multicam, Docker, FastAPI, Python, NLE, Captions, On-Premise, Electron, Product Engineering]
 ---
 

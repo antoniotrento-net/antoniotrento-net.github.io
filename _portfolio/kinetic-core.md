@@ -6,6 +6,7 @@ description: "Kinetic Core è una libreria Python production-ready pensata per r
 image: "/assets/images/portfolio/kinetic-core/kinetic-core.jpg"
 image-header: "/assets/images/portfolio/kinetic-core/kinetic-core.jpg"
 image-paint: "/assets/images/portfolio/kinetic-core/kinetic-core.jpg"
+og_image: "og/kinetic-core.jpg"
 tags: [Salesforce, Python, Library, ETL, Data Integration, API, CLI, Logging, Automation, Docker, DevOps]
 ---
 

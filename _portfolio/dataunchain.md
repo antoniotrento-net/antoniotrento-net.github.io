@@ -6,6 +6,7 @@ description: "Motore di estrazione dati da documenti aziendali (fatture, DDT, co
 image: "/assets/images/portfolio/dataunchain/dataunchain-cover.jpg"
 image-header: "/assets/images/portfolio/dataunchain/dataunchain-cover.jpg"
 image-paint: "/assets/images/portfolio/dataunchain/dataunchain-cover.jpg"
+og_image: "og/dataunchain.jpg"
 tags: [AI, Python, Docker, FastAPI, Ollama, Qwen, VLM, On-Premise, Data Extraction, OCR, Automazione, ERP Integration]
 ---
 

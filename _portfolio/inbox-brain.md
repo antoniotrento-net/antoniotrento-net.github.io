@@ -6,6 +6,7 @@ description: "Inbox Brain è un motore open-source che legge le email via IMAP, 
 image: "/assets/images/portfolio/inbox-brain/inbox-brain.jpg"
 image-header: "/assets/images/portfolio/inbox-brain/inbox-brain.jpg"
 image-paint: "/assets/images/portfolio/inbox-brain/inbox-brain.jpg"
+og_image: "og/inbox-brain.jpg"
 tags: [Open Source, Email, IMAP, AI, LLM, FastAPI, MySQL, Docker, DevOps, ETL, Data Engineering, Triage, Classification, REST API, Automation, Inbox]
 ---
 

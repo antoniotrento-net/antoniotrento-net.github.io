@@ -6,6 +6,7 @@ description: "MVP di assistente vocale AI per gestire prenotazioni Google Calend
 image: "/assets/images/portfolio/audely/audely-logo-video.jpg"
 image-header: "/assets/images/portfolio/audely/audely-logo-video.jpg"
 image-paint: "/assets/images/portfolio/audely/audely-logo-video.jpg"
+og_image: "og/audely.jpg"
 tags: [AI, Automazione, Webdesign, PhoneCalls]
 ---
 

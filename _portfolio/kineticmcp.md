@@ -6,6 +6,7 @@ description: "Un'architettura agentica self-hosted che trasforma Salesforce da s
 image: "/assets/images/portfolio/kineticmcp/kineticmcp.jpg"
 image-header: "/assets/images/portfolio/kineticmcp/kineticmcp.jpg"
 image-paint: "/assets/images/portfolio/kineticmcp/kineticmcp.jpg"
+og_image: "og/kineticmcp.jpg"
 tags: [AI Agents, Model Context Protocol, Salesforce, System of Action, Python, Docker, Enterprise Architecture, LLM, Automation]
 ---
 

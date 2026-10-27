@@ -6,6 +6,7 @@ description: "Dal calcolo statistico di base a un sistema predittivo di AI: uno 
 image: "/assets/images/portfolio/churn-rate/churn-rate.jpg"
 image-header: "/assets/images/portfolio/churn-rate/churn-rate.jpg"
 image-paint: "/assets/images/portfolio/churn-rate/churn-rate.jpg"
+og_image: "og/churn-rate.jpg"
 tags: [AI, MachineLearning, DataScience, Energy, Python, Analytics]
 ---
 

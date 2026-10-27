@@ -7,6 +7,7 @@ description: "Un tool Python single-file che trasforma automaticamente registraz
 image: "/assets/images/portfolio/ai-report-video-analizer/ai-report-video-analizer.jpg"
 image-header: "/assets/images/portfolio/ai-report-video-analizer/ai-report-video-analizer.jpg"
 image-paint: "/assets/images/portfolio/ai-report-video-analizer/ai-report-video-analizer.jpg"
+og_image: "og/ai-video-analizer.jpg"
 tags: [Python, Claude API, Whisper, ffmpeg, Docker, AI, Vision, NLP]
 github: https://github.com/antonio-backend-projects/ai-report-video-analizer
 status: released

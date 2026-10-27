@@ -6,6 +6,7 @@ description: "Un'analisi approfondita di BrokerFlow AI, un progetto dimostrativo
 image: "/assets/images/portfolio/broker-flow-ai/broker-flow-ai.jpg"
 image-header:
 image-paint: "/assets/images/portfolio/broker-flow-ai/broker-flow-ai.jpg"
+og_image: "og/broker-flow-ai.jpg"
 tags: [System Design, Backend, AI, Python, FastAPI, Docker, Automation, Data Science, Architettura]
 ---
 

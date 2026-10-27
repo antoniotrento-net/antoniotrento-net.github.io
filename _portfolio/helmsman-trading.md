@@ -6,6 +6,7 @@ description: "Un ecosistema completo per il trading assistito da LLM, progettato
 image: "/assets/images/portfolio/helmsman-trading/helmsman-trading.jpg"
 image-header: "/assets/images/portfolio/helmsman-trading/helmsman-trading.jpg"
 image-paint: "/assets/images/portfolio/helmsman-trading/helmsman-trading.jpg"
+og_image: "og/helmsman-trading.jpg"
 tags: [MCP, Trading Assistant, LLM, Python, FastAPI, PostgreSQL, Redis, Stripe, Electron, React, TypeScript, Risk Management, Multi-Broker, Backtesting, Data Engineering, Docker, Jekyll]
 ---
 

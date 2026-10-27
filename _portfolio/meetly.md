@@ -6,6 +6,7 @@ description: "Meetly è un assistente AI autonomo progettato per automatizzare c
 image: "/assets/images/portfolio/meetly/meetly.jpg"
 image-header: "/assets/images/portfolio/meetly/meetly.jpg"
 image-paint: "/assets/images/portfolio/meetly/meetly.jpg"
+og_image: "og/meetly.jpg"
 tags: [Chatbot, AI, Backend, Python, FastAPI, Docker, Google Calendar API, System Integration, Automation]
 ---
 

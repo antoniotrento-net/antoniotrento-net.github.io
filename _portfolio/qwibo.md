@@ -6,6 +6,7 @@ description: "App desktop Windows per trascrivere riunioni, podcast, interviste 
 image: "/assets/images/portfolio/qwibo/qwibo-cover.jpg"
 image-header: "/assets/images/portfolio/qwibo/qwibo-cover.jpg"
 image-paint: "/assets/images/portfolio/qwibo/qwibo-cover.jpg"
+og_image: "og/qwibo.jpg"
 tags: [AI, Python, Electron, NeMo, ASR, Speech-to-Text, Desktop, LLM, On-Premise, Windows, FastAPI]
 ---
 

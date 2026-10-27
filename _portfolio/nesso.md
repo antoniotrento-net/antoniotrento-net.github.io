@@ -6,6 +6,7 @@ description: "Integrazione tra EspoCRM e sistemi aziendali: un motore Python per
 image: "/assets/images/portfolio/nesso/nesso.jpg"
 image-header: "/assets/images/portfolio/nesso/nesso.jpg"
 image-paint: "/assets/images/portfolio/nesso/nesso.jpg"
+og_image: "og/nesso.jpg"
 tags: [EspoCRM, Integrazione, Python, Docker, API, Jekyll, Open Source]
 ---
 

@@ -6,6 +6,7 @@ description: "Monitor di fragilità vs innesco per il mercato azionario USA in r
 image: "/assets/images/portfolio/sp500-ai-bubble-monitor/sp500-ai-bubble-index.jpg"
 image-header: "/assets/images/portfolio/sp500-ai-bubble-monitor/sp500-ai-bubble-cover.jpg"
 image-paint: "/assets/images/portfolio/sp500-ai-bubble-monitor/sp500-ai-bubble-cover.jpg"
+og_image: "og/sp500-ai-bubble-monitor.jpg"
 tags: [Markets, S&P 500, AI Bubble, Python, FRED, Dashboard, Data Engineering, Risk, Fintech, Open Source]
 ---
 

@@ -6,6 +6,7 @@ description: "Un agente AI open source che trasforma un file YAML in un virtual 
 image: "/assets/images/portfolio/zirelia/zirelia.jpg"
 image-header: "/assets/images/portfolio/zirelia/zirelia.jpg"
 image-paint: "/assets/images/portfolio/zirelia/zirelia.jpg"
+og_image: "og/zirelia.jpg"
 tags: [AI Agents, LangGraph, GPT-4, FLUX, LoRA, Instagram, Facebook, Threads, Python, Docker, Open Source, Virtual Influencer]
 ---
 

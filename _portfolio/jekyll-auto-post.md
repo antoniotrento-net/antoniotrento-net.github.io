@@ -6,6 +6,7 @@ description: "Sistema automatico che genera e pubblica articoli in un sito Jekyl
 image: "/assets/images/portfolio/jekyll-auto-post/jekyll-auto-post.jpg"
 image-header: "/assets/images/portfolio/jekyll-auto-post/jekyll-auto-post.jpg"
 image-paint: "/assets/images/portfolio/jekyll-auto-post/jekyll-auto-post.jpg"
+og_image: "og/jekyll-auto-post.jpg"
 tags: [AI, Automazione, backend]
 ---
 

@@ -6,7 +6,7 @@ description: "Editor per file Balsamiq .bmpr: React, TypeScript, SQLite e WebAss
 image: "/assets/images/portfolio/telario/telario-index.jpg"
 image-header: "/assets/images/portfolio/telario/telario-cover.jpg"
 image-paint: "/assets/images/portfolio/telario/telario-cover.jpg"
-og_image: "portfolio/telario/telario-index.jpg"
+og_image: "og/telario.jpg"
 tags: [React, TypeScript, WebAssembly, SQLite, Docker, SVG, Wireframe, Product Engineering]
 ---
 

@@ -6,6 +6,7 @@ description: "Cloudetta è un ecosistema digitale open-source e sovrano per PMI.
 image: "/assets/images/portfolio/cloudetta/cloudetta.jpg"
 image-header: "/assets/images/portfolio/cloudetta/cloudetta.jpg"
 image-paint: "/assets/images/portfolio/cloudetta/cloudetta.jpg"
+og_image: "og/cloudetta.jpg"
 tags: [Open Source, DevOps, Cloud, Docker, Odoo, Django, Mautic, Apache Superset, Business Intelligence, n8n, Prometheus, Grafana, Loki, CrowdSec, Restic, System Architecture, SaaS]
 ---
 

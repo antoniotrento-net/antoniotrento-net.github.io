@@ -6,6 +6,7 @@ description: "Open source su PyPI (pip install vibeissue): collega agenti AI a G
 image: "/assets/images/portfolio/vibeissue/vibeissue-cover.jpg"
 image-header: "/assets/images/portfolio/vibeissue/vibeissue-cover.jpg"
 image-paint: "/assets/images/portfolio/vibeissue/vibeissue-cover.jpg"
+og_image: "og/vibeissue.jpg"
 tags: [Open Source, AI Agents, GitHub Issues, Python, PyPI, Cursor, Claude Code, Copilot, Developer Tools, CLI, Vibe Coding, Cross-Platform, MkDocs]
 ---
 
